@@ -7,12 +7,10 @@ NOTE
 ----
 As of SysnovaFeed Java  is a required! You must have installed java version above 6 . 
 To check java installed or not , open cmd from start menu and type  : 
-
-java verion
--------------
+    java-verion
 you will get output like this : java version "1.8.0_144"
 For checking javac version , type :
-javac -version 
+    javac -version 
 you will get output like this : javac 1.8.0_144
 IF java is not installed then you have to install JRE first . You can get JRE installer in JRE directory .
 Or

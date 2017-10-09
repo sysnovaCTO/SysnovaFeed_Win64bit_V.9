@@ -1,21 +1,5 @@
-
-
-SysnovaFeed 
-===========================================================================
-
-NOTE
-----
-As of SysnovaFeed Java  is a required! You must have installed java version above 6 . 
-To check java installed or not , open cmd from start menu and type  : 
-    java-verion
-you will get output like this : java version "1.8.0_144"
-For checking javac version , type :
-    javac -version 
-you will get output like this : javac 1.8.0_144
-IF java is not installed then you have to install JRE first . You can get JRE installer in JRE directory .
-Or
-You can Download from here http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-
+SysnovaFeed is a revolutionary free/open-source least-cost feed formulation software by Sysnova Information Systems Limited.
+============================================================================================================================
 Installation
 ------------
 In order for SysnovaFeed to run,
@@ -26,7 +10,7 @@ In order for SysnovaFeed to run,
 After Completing installation double click the file SysnovaFeed in your Desktop and start using . 
 
 
-Note: SysnovaFeed is a revolutionary free/open-source least-cost feed formulation software by Sysnova Information Systems Limited.
+Note:
 ============================================================================================================================
 
 SysnovaFeed software is a comprehensive free/open-source tool designed to meet the formulation needs of professional nutritionists and feed producers.

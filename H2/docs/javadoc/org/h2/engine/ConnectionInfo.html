@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+ConnectionInfo
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>ConnectionInfo</h1>
+Encapsulates the connection settings, including user name and password.<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return"></td><td class="method">
+<a id="ConnectionInfo_String" href="#ConnectionInfo_String">ConnectionInfo</a>(String name)
+<div class="methodText">Create a connection info object.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return"></td><td>
+<a id="ConnectionInfo_String" href="#ConnectionInfo_String">ConnectionInfo</a>(String name)
+<div class="methodText">Create a connection info object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the database name (including tags), but without the
+            "jdbc:h2:" prefix</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return"></td><td class="method">
+<a id="ConnectionInfo_String_Properties" href="#ConnectionInfo_String_Properties">ConnectionInfo</a>(String u, Properties info)
+<div class="methodText">Create a connection info object.</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return"></td><td>
+<a id="ConnectionInfo_String_Properties" href="#ConnectionInfo_String_Properties">ConnectionInfo</a>(String u, Properties info)
+<div class="methodText">Create a connection info object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">u - the database URL (must start with jdbc:h2:)</div>
+<div class="item">info - the connection properties</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">ConnectionInfo</td><td class="method">
+<a id="clone" href="#clone">clone</a>()
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">ConnectionInfo</td><td>
+<a id="clone" href="#clone">clone</a>() throws CloneNotSupportedException
+<div class="methodText"></div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">DbSettings</td><td class="method">
+<a id="getDbSettings" href="#getDbSettings">getDbSettings</a>()
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">DbSettings</td><td>
+<a id="getDbSettings" href="#getDbSettings">getDbSettings</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">byte[]</td><td class="method">
+<a id="getFilePasswordHash" href="#getFilePasswordHash">getFilePasswordHash</a>()
+<div class="methodText">Get the file password hash if it is set.</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">byte[]</td><td>
+<a id="getFilePasswordHash" href="#getFilePasswordHash">getFilePasswordHash</a>()
+<div class="methodText">Get the file password hash if it is set.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the password hash or null</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">String</td><td class="method">
+<a id="getName" href="#getName">getName</a>()
+<div class="methodText">Get the unique and normalized database name (excluding settings).</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">String</td><td>
+<a id="getName" href="#getName">getName</a>()
+<div class="methodText">Get the unique and normalized database name (excluding settings).</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the database name</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">String</td><td class="method">
+<a id="getOriginalURL" href="#getOriginalURL">getOriginalURL</a>()
+<div class="methodText">Get the complete original database URL.</div>
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">String</td><td>
+<a id="getOriginalURL" href="#getOriginalURL">getOriginalURL</a>()
+<div class="methodText">Get the complete original database URL.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the database URL</div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">String</td><td class="method">
+<a id="getProperty_String_String" href="#getProperty_String_String">getProperty</a>(String key, String defaultValue)
+<div class="methodText">Get the value of the given property.</div>
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">String</td><td>
+<a id="getProperty_String_String" href="#getProperty_String_String">getProperty</a>(String key, String defaultValue)
+<div class="methodText">Get the value of the given property.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">key - the property key</div>
+<div class="item">defaultValue - the default value</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the value as a String</div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">String</td><td class="method">
+<a id="getURL" href="#getURL">getURL</a>()
+<div class="methodText">Get the database URL.</div>
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">String</td><td>
+<a id="getURL" href="#getURL">getURL</a>()
+<div class="methodText">Get the database URL.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the URL</div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">String</td><td class="method">
+<a id="getUserName" href="#getUserName">getUserName</a>()
+<div class="methodText">Get the name of the user.</div>
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">String</td><td>
+<a id="getUserName" href="#getUserName">getUserName</a>()
+<div class="methodText">Get the name of the user.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the user name</div>
+</td></tr>
+<tr id="__10" onclick="return on(10)">
+<td class="return">boolean</td><td class="method">
+<a id="isPersistent" href="#isPersistent">isPersistent</a>()
+<div class="methodText">Check if the referenced database is persistent.</div>
+</td></tr>
+<tr onclick="return off(10)" class="detail" id="_10">
+<td class="return">boolean</td><td>
+<a id="isPersistent" href="#isPersistent">isPersistent</a>()
+<div class="methodText">Check if the referenced database is persistent.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is</div>
+</td></tr>
+<tr id="__11" onclick="return on(11)">
+<td class="return">boolean</td><td class="method">
+<a id="isRemote" href="#isRemote">isRemote</a>()
+<div class="methodText">Check if this is a remote connection.</div>
+</td></tr>
+<tr onclick="return off(11)" class="detail" id="_11">
+<td class="return">boolean</td><td>
+<a id="isRemote" href="#isRemote">isRemote</a>()
+<div class="methodText">Check if this is a remote connection.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is</div>
+</td></tr>
+<tr id="__12" onclick="return on(12)">
+<td class="return">boolean</td><td class="method">
+<a id="removeProperty_String_boolean" href="#removeProperty_String_boolean">removeProperty</a>(String key, boolean defaultValue)
+<div class="methodText">Remove a boolean property if it is set and return the value.</div>
+</td></tr>
+<tr onclick="return off(12)" class="detail" id="_12">
+<td class="return">boolean</td><td>
+<a id="removeProperty_String_boolean" href="#removeProperty_String_boolean">removeProperty</a>(String key, boolean defaultValue)
+<div class="methodText">Remove a boolean property if it is set and return the value.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">key - the property name</div>
+<div class="item">defaultValue - the default value</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the value</div>
+</td></tr>
+<tr id="__13" onclick="return on(13)">
+<td class="return">void</td><td class="method">
+<a id="setBaseDir_String" href="#setBaseDir_String">setBaseDir</a>(String dir)
+<div class="methodText">Set the base directory of persistent databases, unless the database is in
+ the user home folder (~).</div>
+</td></tr>
+<tr onclick="return off(13)" class="detail" id="_13">
+<td class="return">void</td><td>
+<a id="setBaseDir_String" href="#setBaseDir_String">setBaseDir</a>(String dir)
+<div class="methodText">Set the base directory of persistent databases, unless the database is in
+ the user home folder (~).</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">dir - the new base directory</div>
+</td></tr>
+<tr id="__14" onclick="return on(14)">
+<td class="return">void</td><td class="method">
+<a id="setFileEncryptionKey_byte-" href="#setFileEncryptionKey_byte-">setFileEncryptionKey</a>(byte[] key)
+</td></tr>
+<tr onclick="return off(14)" class="detail" id="_14">
+<td class="return">void</td><td>
+<a id="setFileEncryptionKey_byte-" href="#setFileEncryptionKey_byte-">setFileEncryptionKey</a>(byte[] key)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__15" onclick="return on(15)">
+<td class="return">void</td><td class="method">
+<a id="setFilePasswordHash_byte-" href="#setFilePasswordHash_byte-">setFilePasswordHash</a>(byte[] hash)
+<div class="methodText">Set the file password hash.</div>
+</td></tr>
+<tr onclick="return off(15)" class="detail" id="_15">
+<td class="return">void</td><td>
+<a id="setFilePasswordHash_byte-" href="#setFilePasswordHash_byte-">setFilePasswordHash</a>(byte[] hash)
+<div class="methodText">Set the file password hash.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">hash - the new hash value</div>
+</td></tr>
+<tr id="__16" onclick="return on(16)">
+<td class="return">void</td><td class="method">
+<a id="setOriginalURL_String" href="#setOriginalURL_String">setOriginalURL</a>(String url)
+<div class="methodText">Set the original database URL.</div>
+</td></tr>
+<tr onclick="return off(16)" class="detail" id="_16">
+<td class="return">void</td><td>
+<a id="setOriginalURL_String" href="#setOriginalURL_String">setOriginalURL</a>(String url)
+<div class="methodText">Set the original database URL.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">url - the database url</div>
+</td></tr>
+<tr id="__17" onclick="return on(17)">
+<td class="return">void</td><td class="method">
+<a id="setProperty_String_String" href="#setProperty_String_String">setProperty</a>(String key, String value)
+<div class="methodText">Overwrite a property.</div>
+</td></tr>
+<tr onclick="return off(17)" class="detail" id="_17">
+<td class="return">void</td><td>
+<a id="setProperty_String_String" href="#setProperty_String_String">setProperty</a>(String key, String value)
+<div class="methodText">Overwrite a property.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">key - the property name</div>
+<div class="item">value - the value</div>
+</td></tr>
+<tr id="__18" onclick="return on(18)">
+<td class="return">void</td><td class="method">
+<a id="setServerKey_String" href="#setServerKey_String">setServerKey</a>(String serverKey)
+<div class="methodText">Switch to server mode, and set the server name and database key.</div>
+</td></tr>
+<tr onclick="return off(18)" class="detail" id="_18">
+<td class="return">void</td><td>
+<a id="setServerKey_String" href="#setServerKey_String">setServerKey</a>(String serverKey)
+<div class="methodText">Switch to server mode, and set the server name and database key.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">serverKey - the server name, '/', and the security key</div>
+</td></tr>
+<tr id="__19" onclick="return on(19)">
+<td class="return">void</td><td class="method">
+<a id="setUserName_String" href="#setUserName_String">setUserName</a>(String name)
+<div class="methodText">Overwrite the user name.</div>
+</td></tr>
+<tr onclick="return off(19)" class="detail" id="_19">
+<td class="return">void</td><td>
+<a id="setUserName_String" href="#setUserName_String">setUserName</a>(String name)
+<div class="methodText">Overwrite the user name. The user name is case-insensitive and stored in
+ uppercase. English conversion is used.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the user name</div>
+</td></tr>
+<tr id="__20" onclick="return on(20)">
+<td class="return">void</td><td class="method">
+<a id="setUserPasswordHash_byte-" href="#setUserPasswordHash_byte-">setUserPasswordHash</a>(byte[] hash)
+<div class="methodText">Set the user password hash.</div>
+</td></tr>
+<tr onclick="return off(20)" class="detail" id="_20">
+<td class="return">void</td><td>
+<a id="setUserPasswordHash_byte-" href="#setUserPasswordHash_byte-">setUserPasswordHash</a>(byte[] hash)
+<div class="methodText">Set the user password hash.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">hash - the new hash value</div>
+</td></tr>
+</table>
+</div></td></tr></table></body></html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+SessionRemote
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>SessionRemote</h1>
+The client side part of a session when using the server mode. This object
+ communicates with a Session on the server side.<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">void</td><td class="method">
+<a id="addTemporaryLob_Value" href="#addTemporaryLob_Value">addTemporaryLob</a>(Value v)
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">void</td><td>
+<a id="addTemporaryLob_Value" href="#addTemporaryLob_Value">addTemporaryLob</a>(Value v)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">void</td><td class="method">
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">void</td><td>
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">void</td><td class="method">
+<a id="autoCommitIfCluster" href="#autoCommitIfCluster">autoCommitIfCluster</a>()
+<div class="methodText">Calls COMMIT if the session is in cluster mode.</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">void</td><td>
+<a id="autoCommitIfCluster" href="#autoCommitIfCluster">autoCommitIfCluster</a>()
+<div class="methodText">Calls COMMIT if the session is in cluster mode.</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">void</td><td class="method">
+<a id="cancel" href="#cancel">cancel</a>()
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">void</td><td>
+<a id="cancel" href="#cancel">cancel</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">void</td><td class="method">
+<a id="cancelStatement_int" href="#cancelStatement_int">cancelStatement</a>(int id)
+<div class="methodText">Cancel the statement with the given id.</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">void</td><td>
+<a id="cancelStatement_int" href="#cancelStatement_int">cancelStatement</a>(int id)
+<div class="methodText">Cancel the statement with the given id.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">id - the statement id</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">void</td><td class="method">
+<a id="checkClosed" href="#checkClosed">checkClosed</a>()
+<div class="methodText">Check if this session is closed and throws an exception if so.</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">void</td><td>
+<a id="checkClosed" href="#checkClosed">checkClosed</a>()
+<div class="methodText">Check if this session is closed and throws an exception if so.</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if the session is closed</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">void</td><td class="method">
+<a id="checkPowerOff" href="#checkPowerOff">checkPowerOff</a>()
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">void</td><td>
+<a id="checkPowerOff" href="#checkPowerOff">checkPowerOff</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">void</td><td class="method">
+<a id="checkWritingAllowed" href="#checkWritingAllowed">checkWritingAllowed</a>()
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">void</td><td>
+<a id="checkWritingAllowed" href="#checkWritingAllowed">checkWritingAllowed</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">void</td><td class="method">
+<a id="close" href="#close">close</a>()
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">void</td><td>
+<a id="close" href="#close">close</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">SessionInterface</td><td class="method">
+<a id="connectEmbeddedOrServer_boolean" href="#connectEmbeddedOrServer_boolean">connectEmbeddedOrServer</a>(boolean openNew)
+<div class="methodText">Open a new (remote or embedded) session.</div>
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">SessionInterface</td><td>
+<a id="connectEmbeddedOrServer_boolean" href="#connectEmbeddedOrServer_boolean">connectEmbeddedOrServer</a>(boolean openNew)
+<div class="methodText">Open a new (remote or embedded) session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">openNew - whether to open a new session in any case</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the session</div>
+</td></tr>
+<tr id="__10" onclick="return on(10)">
+<td class="return">void</td><td class="method">
+<a id="done_Transfer" href="#done_Transfer">done</a>(Transfer transfer)
+<div class="methodText">Called to flush the output after data has been sent to the server and
+ just before receiving data.</div>
+</td></tr>
+<tr onclick="return off(10)" class="detail" id="_10">
+<td class="return">void</td><td>
+<a id="done_Transfer" href="#done_Transfer">done</a>(Transfer transfer) throws IOException
+<div class="methodText">Called to flush the output after data has been sent to the server and
+ just before receiving data. This method also reads the status code from
+ the server and throws any exception the server sent.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">transfer - the transfer object</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if the server sent an exception</div>
+<div class="item">IOException - if there is a communication problem between client
+             and server</div>
+</td></tr>
+<tr id="__11" onclick="return on(11)">
+<td class="return">boolean</td><td class="method">
+<a id="getAutoCommit" href="#getAutoCommit">getAutoCommit</a>()
+</td></tr>
+<tr onclick="return off(11)" class="detail" id="_11">
+<td class="return">boolean</td><td>
+<a id="getAutoCommit" href="#getAutoCommit">getAutoCommit</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__12" onclick="return on(12)">
+<td class="return">int</td><td class="method">
+<a id="getClientVersion" href="#getClientVersion">getClientVersion</a>()
+</td></tr>
+<tr onclick="return off(12)" class="detail" id="_12">
+<td class="return">int</td><td>
+<a id="getClientVersion" href="#getClientVersion">getClientVersion</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__13" onclick="return on(13)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getClusterServers" href="#getClusterServers">getClusterServers</a>()
+</td></tr>
+<tr onclick="return off(13)" class="detail" id="_13">
+<td class="return">ArrayList</td><td>
+<a id="getClusterServers" href="#getClusterServers">getClusterServers</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__14" onclick="return on(14)">
+<td class="return">CompareMode</td><td class="method">
+<a id="getCompareMode" href="#getCompareMode">getCompareMode</a>()
+</td></tr>
+<tr onclick="return off(14)" class="detail" id="_14">
+<td class="return">CompareMode</td><td>
+<a id="getCompareMode" href="#getCompareMode">getCompareMode</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__15" onclick="return on(15)">
+<td class="return">int</td><td class="method">
+<a id="getCurrentId" href="#getCurrentId">getCurrentId</a>()
+</td></tr>
+<tr onclick="return off(15)" class="detail" id="_15">
+<td class="return">int</td><td>
+<a id="getCurrentId" href="#getCurrentId">getCurrentId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__16" onclick="return on(16)">
+<td class="return">String</td><td class="method">
+<a id="getCurrentSchemaName" href="#getCurrentSchemaName">getCurrentSchemaName</a>()
+</td></tr>
+<tr onclick="return off(16)" class="detail" id="_16">
+<td class="return">String</td><td>
+<a id="getCurrentSchemaName" href="#getCurrentSchemaName">getCurrentSchemaName</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__17" onclick="return on(17)">
+<td class="return">DataHandler</td><td class="method">
+<a id="getDataHandler" href="#getDataHandler">getDataHandler</a>()
+</td></tr>
+<tr onclick="return off(17)" class="detail" id="_17">
+<td class="return">DataHandler</td><td>
+<a id="getDataHandler" href="#getDataHandler">getDataHandler</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__18" onclick="return on(18)">
+<td class="return">String</td><td class="method">
+<a id="getDatabasePath" href="#getDatabasePath">getDatabasePath</a>()
+</td></tr>
+<tr onclick="return off(18)" class="detail" id="_18">
+<td class="return">String</td><td>
+<a id="getDatabasePath" href="#getDatabasePath">getDatabasePath</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__19" onclick="return on(19)">
+<td class="return">JavaObjectSerializer</td><td class="method">
+<a id="getJavaObjectSerializer" href="#getJavaObjectSerializer">getJavaObjectSerializer</a>()
+</td></tr>
+<tr onclick="return off(19)" class="detail" id="_19">
+<td class="return">JavaObjectSerializer</td><td>
+<a id="getJavaObjectSerializer" href="#getJavaObjectSerializer">getJavaObjectSerializer</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__20" onclick="return on(20)">
+<td class="return">int</td><td class="method">
+<a id="getLastReconnect" href="#getLastReconnect">getLastReconnect</a>()
+</td></tr>
+<tr onclick="return off(20)" class="detail" id="_20">
+<td class="return">int</td><td>
+<a id="getLastReconnect" href="#getLastReconnect">getLastReconnect</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__21" onclick="return on(21)">
+<td class="return">String</td><td class="method">
+<a id="getLobCompressionAlgorithm_int" href="#getLobCompressionAlgorithm_int">getLobCompressionAlgorithm</a>(int type)
+</td></tr>
+<tr onclick="return off(21)" class="detail" id="_21">
+<td class="return">String</td><td>
+<a id="getLobCompressionAlgorithm_int" href="#getLobCompressionAlgorithm_int">getLobCompressionAlgorithm</a>(int type)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__22" onclick="return on(22)">
+<td class="return">SmallLRUCache</td><td class="method">
+<a id="getLobFileListCache" href="#getLobFileListCache">getLobFileListCache</a>()
+</td></tr>
+<tr onclick="return off(22)" class="detail" id="_22">
+<td class="return">SmallLRUCache</td><td>
+<a id="getLobFileListCache" href="#getLobFileListCache">getLobFileListCache</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__23" onclick="return on(23)">
+<td class="return">LobStorageInterface</td><td class="method">
+<a id="getLobStorage" href="#getLobStorage">getLobStorage</a>()
+</td></tr>
+<tr onclick="return off(23)" class="detail" id="_23">
+<td class="return">LobStorageInterface</td><td>
+<a id="getLobStorage" href="#getLobStorage">getLobStorage</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__24" onclick="return on(24)">
+<td class="return">Object</td><td class="method">
+<a id="getLobSyncObject" href="#getLobSyncObject">getLobSyncObject</a>()
+</td></tr>
+<tr onclick="return off(24)" class="detail" id="_24">
+<td class="return">Object</td><td>
+<a id="getLobSyncObject" href="#getLobSyncObject">getLobSyncObject</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__25" onclick="return on(25)">
+<td class="return">int</td><td class="method">
+<a id="getMaxLengthInplaceLob" href="#getMaxLengthInplaceLob">getMaxLengthInplaceLob</a>()
+</td></tr>
+<tr onclick="return off(25)" class="detail" id="_25">
+<td class="return">int</td><td>
+<a id="getMaxLengthInplaceLob" href="#getMaxLengthInplaceLob">getMaxLengthInplaceLob</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__26" onclick="return on(26)">
+<td class="return">int</td><td class="method">
+<a id="getNextId" href="#getNextId">getNextId</a>()
+</td></tr>
+<tr onclick="return off(26)" class="detail" id="_26">
+<td class="return">int</td><td>
+<a id="getNextId" href="#getNextId">getNextId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__27" onclick="return on(27)">
+<td class="return">int</td><td class="method">
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+</td></tr>
+<tr onclick="return off(27)" class="detail" id="_27">
+<td class="return">int</td><td>
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__28" onclick="return on(28)">
+<td class="return">TempFileDeleter</td><td class="method">
+<a id="getTempFileDeleter" href="#getTempFileDeleter">getTempFileDeleter</a>()
+</td></tr>
+<tr onclick="return off(28)" class="detail" id="_28">
+<td class="return">TempFileDeleter</td><td>
+<a id="getTempFileDeleter" href="#getTempFileDeleter">getTempFileDeleter</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__29" onclick="return on(29)">
+<td class="return">Trace</td><td class="method">
+<a id="getTrace" href="#getTrace">getTrace</a>()
+</td></tr>
+<tr onclick="return off(29)" class="detail" id="_29">
+<td class="return">Trace</td><td>
+<a id="getTrace" href="#getTrace">getTrace</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__30" onclick="return on(30)">
+<td class="return">boolean</td><td class="method">
+<a id="hasPendingTransaction" href="#hasPendingTransaction">hasPendingTransaction</a>()
+</td></tr>
+<tr onclick="return off(30)" class="detail" id="_30">
+<td class="return">boolean</td><td>
+<a id="hasPendingTransaction" href="#hasPendingTransaction">hasPendingTransaction</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__31" onclick="return on(31)">
+<td class="return">boolean</td><td class="method">
+<a id="isClosed" href="#isClosed">isClosed</a>()
+</td></tr>
+<tr onclick="return off(31)" class="detail" id="_31">
+<td class="return">boolean</td><td>
+<a id="isClosed" href="#isClosed">isClosed</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__32" onclick="return on(32)">
+<td class="return">boolean</td><td class="method">
+<a id="isClustered" href="#isClustered">isClustered</a>()
+<div class="methodText">Returns true if the connection was opened in cluster mode.</div>
+</td></tr>
+<tr onclick="return off(32)" class="detail" id="_32">
+<td class="return">boolean</td><td>
+<a id="isClustered" href="#isClustered">isClustered</a>()
+<div class="methodText">Returns true if the connection was opened in cluster mode.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is</div>
+</td></tr>
+<tr id="__33" onclick="return on(33)">
+<td class="return">boolean</td><td class="method">
+<a id="isReconnectNeeded_boolean" href="#isReconnectNeeded_boolean">isReconnectNeeded</a>(boolean write)
+</td></tr>
+<tr onclick="return off(33)" class="detail" id="_33">
+<td class="return">boolean</td><td>
+<a id="isReconnectNeeded_boolean" href="#isReconnectNeeded_boolean">isReconnectNeeded</a>(boolean write)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__34" onclick="return on(34)">
+<td class="return">boolean</td><td class="method">
+<a id="isRemote" href="#isRemote">isRemote</a>()
+</td></tr>
+<tr onclick="return off(34)" class="detail" id="_34">
+<td class="return">boolean</td><td>
+<a id="isRemote" href="#isRemote">isRemote</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__35" onclick="return on(35)">
+<td class="return">FileStore</td><td class="method">
+<a id="openFile_String_String_boolean" href="#openFile_String_String_boolean">openFile</a>(String name, String mode, boolean mustExist)
+</td></tr>
+<tr onclick="return off(35)" class="detail" id="_35">
+<td class="return">FileStore</td><td>
+<a id="openFile_String_String_boolean" href="#openFile_String_String_boolean">openFile</a>(String name, String mode, boolean mustExist)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__36" onclick="return on(36)">
+<td class="return">CommandInterface</td><td class="method">
+<a id="prepareCommand_String_int" href="#prepareCommand_String_int">prepareCommand</a>(String sql, int fetchSize)
+</td></tr>
+<tr onclick="return off(36)" class="detail" id="_36">
+<td class="return">CommandInterface</td><td>
+<a id="prepareCommand_String_int" href="#prepareCommand_String_int">prepareCommand</a>(String sql, int fetchSize)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__37" onclick="return on(37)">
+<td class="return">int</td><td class="method">
+<a id="readLob_long_byte-_long_byte-_int_int" href="#readLob_long_byte-_long_byte-_int_int">readLob</a>(long lobId, byte[] hmac, long offset, byte[] buff, int off, int length)
+</td></tr>
+<tr onclick="return off(37)" class="detail" id="_37">
+<td class="return">int</td><td>
+<a id="readLob_long_byte-_long_byte-_int_int" href="#readLob_long_byte-_long_byte-_int_int">readLob</a>(long lobId, byte[] hmac, long offset, byte[] buff, int off, int length)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__38" onclick="return on(38)">
+<td class="return">SessionInterface</td><td class="method">
+<a id="reconnect_boolean" href="#reconnect_boolean">reconnect</a>(boolean write)
+</td></tr>
+<tr onclick="return off(38)" class="detail" id="_38">
+<td class="return">SessionInterface</td><td>
+<a id="reconnect_boolean" href="#reconnect_boolean">reconnect</a>(boolean write)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__39" onclick="return on(39)">
+<td class="return">void</td><td class="method">
+<a id="removeServer_IOException_int_int" href="#removeServer_IOException_int_int">removeServer</a>(IOException e, int i, int count)
+<div class="methodText">Remove a server from the list of cluster nodes and disables the cluster
+ mode.</div>
+</td></tr>
+<tr onclick="return off(39)" class="detail" id="_39">
+<td class="return">void</td><td>
+<a id="removeServer_IOException_int_int" href="#removeServer_IOException_int_int">removeServer</a>(IOException e, int i, int count)
+<div class="methodText">Remove a server from the list of cluster nodes and disables the cluster
+ mode.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">e - the exception (used for debugging)</div>
+<div class="item">i - the index of the server to remove</div>
+<div class="item">count - the retry count index</div>
+</td></tr>
+<tr id="__40" onclick="return on(40)">
+<td class="return">void</td><td class="method">
+<a id="setAutoCommit_boolean" href="#setAutoCommit_boolean">setAutoCommit</a>(boolean autoCommit)
+</td></tr>
+<tr onclick="return off(40)" class="detail" id="_40">
+<td class="return">void</td><td>
+<a id="setAutoCommit_boolean" href="#setAutoCommit_boolean">setAutoCommit</a>(boolean autoCommit)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__41" onclick="return on(41)">
+<td class="return">void</td><td class="method">
+<a id="setAutoCommitFromServer_boolean" href="#setAutoCommitFromServer_boolean">setAutoCommitFromServer</a>(boolean autoCommit)
+</td></tr>
+<tr onclick="return off(41)" class="detail" id="_41">
+<td class="return">void</td><td>
+<a id="setAutoCommitFromServer_boolean" href="#setAutoCommitFromServer_boolean">setAutoCommitFromServer</a>(boolean autoCommit)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__42" onclick="return on(42)">
+<td class="return">void</td><td class="method">
+<a id="setCurrentSchemaName_String" href="#setCurrentSchemaName_String">setCurrentSchemaName</a>(String schema)
+</td></tr>
+<tr onclick="return off(42)" class="detail" id="_42">
+<td class="return">void</td><td>
+<a id="setCurrentSchemaName_String" href="#setCurrentSchemaName_String">setCurrentSchemaName</a>(String schema)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__43" onclick="return on(43)">
+<td class="return">void</td><td class="method">
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int count)
+</td></tr>
+<tr onclick="return off(43)" class="detail" id="_43">
+<td class="return">void</td><td>
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int count)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__44" onclick="return on(44)">
+<td class="return">void</td><td class="method">
+<a id="traceOperation_String_int" href="#traceOperation_String_int">traceOperation</a>(String operation, int id)
+<div class="methodText">Write the operation to the trace system if debug trace is enabled.</div>
+</td></tr>
+<tr onclick="return off(44)" class="detail" id="_44">
+<td class="return">void</td><td>
+<a id="traceOperation_String_int" href="#traceOperation_String_int">traceOperation</a>(String operation, int id)
+<div class="methodText">Write the operation to the trace system if debug trace is enabled.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">operation - the operation performed</div>
+<div class="item">id - the id of the operation</div>
+</td></tr>
+</table>
+</div></td></tr></table></body></html>

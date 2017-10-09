@@ -1,0 +1,13 @@
+--- a/src/simplex/spxchuzr.c	2017-07-25 20:46:09.526049834 +0200
++++ b/src/simplex/spxchuzr.c	2017-07-25 20:46:29.324146531 +0200
+@@ -21,6 +21,10 @@
+ *  along with GLPK. If not, see <http://www.gnu.org/licenses/>.
+ ***********************************************************************/
+ 
++#ifdef HAVE_CONFIG_H
++#include <config.h>
++#endif
++
+ #include "env.h"
+ #include "spxchuzr.h"
+ 

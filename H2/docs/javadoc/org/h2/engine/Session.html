@@ -1,0 +1,1350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+Session
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>Session</h1>
+A session represents an embedded database connection. When using the server
+ mode, this object resides on the server side and communicates with a
+ SessionRemote object on the client side.<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">void</td><td class="method">
+<a id="addLocalTempTable_Table" href="#addLocalTempTable_Table">addLocalTempTable</a>(Table table)
+<div class="methodText">Add a local temporary table to this session.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">void</td><td>
+<a id="addLocalTempTable_Table" href="#addLocalTempTable_Table">addLocalTempTable</a>(Table table)
+<div class="methodText">Add a local temporary table to this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">table - the table to add</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if a table with this name already exists</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">void</td><td class="method">
+<a id="addLocalTempTableConstraint_Constraint" href="#addLocalTempTableConstraint_Constraint">addLocalTempTableConstraint</a>(Constraint constraint)
+<div class="methodText">Add a local temporary constraint to this session.</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">void</td><td>
+<a id="addLocalTempTableConstraint_Constraint" href="#addLocalTempTableConstraint_Constraint">addLocalTempTableConstraint</a>(Constraint constraint)
+<div class="methodText">Add a local temporary constraint to this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">constraint - the constraint to add</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if a constraint with the same name already exists</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">void</td><td class="method">
+<a id="addLocalTempTableIndex_Index" href="#addLocalTempTableIndex_Index">addLocalTempTableIndex</a>(Index index)
+<div class="methodText">Add a local temporary index to this session.</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">void</td><td>
+<a id="addLocalTempTableIndex_Index" href="#addLocalTempTableIndex_Index">addLocalTempTableIndex</a>(Index index)
+<div class="methodText">Add a local temporary index to this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">index - the index to add</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if a index with this name already exists</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">void</td><td class="method">
+<a id="addLock_Table" href="#addLock_Table">addLock</a>(Table table)
+<div class="methodText">Add a lock for the given table.</div>
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">void</td><td>
+<a id="addLock_Table" href="#addLock_Table">addLock</a>(Table table)
+<div class="methodText">Add a lock for the given table. The object is unlocked on commit or
+ rollback.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">table - the table that is locked</div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">void</td><td class="method">
+<a id="addLogPos_int_int" href="#addLogPos_int_int">addLogPos</a>(int logId, int pos)
+<div class="methodText">Called when a log entry for this session is added.</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">void</td><td>
+<a id="addLogPos_int_int" href="#addLogPos_int_int">addLogPos</a>(int logId, int pos)
+<div class="methodText">Called when a log entry for this session is added. The session keeps
+ track of the first entry in the transaction log that is not yet
+ committed.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">logId - the transaction log id</div>
+<div class="item">pos - the position of the log entry in the transaction log</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">void</td><td class="method">
+<a id="addProcedure_Procedure" href="#addProcedure_Procedure">addProcedure</a>(Procedure procedure)
+<div class="methodText">Add a procedure to this session.</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">void</td><td>
+<a id="addProcedure_Procedure" href="#addProcedure_Procedure">addProcedure</a>(Procedure procedure)
+<div class="methodText">Add a procedure to this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">procedure - the procedure to add</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">void</td><td class="method">
+<a id="addSavepoint_String" href="#addSavepoint_String">addSavepoint</a>(String name)
+<div class="methodText">Create a savepoint that is linked to the current log position.</div>
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">void</td><td>
+<a id="addSavepoint_String" href="#addSavepoint_String">addSavepoint</a>(String name)
+<div class="methodText">Create a savepoint that is linked to the current log position.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the savepoint name</div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">void</td><td class="method">
+<a id="addTemporaryLob_Value" href="#addTemporaryLob_Value">addTemporaryLob</a>(Value v)
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">void</td><td>
+<a id="addTemporaryLob_Value" href="#addTemporaryLob_Value">addTemporaryLob</a>(Value v)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">void</td><td class="method">
+<a id="addTemporaryResult_ResultInterface" href="#addTemporaryResult_ResultInterface">addTemporaryResult</a>(ResultInterface result)
+<div class="methodText">Remember the result set and close it as soon as the transaction is
+ committed (if it needs to be closed).</div>
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">void</td><td>
+<a id="addTemporaryResult_ResultInterface" href="#addTemporaryResult_ResultInterface">addTemporaryResult</a>(ResultInterface result)
+<div class="methodText">Remember the result set and close it as soon as the transaction is
+ committed (if it needs to be closed). This is done to delete temporary
+ files as soon as possible, and free object ids of temporary tables.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">result - the temporary result set</div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">void</td><td class="method">
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">void</td><td>
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__10" onclick="return on(10)">
+<td class="return">void</td><td class="method">
+<a id="begin" href="#begin">begin</a>()
+<div class="methodText">Begin a transaction.</div>
+</td></tr>
+<tr onclick="return off(10)" class="detail" id="_10">
+<td class="return">void</td><td>
+<a id="begin" href="#begin">begin</a>()
+<div class="methodText">Begin a transaction.</div>
+</td></tr>
+<tr id="__11" onclick="return on(11)">
+<td class="return">void</td><td class="method">
+<a id="cancel" href="#cancel">cancel</a>()
+</td></tr>
+<tr onclick="return off(11)" class="detail" id="_11">
+<td class="return">void</td><td>
+<a id="cancel" href="#cancel">cancel</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__12" onclick="return on(12)">
+<td class="return">void</td><td class="method">
+<a id="checkCanceled" href="#checkCanceled">checkCanceled</a>()
+<div class="methodText">Check if the current transaction is canceled by calling
+ Statement.cancel() or because a session timeout was set and expired.</div>
+</td></tr>
+<tr onclick="return off(12)" class="detail" id="_12">
+<td class="return">void</td><td>
+<a id="checkCanceled" href="#checkCanceled">checkCanceled</a>()
+<div class="methodText">Check if the current transaction is canceled by calling
+ Statement.cancel() or because a session timeout was set and expired.</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if the transaction is canceled</div>
+</td></tr>
+<tr id="__13" onclick="return on(13)">
+<td class="return">void</td><td class="method">
+<a id="clearViewIndexCache" href="#clearViewIndexCache">clearViewIndexCache</a>()
+<div class="methodText">Clear the view cache for this session.</div>
+</td></tr>
+<tr onclick="return off(13)" class="detail" id="_13">
+<td class="return">void</td><td>
+<a id="clearViewIndexCache" href="#clearViewIndexCache">clearViewIndexCache</a>()
+<div class="methodText">Clear the view cache for this session.</div>
+</td></tr>
+<tr id="__14" onclick="return on(14)">
+<td class="return">void</td><td class="method">
+<a id="close" href="#close">close</a>()
+</td></tr>
+<tr onclick="return off(14)" class="detail" id="_14">
+<td class="return">void</td><td>
+<a id="close" href="#close">close</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__15" onclick="return on(15)">
+<td class="return">void</td><td class="method">
+<a id="commit_boolean" href="#commit_boolean">commit</a>(boolean ddl)
+<div class="methodText">Commit the current transaction.</div>
+</td></tr>
+<tr onclick="return off(15)" class="detail" id="_15">
+<td class="return">void</td><td>
+<a id="commit_boolean" href="#commit_boolean">commit</a>(boolean ddl)
+<div class="methodText">Commit the current transaction. If the statement was not a data
+ definition statement, and if there are temporary tables that should be
+ dropped or truncated at commit, this is done as well.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">ddl - if the statement was a data definition statement</div>
+</td></tr>
+<tr id="__16" onclick="return on(16)">
+<td class="return">boolean</td><td class="method">
+<a id="containsUncommitted" href="#containsUncommitted">containsUncommitted</a>()
+<div class="methodText">Whether the session contains any uncommitted changes.</div>
+</td></tr>
+<tr onclick="return off(16)" class="detail" id="_16">
+<td class="return">boolean</td><td>
+<a id="containsUncommitted" href="#containsUncommitted">containsUncommitted</a>()
+<div class="methodText">Whether the session contains any uncommitted changes.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if yes</div>
+</td></tr>
+<tr id="__17" onclick="return on(17)">
+<td class="return">JdbcConnection</td><td class="method">
+<a id="createConnection_boolean" href="#createConnection_boolean">createConnection</a>(boolean columnList)
+<div class="methodText">Create an internal connection.</div>
+</td></tr>
+<tr onclick="return off(17)" class="detail" id="_17">
+<td class="return">JdbcConnection</td><td>
+<a id="createConnection_boolean" href="#createConnection_boolean">createConnection</a>(boolean columnList)
+<div class="methodText">Create an internal connection. This connection is used when initializing
+ triggers, and when calling user defined functions.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">columnList - if the url should be 'jdbc:columnlist:connection'</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the internal connection</div>
+</td></tr>
+<tr id="__18" onclick="return on(18)">
+<td class="return">Row</td><td class="method">
+<a id="createRow_Value-_int" href="#createRow_Value-_int">createRow</a>(Value[] data, int memory)
+<div class="methodText">Create a new row for a table.</div>
+</td></tr>
+<tr onclick="return off(18)" class="detail" id="_18">
+<td class="return">Row</td><td>
+<a id="createRow_Value-_int" href="#createRow_Value-_int">createRow</a>(Value[] data, int memory)
+<div class="methodText">Create a new row for a table.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">data - the values</div>
+<div class="item">memory - whether the row is in memory</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the created row</div>
+</td></tr>
+<tr id="__19" onclick="return on(19)">
+<td class="return">void</td><td class="method">
+<a id="endStatement" href="#endStatement">endStatement</a>()
+<div class="methodText">Mark the statement as completed.</div>
+</td></tr>
+<tr onclick="return off(19)" class="detail" id="_19">
+<td class="return">void</td><td>
+<a id="endStatement" href="#endStatement">endStatement</a>()
+<div class="methodText">Mark the statement as completed. This also close all temporary result
+ set, and deletes all temporary files held by the result sets.</div>
+</td></tr>
+<tr id="__20" onclick="return on(20)">
+<td class="return">Table</td><td class="method">
+<a id="findLocalTempTable_String" href="#findLocalTempTable_String">findLocalTempTable</a>(String name)
+<div class="methodText">Get the local temporary table if one exists with that name, or null if
+ not.</div>
+</td></tr>
+<tr onclick="return off(20)" class="detail" id="_20">
+<td class="return">Table</td><td>
+<a id="findLocalTempTable_String" href="#findLocalTempTable_String">findLocalTempTable</a>(String name)
+<div class="methodText">Get the local temporary table if one exists with that name, or null if
+ not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the table name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the table, or null</div>
+</td></tr>
+<tr id="__21" onclick="return on(21)">
+<td class="return">Constraint</td><td class="method">
+<a id="findLocalTempTableConstraint_String" href="#findLocalTempTableConstraint_String">findLocalTempTableConstraint</a>(String name)
+<div class="methodText">Get the local temporary constraint if one exists with that name, or
+ null if not.</div>
+</td></tr>
+<tr onclick="return off(21)" class="detail" id="_21">
+<td class="return">Constraint</td><td>
+<a id="findLocalTempTableConstraint_String" href="#findLocalTempTableConstraint_String">findLocalTempTableConstraint</a>(String name)
+<div class="methodText">Get the local temporary constraint if one exists with that name, or
+ null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the constraint name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the constraint, or null</div>
+</td></tr>
+<tr id="__22" onclick="return on(22)">
+<td class="return">Index</td><td class="method">
+<a id="findLocalTempTableIndex_String" href="#findLocalTempTableIndex_String">findLocalTempTableIndex</a>(String name)
+<div class="methodText">Get the local temporary index if one exists with that name, or null if
+ not.</div>
+</td></tr>
+<tr onclick="return off(22)" class="detail" id="_22">
+<td class="return">Index</td><td>
+<a id="findLocalTempTableIndex_String" href="#findLocalTempTableIndex_String">findLocalTempTableIndex</a>(String name)
+<div class="methodText">Get the local temporary index if one exists with that name, or null if
+ not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the table name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the table, or null</div>
+</td></tr>
+<tr id="__23" onclick="return on(23)">
+<td class="return">boolean</td><td class="method">
+<a id="getAllowLiterals" href="#getAllowLiterals">getAllowLiterals</a>()
+</td></tr>
+<tr onclick="return off(23)" class="detail" id="_23">
+<td class="return">boolean</td><td>
+<a id="getAllowLiterals" href="#getAllowLiterals">getAllowLiterals</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__24" onclick="return on(24)">
+<td class="return">boolean</td><td class="method">
+<a id="getAutoCommit" href="#getAutoCommit">getAutoCommit</a>()
+</td></tr>
+<tr onclick="return off(24)" class="detail" id="_24">
+<td class="return">boolean</td><td>
+<a id="getAutoCommit" href="#getAutoCommit">getAutoCommit</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__25" onclick="return on(25)">
+<td class="return">long</td><td class="method">
+<a id="getCancel" href="#getCancel">getCancel</a>()
+<div class="methodText">Get the cancel time.</div>
+</td></tr>
+<tr onclick="return off(25)" class="detail" id="_25">
+<td class="return">long</td><td>
+<a id="getCancel" href="#getCancel">getCancel</a>()
+<div class="methodText">Get the cancel time.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the time or 0 if not set</div>
+</td></tr>
+<tr id="__26" onclick="return on(26)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getClusterServers" href="#getClusterServers">getClusterServers</a>()
+</td></tr>
+<tr onclick="return off(26)" class="detail" id="_26">
+<td class="return">ArrayList</td><td>
+<a id="getClusterServers" href="#getClusterServers">getClusterServers</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__27" onclick="return on(27)">
+<td class="return">Command</td><td class="method">
+<a id="getCurrentCommand" href="#getCurrentCommand">getCurrentCommand</a>()
+</td></tr>
+<tr onclick="return off(27)" class="detail" id="_27">
+<td class="return">Command</td><td>
+<a id="getCurrentCommand" href="#getCurrentCommand">getCurrentCommand</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__28" onclick="return on(28)">
+<td class="return">long</td><td class="method">
+<a id="getCurrentCommandStart" href="#getCurrentCommandStart">getCurrentCommandStart</a>()
+</td></tr>
+<tr onclick="return off(28)" class="detail" id="_28">
+<td class="return">long</td><td>
+<a id="getCurrentCommandStart" href="#getCurrentCommandStart">getCurrentCommandStart</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__29" onclick="return on(29)">
+<td class="return">String</td><td class="method">
+<a id="getCurrentSchemaName" href="#getCurrentSchemaName">getCurrentSchemaName</a>()
+</td></tr>
+<tr onclick="return off(29)" class="detail" id="_29">
+<td class="return">String</td><td>
+<a id="getCurrentSchemaName" href="#getCurrentSchemaName">getCurrentSchemaName</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__30" onclick="return on(30)">
+<td class="return">DataHandler</td><td class="method">
+<a id="getDataHandler" href="#getDataHandler">getDataHandler</a>()
+</td></tr>
+<tr onclick="return off(30)" class="detail" id="_30">
+<td class="return">DataHandler</td><td>
+<a id="getDataHandler" href="#getDataHandler">getDataHandler</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__31" onclick="return on(31)">
+<td class="return">Database</td><td class="method">
+<a id="getDatabase" href="#getDatabase">getDatabase</a>()
+</td></tr>
+<tr onclick="return off(31)" class="detail" id="_31">
+<td class="return">Database</td><td>
+<a id="getDatabase" href="#getDatabase">getDatabase</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__32" onclick="return on(32)">
+<td class="return">int</td><td class="method">
+<a id="getFirstUncommittedLog" href="#getFirstUncommittedLog">getFirstUncommittedLog</a>()
+</td></tr>
+<tr onclick="return off(32)" class="detail" id="_32">
+<td class="return">int</td><td>
+<a id="getFirstUncommittedLog" href="#getFirstUncommittedLog">getFirstUncommittedLog</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__33" onclick="return on(33)">
+<td class="return">int</td><td class="method">
+<a id="getId" href="#getId">getId</a>()
+</td></tr>
+<tr onclick="return off(33)" class="detail" id="_33">
+<td class="return">int</td><td>
+<a id="getId" href="#getId">getId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__34" onclick="return on(34)">
+<td class="return">Value</td><td class="method">
+<a id="getLastIdentity" href="#getLastIdentity">getLastIdentity</a>()
+</td></tr>
+<tr onclick="return off(34)" class="detail" id="_34">
+<td class="return">Value</td><td>
+<a id="getLastIdentity" href="#getLastIdentity">getLastIdentity</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__35" onclick="return on(35)">
+<td class="return">Value</td><td class="method">
+<a id="getLastScopeIdentity" href="#getLastScopeIdentity">getLastScopeIdentity</a>()
+</td></tr>
+<tr onclick="return off(35)" class="detail" id="_35">
+<td class="return">Value</td><td>
+<a id="getLastScopeIdentity" href="#getLastScopeIdentity">getLastScopeIdentity</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__36" onclick="return on(36)">
+<td class="return">Value</td><td class="method">
+<a id="getLastTriggerIdentity" href="#getLastTriggerIdentity">getLastTriggerIdentity</a>()
+</td></tr>
+<tr onclick="return off(36)" class="detail" id="_36">
+<td class="return">Value</td><td>
+<a id="getLastTriggerIdentity" href="#getLastTriggerIdentity">getLastTriggerIdentity</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__37" onclick="return on(37)">
+<td class="return">HashMap</td><td class="method">
+<a id="getLocalTempTableConstraints" href="#getLocalTempTableConstraints">getLocalTempTableConstraints</a>()
+<div class="methodText">Get the map of constraints for all constraints on local, temporary
+ tables, if any.</div>
+</td></tr>
+<tr onclick="return off(37)" class="detail" id="_37">
+<td class="return">HashMap</td><td>
+<a id="getLocalTempTableConstraints" href="#getLocalTempTableConstraints">getLocalTempTableConstraints</a>()
+<div class="methodText">Get the map of constraints for all constraints on local, temporary
+ tables, if any. The map's keys are the constraints' names.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the map of constraints, or null</div>
+</td></tr>
+<tr id="__38" onclick="return on(38)">
+<td class="return">HashMap</td><td class="method">
+<a id="getLocalTempTableIndexes" href="#getLocalTempTableIndexes">getLocalTempTableIndexes</a>()
+</td></tr>
+<tr onclick="return off(38)" class="detail" id="_38">
+<td class="return">HashMap</td><td>
+<a id="getLocalTempTableIndexes" href="#getLocalTempTableIndexes">getLocalTempTableIndexes</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__39" onclick="return on(39)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getLocalTempTables" href="#getLocalTempTables">getLocalTempTables</a>()
+</td></tr>
+<tr onclick="return off(39)" class="detail" id="_39">
+<td class="return">ArrayList</td><td>
+<a id="getLocalTempTables" href="#getLocalTempTables">getLocalTempTables</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__40" onclick="return on(40)">
+<td class="return">int</td><td class="method">
+<a id="getLockTimeout" href="#getLockTimeout">getLockTimeout</a>()
+</td></tr>
+<tr onclick="return off(40)" class="detail" id="_40">
+<td class="return">int</td><td>
+<a id="getLockTimeout" href="#getLockTimeout">getLockTimeout</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__41" onclick="return on(41)">
+<td class="return">Table[]</td><td class="method">
+<a id="getLocks" href="#getLocks">getLocks</a>()
+</td></tr>
+<tr onclick="return off(41)" class="detail" id="_41">
+<td class="return">Table[]</td><td>
+<a id="getLocks" href="#getLocks">getLocks</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__42" onclick="return on(42)">
+<td class="return">int</td><td class="method">
+<a id="getModificationId" href="#getModificationId">getModificationId</a>()
+</td></tr>
+<tr onclick="return off(42)" class="detail" id="_42">
+<td class="return">int</td><td>
+<a id="getModificationId" href="#getModificationId">getModificationId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__43" onclick="return on(43)">
+<td class="return">String</td><td class="method">
+<a id="getNextSystemIdentifier_String" href="#getNextSystemIdentifier_String">getNextSystemIdentifier</a>(String sql)
+<div class="methodText">Get the next system generated identifiers.</div>
+</td></tr>
+<tr onclick="return off(43)" class="detail" id="_43">
+<td class="return">String</td><td>
+<a id="getNextSystemIdentifier_String" href="#getNextSystemIdentifier_String">getNextSystemIdentifier</a>(String sql)
+<div class="methodText">Get the next system generated identifiers. The identifier returned does
+ not occur within the given SQL statement.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">sql - the SQL statement</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the new identifier</div>
+</td></tr>
+<tr id="__44" onclick="return on(44)">
+<td class="return">int</td><td class="method">
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+</td></tr>
+<tr onclick="return off(44)" class="detail" id="_44">
+<td class="return">int</td><td>
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__45" onclick="return on(45)">
+<td class="return">Procedure</td><td class="method">
+<a id="getProcedure_String" href="#getProcedure_String">getProcedure</a>(String name)
+<div class="methodText">Get the procedure with the given name, or null
+ if none exists.</div>
+</td></tr>
+<tr onclick="return off(45)" class="detail" id="_45">
+<td class="return">Procedure</td><td>
+<a id="getProcedure_String" href="#getProcedure_String">getProcedure</a>(String name)
+<div class="methodText">Get the procedure with the given name, or null
+ if none exists.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the procedure name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the procedure or null</div>
+</td></tr>
+<tr id="__46" onclick="return on(46)">
+<td class="return">int</td><td class="method">
+<a id="getQueryTimeout" href="#getQueryTimeout">getQueryTimeout</a>()
+</td></tr>
+<tr onclick="return off(46)" class="detail" id="_46">
+<td class="return">int</td><td>
+<a id="getQueryTimeout" href="#getQueryTimeout">getQueryTimeout</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__47" onclick="return on(47)">
+<td class="return">Random</td><td class="method">
+<a id="getRandom" href="#getRandom">getRandom</a>()
+</td></tr>
+<tr onclick="return off(47)" class="detail" id="_47">
+<td class="return">Random</td><td>
+<a id="getRandom" href="#getRandom">getRandom</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__48" onclick="return on(48)">
+<td class="return">String[]</td><td class="method">
+<a id="getSchemaSearchPath" href="#getSchemaSearchPath">getSchemaSearchPath</a>()
+</td></tr>
+<tr onclick="return off(48)" class="detail" id="_48">
+<td class="return">String[]</td><td>
+<a id="getSchemaSearchPath" href="#getSchemaSearchPath">getSchemaSearchPath</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__49" onclick="return on(49)">
+<td class="return">long</td><td class="method">
+<a id="getSessionStart" href="#getSessionStart">getSessionStart</a>()
+</td></tr>
+<tr onclick="return off(49)" class="detail" id="_49">
+<td class="return">long</td><td>
+<a id="getSessionStart" href="#getSessionStart">getSessionStart</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__50" onclick="return on(50)">
+<td class="return">long</td><td class="method">
+<a id="getStatementSavepoint" href="#getStatementSavepoint">getStatementSavepoint</a>()
+</td></tr>
+<tr onclick="return off(50)" class="detail" id="_50">
+<td class="return">long</td><td>
+<a id="getStatementSavepoint" href="#getStatementSavepoint">getStatementSavepoint</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__51" onclick="return on(51)">
+<td class="return">SubQueryInfo</td><td class="method">
+<a id="getSubQueryInfo" href="#getSubQueryInfo">getSubQueryInfo</a>()
+</td></tr>
+<tr onclick="return off(51)" class="detail" id="_51">
+<td class="return">SubQueryInfo</td><td>
+<a id="getSubQueryInfo" href="#getSubQueryInfo">getSubQueryInfo</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__52" onclick="return on(52)">
+<td class="return">Trace</td><td class="method">
+<a id="getTrace" href="#getTrace">getTrace</a>()
+</td></tr>
+<tr onclick="return off(52)" class="detail" id="_52">
+<td class="return">Trace</td><td>
+<a id="getTrace" href="#getTrace">getTrace</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__53" onclick="return on(53)">
+<td class="return">TransactionStore.Transaction</td><td class="method">
+<a id="getTransaction" href="#getTransaction">getTransaction</a>()
+<div class="methodText">Get the transaction to use for this session.</div>
+</td></tr>
+<tr onclick="return off(53)" class="detail" id="_53">
+<td class="return">TransactionStore.Transaction</td><td>
+<a id="getTransaction" href="#getTransaction">getTransaction</a>()
+<div class="methodText">Get the transaction to use for this session.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the transaction</div>
+</td></tr>
+<tr id="__54" onclick="return on(54)">
+<td class="return">Value</td><td class="method">
+<a id="getTransactionId" href="#getTransactionId">getTransactionId</a>()
+</td></tr>
+<tr onclick="return off(54)" class="detail" id="_54">
+<td class="return">Value</td><td>
+<a id="getTransactionId" href="#getTransactionId">getTransactionId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__55" onclick="return on(55)">
+<td class="return">long</td><td class="method">
+<a id="getTransactionStart" href="#getTransactionStart">getTransactionStart</a>()
+</td></tr>
+<tr onclick="return off(55)" class="detail" id="_55">
+<td class="return">long</td><td>
+<a id="getTransactionStart" href="#getTransactionStart">getTransactionStart</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__56" onclick="return on(56)">
+<td class="return">User</td><td class="method">
+<a id="getUser" href="#getUser">getUser</a>()
+</td></tr>
+<tr onclick="return off(56)" class="detail" id="_56">
+<td class="return">User</td><td>
+<a id="getUser" href="#getUser">getUser</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__57" onclick="return on(57)">
+<td class="return">Value</td><td class="method">
+<a id="getVariable_String" href="#getVariable_String">getVariable</a>(String name)
+<div class="methodText">Get the value of the specified user defined variable.</div>
+</td></tr>
+<tr onclick="return off(57)" class="detail" id="_57">
+<td class="return">Value</td><td>
+<a id="getVariable_String" href="#getVariable_String">getVariable</a>(String name)
+<div class="methodText">Get the value of the specified user defined variable. This method always
+ returns a value; it returns ValueNull.INSTANCE if the variable doesn't
+ exist.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the variable name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the value, or NULL</div>
+</td></tr>
+<tr id="__58" onclick="return on(58)">
+<td class="return">String[]</td><td class="method">
+<a id="getVariableNames" href="#getVariableNames">getVariableNames</a>()
+<div class="methodText">Get the list of variable names that are set for this session.</div>
+</td></tr>
+<tr onclick="return off(58)" class="detail" id="_58">
+<td class="return">String[]</td><td>
+<a id="getVariableNames" href="#getVariableNames">getVariableNames</a>()
+<div class="methodText">Get the list of variable names that are set for this session.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the list of names</div>
+</td></tr>
+<tr id="__59" onclick="return on(59)">
+<td class="return">Map</td><td class="method">
+<a id="getViewIndexCache_boolean" href="#getViewIndexCache_boolean">getViewIndexCache</a>(boolean subQuery)
+<div class="methodText">Get the view cache for this session.</div>
+</td></tr>
+<tr onclick="return off(59)" class="detail" id="_59">
+<td class="return">Map</td><td>
+<a id="getViewIndexCache_boolean" href="#getViewIndexCache_boolean">getViewIndexCache</a>(boolean subQuery)
+<div class="methodText">Get the view cache for this session. There are two caches: the subquery
+ cache (which is only use for a single query, has no bounds, and is
+ cleared after use), and the cache for regular views.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">subQuery - true to get the subquery cache</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the view cache</div>
+</td></tr>
+<tr id="__60" onclick="return on(60)">
+<td class="return">Table</td><td class="method">
+<a id="getWaitForLock" href="#getWaitForLock">getWaitForLock</a>()
+</td></tr>
+<tr onclick="return off(60)" class="detail" id="_60">
+<td class="return">Table</td><td>
+<a id="getWaitForLock" href="#getWaitForLock">getWaitForLock</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__61" onclick="return on(61)">
+<td class="return">Thread</td><td class="method">
+<a id="getWaitForLockThread" href="#getWaitForLockThread">getWaitForLockThread</a>()
+</td></tr>
+<tr onclick="return off(61)" class="detail" id="_61">
+<td class="return">Thread</td><td>
+<a id="getWaitForLockThread" href="#getWaitForLockThread">getWaitForLockThread</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__62" onclick="return on(62)">
+<td class="return">boolean</td><td class="method">
+<a id="hasPendingTransaction" href="#hasPendingTransaction">hasPendingTransaction</a>()
+</td></tr>
+<tr onclick="return off(62)" class="detail" id="_62">
+<td class="return">boolean</td><td>
+<a id="hasPendingTransaction" href="#hasPendingTransaction">hasPendingTransaction</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__63" onclick="return on(63)">
+<td class="return">int</td><td class="method">
+<a id="hashCode" href="#hashCode">hashCode</a>()
+</td></tr>
+<tr onclick="return off(63)" class="detail" id="_63">
+<td class="return">int</td><td>
+<a id="hashCode" href="#hashCode">hashCode</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__64" onclick="return on(64)">
+<td class="return">boolean</td><td class="method">
+<a id="isClosed" href="#isClosed">isClosed</a>()
+</td></tr>
+<tr onclick="return off(64)" class="detail" id="_64">
+<td class="return">boolean</td><td>
+<a id="isClosed" href="#isClosed">isClosed</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__65" onclick="return on(65)">
+<td class="return">boolean</td><td class="method">
+<a id="isForceJoinOrder" href="#isForceJoinOrder">isForceJoinOrder</a>()
+</td></tr>
+<tr onclick="return off(65)" class="detail" id="_65">
+<td class="return">boolean</td><td>
+<a id="isForceJoinOrder" href="#isForceJoinOrder">isForceJoinOrder</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__66" onclick="return on(66)">
+<td class="return">boolean</td><td class="method">
+<a id="isJoinBatchEnabled" href="#isJoinBatchEnabled">isJoinBatchEnabled</a>()
+</td></tr>
+<tr onclick="return off(66)" class="detail" id="_66">
+<td class="return">boolean</td><td>
+<a id="isJoinBatchEnabled" href="#isJoinBatchEnabled">isJoinBatchEnabled</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__67" onclick="return on(67)">
+<td class="return">boolean</td><td class="method">
+<a id="isLazyQueryExecution" href="#isLazyQueryExecution">isLazyQueryExecution</a>()
+</td></tr>
+<tr onclick="return off(67)" class="detail" id="_67">
+<td class="return">boolean</td><td>
+<a id="isLazyQueryExecution" href="#isLazyQueryExecution">isLazyQueryExecution</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__68" onclick="return on(68)">
+<td class="return">boolean</td><td class="method">
+<a id="isParsingView" href="#isParsingView">isParsingView</a>()
+</td></tr>
+<tr onclick="return off(68)" class="detail" id="_68">
+<td class="return">boolean</td><td>
+<a id="isParsingView" href="#isParsingView">isParsingView</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__69" onclick="return on(69)">
+<td class="return">boolean</td><td class="method">
+<a id="isPreparingQueryExpression" href="#isPreparingQueryExpression">isPreparingQueryExpression</a>()
+</td></tr>
+<tr onclick="return off(69)" class="detail" id="_69">
+<td class="return">boolean</td><td>
+<a id="isPreparingQueryExpression" href="#isPreparingQueryExpression">isPreparingQueryExpression</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__70" onclick="return on(70)">
+<td class="return">boolean</td><td class="method">
+<a id="isReconnectNeeded_boolean" href="#isReconnectNeeded_boolean">isReconnectNeeded</a>(boolean write)
+</td></tr>
+<tr onclick="return off(70)" class="detail" id="_70">
+<td class="return">boolean</td><td>
+<a id="isReconnectNeeded_boolean" href="#isReconnectNeeded_boolean">isReconnectNeeded</a>(boolean write)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__71" onclick="return on(71)">
+<td class="return">boolean</td><td class="method">
+<a id="isRedoLogBinaryEnabled" href="#isRedoLogBinaryEnabled">isRedoLogBinaryEnabled</a>()
+</td></tr>
+<tr onclick="return off(71)" class="detail" id="_71">
+<td class="return">boolean</td><td>
+<a id="isRedoLogBinaryEnabled" href="#isRedoLogBinaryEnabled">isRedoLogBinaryEnabled</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__72" onclick="return on(72)">
+<td class="return">boolean</td><td class="method">
+<a id="isRemote" href="#isRemote">isRemote</a>()
+</td></tr>
+<tr onclick="return off(72)" class="detail" id="_72">
+<td class="return">boolean</td><td>
+<a id="isRemote" href="#isRemote">isRemote</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__73" onclick="return on(73)">
+<td class="return">boolean</td><td class="method">
+<a id="isUndoLogEnabled" href="#isUndoLogEnabled">isUndoLogEnabled</a>()
+</td></tr>
+<tr onclick="return off(73)" class="detail" id="_73">
+<td class="return">boolean</td><td>
+<a id="isUndoLogEnabled" href="#isUndoLogEnabled">isUndoLogEnabled</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__74" onclick="return on(74)">
+<td class="return">void</td><td class="method">
+<a id="log_Table_short_Row" href="#log_Table_short_Row">log</a>(Table table, short operation, Row row)
+<div class="methodText">Add an undo log entry to this session.</div>
+</td></tr>
+<tr onclick="return off(74)" class="detail" id="_74">
+<td class="return">void</td><td>
+<a id="log_Table_short_Row" href="#log_Table_short_Row">log</a>(Table table, short operation, Row row)
+<div class="methodText">Add an undo log entry to this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">table - the table</div>
+<div class="item">operation - the operation type (see {@link UndoLogRecord})</div>
+<div class="item">row - the row</div>
+</td></tr>
+<tr id="__75" onclick="return on(75)">
+<td class="return">int</td><td class="method">
+<a id="nextObjectId" href="#nextObjectId">nextObjectId</a>()
+<div class="methodText">Get the next object id.</div>
+</td></tr>
+<tr onclick="return off(75)" class="detail" id="_75">
+<td class="return">int</td><td>
+<a id="nextObjectId" href="#nextObjectId">nextObjectId</a>()
+<div class="methodText">Get the next object id.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the next object id</div>
+</td></tr>
+<tr id="__76" onclick="return on(76)">
+<td class="return">void</td><td class="method">
+<a id="optimizeQueryExpression_Query" href="#optimizeQueryExpression_Query">optimizeQueryExpression</a>(Query query)
+<div class="methodText">Optimize a query.</div>
+</td></tr>
+<tr onclick="return off(76)" class="detail" id="_76">
+<td class="return">void</td><td>
+<a id="optimizeQueryExpression_Query" href="#optimizeQueryExpression_Query">optimizeQueryExpression</a>(Query query)
+<div class="methodText">Optimize a query. This will remember the subquery info, clear it, prepare
+ the query, and reset the subquery info.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">query - the query to prepare</div>
+</td></tr>
+<tr id="__77" onclick="return on(77)">
+<td class="return">void</td><td class="method">
+<a id="popSubQueryInfo" href="#popSubQueryInfo">popSubQueryInfo</a>()
+<div class="methodText">Remove the current subquery info from the stack.</div>
+</td></tr>
+<tr onclick="return off(77)" class="detail" id="_77">
+<td class="return">void</td><td>
+<a id="popSubQueryInfo" href="#popSubQueryInfo">popSubQueryInfo</a>()
+<div class="methodText">Remove the current subquery info from the stack.</div>
+</td></tr>
+<tr id="__78" onclick="return on(78)">
+<td class="return">Prepared</td><td class="method">
+<a id="prepare_String" href="#prepare_String">prepare</a>(String sql)
+<div class="methodText">Parse and prepare the given SQL statement.</div>
+</td></tr>
+<tr onclick="return off(78)" class="detail" id="_78">
+<td class="return">Prepared</td><td>
+<a id="prepare_String" href="#prepare_String">prepare</a>(String sql)
+<div class="methodText">Parse and prepare the given SQL statement. This method also checks the
+ rights.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">sql - the SQL statement</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the prepared statement</div>
+</td></tr>
+<tr id="__79" onclick="return on(79)">
+<td class="return">Prepared</td><td class="method">
+<a id="prepare_String_boolean" href="#prepare_String_boolean">prepare</a>(String sql, boolean rightsChecked)
+<div class="methodText">Parse and prepare the given SQL statement.</div>
+</td></tr>
+<tr onclick="return off(79)" class="detail" id="_79">
+<td class="return">Prepared</td><td>
+<a id="prepare_String_boolean" href="#prepare_String_boolean">prepare</a>(String sql, boolean rightsChecked)
+<div class="methodText">Parse and prepare the given SQL statement.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">sql - the SQL statement</div>
+<div class="item">rightsChecked - true if the rights have already been checked</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the prepared statement</div>
+</td></tr>
+<tr id="__80" onclick="return on(80)">
+<td class="return">CommandInterface</td><td class="method">
+<a id="prepareCommand_String_int" href="#prepareCommand_String_int">prepareCommand</a>(String sql, int fetchSize)
+</td></tr>
+<tr onclick="return off(80)" class="detail" id="_80">
+<td class="return">CommandInterface</td><td>
+<a id="prepareCommand_String_int" href="#prepareCommand_String_int">prepareCommand</a>(String sql, int fetchSize)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__81" onclick="return on(81)">
+<td class="return">void</td><td class="method">
+<a id="prepareCommit_String" href="#prepareCommit_String">prepareCommit</a>(String transactionName)
+<div class="methodText">Prepare the given transaction.</div>
+</td></tr>
+<tr onclick="return off(81)" class="detail" id="_81">
+<td class="return">void</td><td>
+<a id="prepareCommit_String" href="#prepareCommit_String">prepareCommit</a>(String transactionName)
+<div class="methodText">Prepare the given transaction.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">transactionName - the name of the transaction</div>
+</td></tr>
+<tr id="__82" onclick="return on(82)">
+<td class="return">Command</td><td class="method">
+<a id="prepareLocal_String" href="#prepareLocal_String">prepareLocal</a>(String sql)
+<div class="methodText">Parse and prepare the given SQL statement.</div>
+</td></tr>
+<tr onclick="return off(82)" class="detail" id="_82">
+<td class="return">Command</td><td>
+<a id="prepareLocal_String" href="#prepareLocal_String">prepareLocal</a>(String sql)
+<div class="methodText">Parse and prepare the given SQL statement.
+ This method also checks if the connection has been closed.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">sql - the SQL statement</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the prepared statement</div>
+</td></tr>
+<tr id="__83" onclick="return on(83)">
+<td class="return">void</td><td class="method">
+<a id="pushSubQueryInfo_int-_TableFilter-_int_SortOrder" href="#pushSubQueryInfo_int-_TableFilter-_int_SortOrder">pushSubQueryInfo</a>(int[] masks, TableFilter[] filters, int filter, SortOrder sortOrder)
+<div class="methodText">Add a subquery info on top of the subquery info stack.</div>
+</td></tr>
+<tr onclick="return off(83)" class="detail" id="_83">
+<td class="return">void</td><td>
+<a id="pushSubQueryInfo_int-_TableFilter-_int_SortOrder" href="#pushSubQueryInfo_int-_TableFilter-_int_SortOrder">pushSubQueryInfo</a>(int[] masks, TableFilter[] filters, int filter, SortOrder sortOrder)
+<div class="methodText">Add a subquery info on top of the subquery info stack.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">masks - the mask</div>
+<div class="item">filters - the filters</div>
+<div class="item">filter - the filter index</div>
+<div class="item">sortOrder - the sort order</div>
+</td></tr>
+<tr id="__84" onclick="return on(84)">
+<td class="return">SessionInterface</td><td class="method">
+<a id="reconnect_boolean" href="#reconnect_boolean">reconnect</a>(boolean write)
+</td></tr>
+<tr onclick="return off(84)" class="detail" id="_84">
+<td class="return">SessionInterface</td><td>
+<a id="reconnect_boolean" href="#reconnect_boolean">reconnect</a>(boolean write)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__85" onclick="return on(85)">
+<td class="return">void</td><td class="method">
+<a id="removeAtCommit_Value" href="#removeAtCommit_Value">removeAtCommit</a>(Value v)
+<div class="methodText">Remember that the given LOB value must be removed at commit.</div>
+</td></tr>
+<tr onclick="return off(85)" class="detail" id="_85">
+<td class="return">void</td><td>
+<a id="removeAtCommit_Value" href="#removeAtCommit_Value">removeAtCommit</a>(Value v)
+<div class="methodText">Remember that the given LOB value must be removed at commit.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">v - the value</div>
+</td></tr>
+<tr id="__86" onclick="return on(86)">
+<td class="return">void</td><td class="method">
+<a id="removeAtCommitStop_Value" href="#removeAtCommitStop_Value">removeAtCommitStop</a>(Value v)
+<div class="methodText">Do not remove this LOB value at commit any longer.</div>
+</td></tr>
+<tr onclick="return off(86)" class="detail" id="_86">
+<td class="return">void</td><td>
+<a id="removeAtCommitStop_Value" href="#removeAtCommitStop_Value">removeAtCommitStop</a>(Value v)
+<div class="methodText">Do not remove this LOB value at commit any longer.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">v - the value</div>
+</td></tr>
+<tr id="__87" onclick="return on(87)">
+<td class="return">void</td><td class="method">
+<a id="removeLocalTempTable_Table" href="#removeLocalTempTable_Table">removeLocalTempTable</a>(Table table)
+<div class="methodText">Drop and remove the given local temporary table from this session.</div>
+</td></tr>
+<tr onclick="return off(87)" class="detail" id="_87">
+<td class="return">void</td><td>
+<a id="removeLocalTempTable_Table" href="#removeLocalTempTable_Table">removeLocalTempTable</a>(Table table)
+<div class="methodText">Drop and remove the given local temporary table from this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">table - the table</div>
+</td></tr>
+<tr id="__88" onclick="return on(88)">
+<td class="return">void</td><td class="method">
+<a id="removeLocalTempTableIndex_Index" href="#removeLocalTempTableIndex_Index">removeLocalTempTableIndex</a>(Index index)
+<div class="methodText">Drop and remove the given local temporary index from this session.</div>
+</td></tr>
+<tr onclick="return off(88)" class="detail" id="_88">
+<td class="return">void</td><td>
+<a id="removeLocalTempTableIndex_Index" href="#removeLocalTempTableIndex_Index">removeLocalTempTableIndex</a>(Index index)
+<div class="methodText">Drop and remove the given local temporary index from this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">index - the index</div>
+</td></tr>
+<tr id="__89" onclick="return on(89)">
+<td class="return">void</td><td class="method">
+<a id="removeProcedure_String" href="#removeProcedure_String">removeProcedure</a>(String name)
+<div class="methodText">Remove a procedure from this session.</div>
+</td></tr>
+<tr onclick="return off(89)" class="detail" id="_89">
+<td class="return">void</td><td>
+<a id="removeProcedure_String" href="#removeProcedure_String">removeProcedure</a>(String name)
+<div class="methodText">Remove a procedure from this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the procedure to remove</div>
+</td></tr>
+<tr id="__90" onclick="return on(90)">
+<td class="return">void</td><td class="method">
+<a id="rollback" href="#rollback">rollback</a>()
+<div class="methodText">Fully roll back the current transaction.</div>
+</td></tr>
+<tr onclick="return off(90)" class="detail" id="_90">
+<td class="return">void</td><td>
+<a id="rollback" href="#rollback">rollback</a>()
+<div class="methodText">Fully roll back the current transaction.</div>
+</td></tr>
+<tr id="__91" onclick="return on(91)">
+<td class="return">void</td><td class="method">
+<a id="rollbackTo_Session.Savepoint_boolean" href="#rollbackTo_Session.Savepoint_boolean">rollbackTo</a>(Session.Savepoint savepoint, boolean trimToSize)
+<div class="methodText">Partially roll back the current transaction.</div>
+</td></tr>
+<tr onclick="return off(91)" class="detail" id="_91">
+<td class="return">void</td><td>
+<a id="rollbackTo_Session.Savepoint_boolean" href="#rollbackTo_Session.Savepoint_boolean">rollbackTo</a>(Session.Savepoint savepoint, boolean trimToSize)
+<div class="methodText">Partially roll back the current transaction.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">savepoint - the savepoint to which should be rolled back</div>
+<div class="item">trimToSize - if the list should be trimmed</div>
+</td></tr>
+<tr id="__92" onclick="return on(92)">
+<td class="return">void</td><td class="method">
+<a id="rollbackToSavepoint_String" href="#rollbackToSavepoint_String">rollbackToSavepoint</a>(String name)
+<div class="methodText">Undo all operations back to the log position of the given savepoint.</div>
+</td></tr>
+<tr onclick="return off(92)" class="detail" id="_92">
+<td class="return">void</td><td>
+<a id="rollbackToSavepoint_String" href="#rollbackToSavepoint_String">rollbackToSavepoint</a>(String name)
+<div class="methodText">Undo all operations back to the log position of the given savepoint.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the savepoint name</div>
+</td></tr>
+<tr id="__93" onclick="return on(93)">
+<td class="return">void</td><td class="method">
+<a id="setAllowLiterals_boolean" href="#setAllowLiterals_boolean">setAllowLiterals</a>(boolean b)
+</td></tr>
+<tr onclick="return off(93)" class="detail" id="_93">
+<td class="return">void</td><td>
+<a id="setAllowLiterals_boolean" href="#setAllowLiterals_boolean">setAllowLiterals</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__94" onclick="return on(94)">
+<td class="return">void</td><td class="method">
+<a id="setAutoCommit_boolean" href="#setAutoCommit_boolean">setAutoCommit</a>(boolean b)
+</td></tr>
+<tr onclick="return off(94)" class="detail" id="_94">
+<td class="return">void</td><td>
+<a id="setAutoCommit_boolean" href="#setAutoCommit_boolean">setAutoCommit</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__95" onclick="return on(95)">
+<td class="return">boolean</td><td class="method">
+<a id="setCommitOrRollbackDisabled_boolean" href="#setCommitOrRollbackDisabled_boolean">setCommitOrRollbackDisabled</a>(boolean x)
+</td></tr>
+<tr onclick="return off(95)" class="detail" id="_95">
+<td class="return">boolean</td><td>
+<a id="setCommitOrRollbackDisabled_boolean" href="#setCommitOrRollbackDisabled_boolean">setCommitOrRollbackDisabled</a>(boolean x)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__96" onclick="return on(96)">
+<td class="return">void</td><td class="method">
+<a id="setConnectionInfo_ConnectionInfo" href="#setConnectionInfo_ConnectionInfo">setConnectionInfo</a>(ConnectionInfo ci)
+</td></tr>
+<tr onclick="return off(96)" class="detail" id="_96">
+<td class="return">void</td><td>
+<a id="setConnectionInfo_ConnectionInfo" href="#setConnectionInfo_ConnectionInfo">setConnectionInfo</a>(ConnectionInfo ci)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__97" onclick="return on(97)">
+<td class="return">void</td><td class="method">
+<a id="setCurrentCommand_Command" href="#setCurrentCommand_Command">setCurrentCommand</a>(Command command)
+<div class="methodText">Set the current command of this session.</div>
+</td></tr>
+<tr onclick="return off(97)" class="detail" id="_97">
+<td class="return">void</td><td>
+<a id="setCurrentCommand_Command" href="#setCurrentCommand_Command">setCurrentCommand</a>(Command command)
+<div class="methodText">Set the current command of this session. This is done just before
+ executing the statement.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">command - the command</div>
+</td></tr>
+<tr id="__98" onclick="return on(98)">
+<td class="return">void</td><td class="method">
+<a id="setCurrentSchema_Schema" href="#setCurrentSchema_Schema">setCurrentSchema</a>(Schema schema)
+</td></tr>
+<tr onclick="return off(98)" class="detail" id="_98">
+<td class="return">void</td><td>
+<a id="setCurrentSchema_Schema" href="#setCurrentSchema_Schema">setCurrentSchema</a>(Schema schema)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__99" onclick="return on(99)">
+<td class="return">void</td><td class="method">
+<a id="setCurrentSchemaName_String" href="#setCurrentSchemaName_String">setCurrentSchemaName</a>(String schemaName)
+</td></tr>
+<tr onclick="return off(99)" class="detail" id="_99">
+<td class="return">void</td><td>
+<a id="setCurrentSchemaName_String" href="#setCurrentSchemaName_String">setCurrentSchemaName</a>(String schemaName)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__100" onclick="return on(100)">
+<td class="return">void</td><td class="method">
+<a id="setForceJoinOrder_boolean" href="#setForceJoinOrder_boolean">setForceJoinOrder</a>(boolean forceJoinOrder)
+</td></tr>
+<tr onclick="return off(100)" class="detail" id="_100">
+<td class="return">void</td><td>
+<a id="setForceJoinOrder_boolean" href="#setForceJoinOrder_boolean">setForceJoinOrder</a>(boolean forceJoinOrder)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__101" onclick="return on(101)">
+<td class="return">void</td><td class="method">
+<a id="setJoinBatchEnabled_boolean" href="#setJoinBatchEnabled_boolean">setJoinBatchEnabled</a>(boolean joinBatchEnabled)
+</td></tr>
+<tr onclick="return off(101)" class="detail" id="_101">
+<td class="return">void</td><td>
+<a id="setJoinBatchEnabled_boolean" href="#setJoinBatchEnabled_boolean">setJoinBatchEnabled</a>(boolean joinBatchEnabled)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__102" onclick="return on(102)">
+<td class="return">void</td><td class="method">
+<a id="setLastIdentity_Value" href="#setLastIdentity_Value">setLastIdentity</a>(Value last)
+</td></tr>
+<tr onclick="return off(102)" class="detail" id="_102">
+<td class="return">void</td><td>
+<a id="setLastIdentity_Value" href="#setLastIdentity_Value">setLastIdentity</a>(Value last)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__103" onclick="return on(103)">
+<td class="return">void</td><td class="method">
+<a id="setLastScopeIdentity_Value" href="#setLastScopeIdentity_Value">setLastScopeIdentity</a>(Value last)
+</td></tr>
+<tr onclick="return off(103)" class="detail" id="_103">
+<td class="return">void</td><td>
+<a id="setLastScopeIdentity_Value" href="#setLastScopeIdentity_Value">setLastScopeIdentity</a>(Value last)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__104" onclick="return on(104)">
+<td class="return">void</td><td class="method">
+<a id="setLastTriggerIdentity_Value" href="#setLastTriggerIdentity_Value">setLastTriggerIdentity</a>(Value last)
+</td></tr>
+<tr onclick="return off(104)" class="detail" id="_104">
+<td class="return">void</td><td>
+<a id="setLastTriggerIdentity_Value" href="#setLastTriggerIdentity_Value">setLastTriggerIdentity</a>(Value last)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__105" onclick="return on(105)">
+<td class="return">void</td><td class="method">
+<a id="setLazyQueryExecution_boolean" href="#setLazyQueryExecution_boolean">setLazyQueryExecution</a>(boolean lazyQueryExecution)
+</td></tr>
+<tr onclick="return off(105)" class="detail" id="_105">
+<td class="return">void</td><td>
+<a id="setLazyQueryExecution_boolean" href="#setLazyQueryExecution_boolean">setLazyQueryExecution</a>(boolean lazyQueryExecution)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__106" onclick="return on(106)">
+<td class="return">void</td><td class="method">
+<a id="setLockTimeout_int" href="#setLockTimeout_int">setLockTimeout</a>(int lockTimeout)
+</td></tr>
+<tr onclick="return off(106)" class="detail" id="_106">
+<td class="return">void</td><td>
+<a id="setLockTimeout_int" href="#setLockTimeout_int">setLockTimeout</a>(int lockTimeout)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__107" onclick="return on(107)">
+<td class="return">void</td><td class="method">
+<a id="setParsingView_boolean" href="#setParsingView_boolean">setParsingView</a>(boolean parsingView)
+</td></tr>
+<tr onclick="return off(107)" class="detail" id="_107">
+<td class="return">void</td><td>
+<a id="setParsingView_boolean" href="#setParsingView_boolean">setParsingView</a>(boolean parsingView)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__108" onclick="return on(108)">
+<td class="return">void</td><td class="method">
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int count)
+</td></tr>
+<tr onclick="return off(108)" class="detail" id="_108">
+<td class="return">void</td><td>
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int count)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__109" onclick="return on(109)">
+<td class="return">void</td><td class="method">
+<a id="setPreparedTransaction_String_boolean" href="#setPreparedTransaction_String_boolean">setPreparedTransaction</a>(String transactionName, boolean commit)
+<div class="methodText">Commit or roll back the given transaction.</div>
+</td></tr>
+<tr onclick="return off(109)" class="detail" id="_109">
+<td class="return">void</td><td>
+<a id="setPreparedTransaction_String_boolean" href="#setPreparedTransaction_String_boolean">setPreparedTransaction</a>(String transactionName, boolean commit)
+<div class="methodText">Commit or roll back the given transaction.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">transactionName - the name of the transaction</div>
+<div class="item">commit - true for commit, false for rollback</div>
+</td></tr>
+<tr id="__110" onclick="return on(110)">
+<td class="return">void</td><td class="method">
+<a id="setQueryTimeout_int" href="#setQueryTimeout_int">setQueryTimeout</a>(int queryTimeout)
+</td></tr>
+<tr onclick="return off(110)" class="detail" id="_110">
+<td class="return">void</td><td>
+<a id="setQueryTimeout_int" href="#setQueryTimeout_int">setQueryTimeout</a>(int queryTimeout)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__111" onclick="return on(111)">
+<td class="return">void</td><td class="method">
+<a id="setRedoLogBinary_boolean" href="#setRedoLogBinary_boolean">setRedoLogBinary</a>(boolean b)
+</td></tr>
+<tr onclick="return off(111)" class="detail" id="_111">
+<td class="return">void</td><td>
+<a id="setRedoLogBinary_boolean" href="#setRedoLogBinary_boolean">setRedoLogBinary</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__112" onclick="return on(112)">
+<td class="return">Session.Savepoint</td><td class="method">
+<a id="setSavepoint" href="#setSavepoint">setSavepoint</a>()
+<div class="methodText">Create a savepoint to allow rolling back to this state.</div>
+</td></tr>
+<tr onclick="return off(112)" class="detail" id="_112">
+<td class="return">Session.Savepoint</td><td>
+<a id="setSavepoint" href="#setSavepoint">setSavepoint</a>()
+<div class="methodText">Create a savepoint to allow rolling back to this state.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the savepoint</div>
+</td></tr>
+<tr id="__113" onclick="return on(113)">
+<td class="return">void</td><td class="method">
+<a id="setSchemaSearchPath_String-" href="#setSchemaSearchPath_String-">setSchemaSearchPath</a>(String[] schemas)
+</td></tr>
+<tr onclick="return off(113)" class="detail" id="_113">
+<td class="return">void</td><td>
+<a id="setSchemaSearchPath_String-" href="#setSchemaSearchPath_String-">setSchemaSearchPath</a>(String[] schemas)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__114" onclick="return on(114)">
+<td class="return">void</td><td class="method">
+<a id="setThrottle_int" href="#setThrottle_int">setThrottle</a>(int throttle)
+</td></tr>
+<tr onclick="return off(114)" class="detail" id="_114">
+<td class="return">void</td><td>
+<a id="setThrottle_int" href="#setThrottle_int">setThrottle</a>(int throttle)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__115" onclick="return on(115)">
+<td class="return">void</td><td class="method">
+<a id="setUndoLogEnabled_boolean" href="#setUndoLogEnabled_boolean">setUndoLogEnabled</a>(boolean b)
+</td></tr>
+<tr onclick="return off(115)" class="detail" id="_115">
+<td class="return">void</td><td>
+<a id="setUndoLogEnabled_boolean" href="#setUndoLogEnabled_boolean">setUndoLogEnabled</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__116" onclick="return on(116)">
+<td class="return">void</td><td class="method">
+<a id="setVariable_String_Value" href="#setVariable_String_Value">setVariable</a>(String name, Value value)
+<div class="methodText">Set the value of the given variable for this session.</div>
+</td></tr>
+<tr onclick="return off(116)" class="detail" id="_116">
+<td class="return">void</td><td>
+<a id="setVariable_String_Value" href="#setVariable_String_Value">setVariable</a>(String name, Value value)
+<div class="methodText">Set the value of the given variable for this session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the variable (may not be null)</div>
+<div class="item">value - the new value (may not be null)</div>
+</td></tr>
+<tr id="__117" onclick="return on(117)">
+<td class="return">void</td><td class="method">
+<a id="setWaitForLock_Table_Thread" href="#setWaitForLock_Table_Thread">setWaitForLock</a>(Table waitForLock, Thread waitForLockThread)
+<div class="methodText">Set the table this session is waiting for, and the thread that is
+ waiting.</div>
+</td></tr>
+<tr onclick="return off(117)" class="detail" id="_117">
+<td class="return">void</td><td>
+<a id="setWaitForLock_Table_Thread" href="#setWaitForLock_Table_Thread">setWaitForLock</a>(Table waitForLock, Thread waitForLockThread)
+<div class="methodText">Set the table this session is waiting for, and the thread that is
+ waiting.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">waitForLock - the table</div>
+<div class="item">waitForLockThread - the current thread (the one that is waiting)</div>
+</td></tr>
+<tr id="__118" onclick="return on(118)">
+<td class="return">void</td><td class="method">
+<a id="startStatementWithinTransaction" href="#startStatementWithinTransaction">startStatementWithinTransaction</a>()
+<div class="methodText">Start a new statement within a transaction.</div>
+</td></tr>
+<tr onclick="return off(118)" class="detail" id="_118">
+<td class="return">void</td><td>
+<a id="startStatementWithinTransaction" href="#startStatementWithinTransaction">startStatementWithinTransaction</a>()
+<div class="methodText">Start a new statement within a transaction.</div>
+</td></tr>
+<tr id="__119" onclick="return on(119)">
+<td class="return">void</td><td class="method">
+<a id="throttle" href="#throttle">throttle</a>()
+<div class="methodText">Wait for some time if this session is throttled (slowed down).</div>
+</td></tr>
+<tr onclick="return off(119)" class="detail" id="_119">
+<td class="return">void</td><td>
+<a id="throttle" href="#throttle">throttle</a>()
+<div class="methodText">Wait for some time if this session is throttled (slowed down).</div>
+</td></tr>
+<tr id="__120" onclick="return on(120)">
+<td class="return">String</td><td class="method">
+<a id="toString" href="#toString">toString</a>()
+</td></tr>
+<tr onclick="return off(120)" class="detail" id="_120">
+<td class="return">String</td><td>
+<a id="toString" href="#toString">toString</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__121" onclick="return on(121)">
+<td class="return">void</td><td class="method">
+<a id="unlockReadLocks" href="#unlockReadLocks">unlockReadLocks</a>()
+<div class="methodText">Unlock all read locks.</div>
+</td></tr>
+<tr onclick="return off(121)" class="detail" id="_121">
+<td class="return">void</td><td>
+<a id="unlockReadLocks" href="#unlockReadLocks">unlockReadLocks</a>()
+<div class="methodText">Unlock all read locks. This is done if the transaction isolation mode is
+ READ_COMMITTED.</div>
+</td></tr>
+<tr id="__122" onclick="return on(122)">
+<td class="return">void</td><td class="method">
+<a id="waitIfExclusiveModeEnabled" href="#waitIfExclusiveModeEnabled">waitIfExclusiveModeEnabled</a>()
+<div class="methodText">Wait if the exclusive mode has been enabled for another session.</div>
+</td></tr>
+<tr onclick="return off(122)" class="detail" id="_122">
+<td class="return">void</td><td>
+<a id="waitIfExclusiveModeEnabled" href="#waitIfExclusiveModeEnabled">waitIfExclusiveModeEnabled</a>()
+<div class="methodText">Wait if the exclusive mode has been enabled for another session. This
+ method returns as soon as the exclusive mode has been disabled.</div>
+</td></tr>
+</table>
+<br /><table><tr><th colspan="2">Fields</th></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#-1">LOG_WRITTEN</a> = -1
+</td></tr>
+</table>
+<h4 id="-1"><span class="methodName">LOG_WRITTEN
+ = -1
+</span></h4>
+<div class="item">This special log position means that the log entry has been written.</div>
+<hr />
+</div></td></tr></table></body></html>

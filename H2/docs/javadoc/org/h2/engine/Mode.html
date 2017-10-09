@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+Mode
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>Mode</h1>
+The compatibility modes. There is a fixed set of modes (for example
+ PostgreSQL, MySQL). Each mode has different settings.<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">static Mode</td><td class="method">
+<a id="getInstance_String" href="#getInstance_String">getInstance</a>(String name)
+<div class="methodText">Get the mode with the given name.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">static Mode</td><td>
+<a id="getInstance_String" href="#getInstance_String">getInstance</a>(String name)
+<div class="methodText">Get the mode with the given name.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the mode</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the mode object</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">String</td><td class="method">
+<a id="getName" href="#getName">getName</a>()
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">String</td><td>
+<a id="getName" href="#getName">getName</a>()
+<div class="methodText"></div>
+</td></tr>
+</table>
+<br /><table><tr><th colspan="2">Fields</th></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#aliascolumnname">aliasColumnName</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#allowplusforstringconcat">allowPlusForStringConcat</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#convertinsertnulltozero">convertInsertNullToZero</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#convertonlytosmallerscale">convertOnlyToSmallerScale</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#INDEX(..)">indexDefinitionInCreateTable</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#isolationlevelinselectorinsertstatement">isolationLevelInSelectOrInsertStatement</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#logislogbase10">logIsLogBase10</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#lowercaseidentifiers">lowerCaseIdentifiers</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#nullconcatisnull">nullConcatIsNull</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#onduplicatekeyupdate">onDuplicateKeyUpdate</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#prohibitemptyinpredicate">prohibitEmptyInPredicate</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#serialcolumnisnotpk">serialColumnIsNotPK</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#squarebracketquotednames">squareBracketQuotedNames</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#supportoffsetfetch">supportOffsetFetch</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#supportpoundsymbolforcolumnnames">supportPoundSymbolForColumnNames</a>
+</td></tr>
+<tr><td class="return">static Pattern</td><td class="method">
+<a href="#supportedclientinfopropertiesregex">supportedClientInfoPropertiesRegEx</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#swapconvertfunctionparameters">swapConvertFunctionParameters</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#sysdummy1">sysDummy1</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#systemcolumns">systemColumns</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#treatemptystringsasnull">treatEmptyStringsAsNull</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#uniqueindexsinglenull">uniqueIndexSingleNull</a>
+</td></tr>
+<tr><td class="return">static boolean</td><td class="method">
+<a href="#uniqueindexsinglenullexceptallcolumnsarenull">uniqueIndexSingleNullExceptAllColumnsAreNull</a>
+</td></tr>
+</table>
+<h4 id="aliascolumnname"><span class="methodName">aliasColumnName
+
+</span></h4>
+<div class="item">When enabled, aliased columns (as in SELECT ID AS I FROM TEST) return the
+ alias (I in this case) in ResultSetMetaData.getColumnName() and 'null' in
+ getTableName(). If disabled, the real column name (ID in this case) and
+ table name is returned.</div>
+<hr />
+<h4 id="allowplusforstringconcat"><span class="methodName">allowPlusForStringConcat
+
+</span></h4>
+<div class="item">Text can be concatenated using '+'.</div>
+<hr />
+<h4 id="convertinsertnulltozero"><span class="methodName">convertInsertNullToZero
+
+</span></h4>
+<div class="item">When inserting data, if a column is defined to be NOT NULL and NULL is
+ inserted, then a 0 (or empty string, or the current timestamp for
+ timestamp columns) value is used. Usually, this operation is not allowed
+ and an exception is thrown.</div>
+<hr />
+<h4 id="convertonlytosmallerscale"><span class="methodName">convertOnlyToSmallerScale
+
+</span></h4>
+<div class="item">When converting the scale of decimal data, the number is only converted
+ if the new scale is smaller than the current scale. Usually, the scale is
+ converted and 0s are added if required.</div>
+<hr />
+<h4 id="INDEX(..)"><span class="methodName">indexDefinitionInCreateTable
+
+</span></h4>
+<div class="item">Creating indexes in the CREATE TABLE statement is allowed using
+ <code>INDEX(..)</code> or <code>KEY(..)</code>.
+ Example: <code>create table test(id int primary key, name varchar(255),
+ key idx_name(name));</code></div>
+<hr />
+<h4 id="isolationlevelinselectorinsertstatement"><span class="methodName">isolationLevelInSelectOrInsertStatement
+
+</span></h4>
+<div class="item">can set the isolation level using WITH {RR|RS|CS|UR}</div>
+<hr />
+<h4 id="logislogbase10"><span class="methodName">logIsLogBase10
+
+</span></h4>
+<div class="item">The function LOG() uses base 10 instead of E.</div>
+<hr />
+<h4 id="lowercaseidentifiers"><span class="methodName">lowerCaseIdentifiers
+
+</span></h4>
+<div class="item">Meta data calls return identifiers in lower case.</div>
+<hr />
+<h4 id="nullconcatisnull"><span class="methodName">nullConcatIsNull
+
+</span></h4>
+<div class="item">Concatenation with NULL results in NULL. Usually, NULL is treated as an
+ empty string if only one of the operands is NULL, and NULL is only
+ returned if both operands are NULL.</div>
+<hr />
+<h4 id="onduplicatekeyupdate"><span class="methodName">onDuplicateKeyUpdate
+
+</span></h4>
+<div class="item">MySQL style INSERT ... ON DUPLICATE KEY UPDATE ...</div>
+<hr />
+<h4 id="prohibitemptyinpredicate"><span class="methodName">prohibitEmptyInPredicate
+
+</span></h4>
+<div class="item">Whether an empty list as in "NAME IN()" results in a syntax error.</div>
+<hr />
+<h4 id="serialcolumnisnotpk"><span class="methodName">serialColumnIsNotPK
+
+</span></h4>
+<div class="item">SERIAL and BIGSERIAL columns are not automatically primary keys.</div>
+<hr />
+<h4 id="squarebracketquotednames"><span class="methodName">squareBracketQuotedNames
+
+</span></h4>
+<div class="item">Identifiers may be quoted using square brackets as in [Test].</div>
+<hr />
+<h4 id="supportoffsetfetch"><span class="methodName">supportOffsetFetch
+
+</span></h4>
+<div class="item">Support for the syntax
+ [OFFSET .. ROW|ROWS] [FETCH FIRST .. ROW|ROWS ONLY]
+ as an alternative for LIMIT .. OFFSET.</div>
+<hr />
+<h4 id="supportpoundsymbolforcolumnnames"><span class="methodName">supportPoundSymbolForColumnNames
+
+</span></h4>
+<div class="item">Support the # for column names</div>
+<hr />
+<h4 id="supportedclientinfopropertiesregex"><span class="methodName">supportedClientInfoPropertiesRegEx
+
+</span></h4>
+<div class="item">Pattern describing the keys the java.sql.Connection.setClientInfo()
+ method accepts.</div>
+<hr />
+<h4 id="swapconvertfunctionparameters"><span class="methodName">swapConvertFunctionParameters
+
+</span></h4>
+<div class="item">Swap the parameters of the CONVERT function.</div>
+<hr />
+<h4 id="sysdummy1"><span class="methodName">sysDummy1
+
+</span></h4>
+<div class="item">Support the pseudo-table SYSIBM.SYSDUMMY1.</div>
+<hr />
+<h4 id="systemcolumns"><span class="methodName">systemColumns
+
+</span></h4>
+<div class="item">The system columns 'CTID' and 'OID' are supported.</div>
+<hr />
+<h4 id="treatemptystringsasnull"><span class="methodName">treatEmptyStringsAsNull
+
+</span></h4>
+<div class="item">Empty strings are treated like NULL values. Useful for Oracle emulation.</div>
+<hr />
+<h4 id="uniqueindexsinglenull"><span class="methodName">uniqueIndexSingleNull
+
+</span></h4>
+<div class="item">For unique indexes, NULL is distinct. That means only one row with NULL
+ in one of the columns is allowed.</div>
+<hr />
+<h4 id="uniqueindexsinglenullexceptallcolumnsarenull"><span class="methodName">uniqueIndexSingleNullExceptAllColumnsAreNull
+
+</span></h4>
+<div class="item">When using unique indexes, multiple rows with NULL in all columns
+ are allowed, however it is not allowed to have multiple rows with the
+ same values otherwise.</div>
+<hr />
+</div></td></tr></table></body></html>

@@ -1,0 +1,1727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+Database
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>Database</h1>
+There is one database object per open database.
+
+ The format of the meta data table is:
+  id int, 0, objectType int, sql varchar<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">static void</td><td class="method">
+<a id="setInitialPowerOffCount_int" href="#setInitialPowerOffCount_int">setInitialPowerOffCount</a>(int count)
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">static void</td><td>
+<a id="setInitialPowerOffCount_int" href="#setInitialPowerOffCount_int">setInitialPowerOffCount</a>(int count)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">void</td><td class="method">
+<a id="addDatabaseObject_Session_DbObject" href="#addDatabaseObject_Session_DbObject">addDatabaseObject</a>(Session session, DbObject obj)
+<div class="methodText">Add an object to the database.</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">void</td><td>
+<a id="addDatabaseObject_Session_DbObject" href="#addDatabaseObject_Session_DbObject">addDatabaseObject</a>(Session session, DbObject obj)
+<div class="methodText">Add an object to the database.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the object to add</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">void</td><td class="method">
+<a id="addSchemaObject_Session_SchemaObject" href="#addSchemaObject_Session_SchemaObject">addSchemaObject</a>(Session session, SchemaObject obj)
+<div class="methodText">Add a schema object to the database.</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">void</td><td>
+<a id="addSchemaObject_Session_SchemaObject" href="#addSchemaObject_Session_SchemaObject">addSchemaObject</a>(Session session, SchemaObject obj)
+<div class="methodText">Add a schema object to the database.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the object to add</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">void</td><td class="method">
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+<div class="methodText">This method is called after updates are finished.</div>
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">void</td><td>
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+<div class="methodText">This method is called after updates are finished.</div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">int</td><td class="method">
+<a id="allocateObjectId" href="#allocateObjectId">allocateObjectId</a>()
+<div class="methodText">Allocate a new object id.</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">int</td><td>
+<a id="allocateObjectId" href="#allocateObjectId">allocateObjectId</a>()
+<div class="methodText">Allocate a new object id.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the id</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">boolean</td><td class="method">
+<a id="areEqual_Value_Value" href="#areEqual_Value_Value">areEqual</a>(Value a, Value b)
+<div class="methodText">Check if two values are equal with the current comparison mode.</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">boolean</td><td>
+<a id="areEqual_Value_Value" href="#areEqual_Value_Value">areEqual</a>(Value a, Value b)
+<div class="methodText">Check if two values are equal with the current comparison mode.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">a - the first value</div>
+<div class="item">b - the second value</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if both objects are equal</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">boolean</td><td class="method">
+<a id="beforeWriting" href="#beforeWriting">beforeWriting</a>()
+<div class="methodText">This method is called before writing to the transaction log.</div>
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">boolean</td><td>
+<a id="beforeWriting" href="#beforeWriting">beforeWriting</a>()
+<div class="methodText">This method is called before writing to the transaction log.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if the call was successful and writing is allowed,
+          false if another connection was faster</div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">void</td><td class="method">
+<a id="checkPowerOff" href="#checkPowerOff">checkPowerOff</a>()
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">void</td><td>
+<a id="checkPowerOff" href="#checkPowerOff">checkPowerOff</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">void</td><td class="method">
+<a id="checkWritingAllowed" href="#checkWritingAllowed">checkWritingAllowed</a>()
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">void</td><td>
+<a id="checkWritingAllowed" href="#checkWritingAllowed">checkWritingAllowed</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">void</td><td class="method">
+<a id="checkpoint" href="#checkpoint">checkpoint</a>()
+<div class="methodText">Flush all changes and open a new transaction log.</div>
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">void</td><td>
+<a id="checkpoint" href="#checkpoint">checkpoint</a>()
+<div class="methodText">Flush all changes and open a new transaction log.</div>
+</td></tr>
+<tr id="__10" onclick="return on(10)">
+<td class="return">void</td><td class="method">
+<a id="checkpointIfRequired" href="#checkpointIfRequired">checkpointIfRequired</a>()
+<div class="methodText">Flush all changes when using the serialized mode, and if there are
+ pending changes, and some time has passed.</div>
+</td></tr>
+<tr onclick="return off(10)" class="detail" id="_10">
+<td class="return">void</td><td>
+<a id="checkpointIfRequired" href="#checkpointIfRequired">checkpointIfRequired</a>()
+<div class="methodText">Flush all changes when using the serialized mode, and if there are
+ pending changes, and some time has passed. This switches to a new
+ transaction log and resets the change pending flag in
+ the .lock.db file.</div>
+</td></tr>
+<tr id="__11" onclick="return on(11)">
+<td class="return">int</td><td class="method">
+<a id="compare_Value_Value" href="#compare_Value_Value">compare</a>(Value a, Value b)
+<div class="methodText">Compare two values with the current comparison mode.</div>
+</td></tr>
+<tr onclick="return off(11)" class="detail" id="_11">
+<td class="return">int</td><td>
+<a id="compare_Value_Value" href="#compare_Value_Value">compare</a>(Value a, Value b)
+<div class="methodText">Compare two values with the current comparison mode. The values may not
+ be of the same type.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">a - the first value</div>
+<div class="item">b - the second value</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">0 if both values are equal, -1 if the first value is smaller, and
+         1 otherwise</div>
+</td></tr>
+<tr id="__12" onclick="return on(12)">
+<td class="return">int</td><td class="method">
+<a id="compareTypeSafe_Value_Value" href="#compareTypeSafe_Value_Value">compareTypeSafe</a>(Value a, Value b)
+<div class="methodText">Compare two values with the current comparison mode.</div>
+</td></tr>
+<tr onclick="return off(12)" class="detail" id="_12">
+<td class="return">int</td><td>
+<a id="compareTypeSafe_Value_Value" href="#compareTypeSafe_Value_Value">compareTypeSafe</a>(Value a, Value b)
+<div class="methodText">Compare two values with the current comparison mode. The values must be
+ of the same type.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">a - the first value</div>
+<div class="item">b - the second value</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">0 if both values are equal, -1 if the first value is smaller, and
+         1 otherwise</div>
+</td></tr>
+<tr id="__13" onclick="return on(13)">
+<td class="return">Row</td><td class="method">
+<a id="createRow_Value-_int" href="#createRow_Value-_int">createRow</a>(Value[] data, int memory)
+<div class="methodText">Create a new row for a table.</div>
+</td></tr>
+<tr onclick="return off(13)" class="detail" id="_13">
+<td class="return">Row</td><td>
+<a id="createRow_Value-_int" href="#createRow_Value-_int">createRow</a>(Value[] data, int memory)
+<div class="methodText">Create a new row for a table.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">data - the values</div>
+<div class="item">memory - whether the row is in memory</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the created row</div>
+</td></tr>
+<tr id="__14" onclick="return on(14)">
+<td class="return">String</td><td class="method">
+<a id="createTempFile" href="#createTempFile">createTempFile</a>()
+<div class="methodText">Create a temporary file in the database folder.</div>
+</td></tr>
+<tr onclick="return off(14)" class="detail" id="_14">
+<td class="return">String</td><td>
+<a id="createTempFile" href="#createTempFile">createTempFile</a>()
+<div class="methodText">Create a temporary file in the database folder.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the file name</div>
+</td></tr>
+<tr id="__15" onclick="return on(15)">
+<td class="return">boolean</td><td class="method">
+<a id="equalsIdentifiers_String_String" href="#equalsIdentifiers_String_String">equalsIdentifiers</a>(String a, String b)
+<div class="methodText">Compare two identifiers (table names, column names,...) and verify they
+ are equal.</div>
+</td></tr>
+<tr onclick="return off(15)" class="detail" id="_15">
+<td class="return">boolean</td><td>
+<a id="equalsIdentifiers_String_String" href="#equalsIdentifiers_String_String">equalsIdentifiers</a>(String a, String b)
+<div class="methodText">Compare two identifiers (table names, column names,...) and verify they
+ are equal. Case sensitivity depends on the configuration.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">a - the first identifier</div>
+<div class="item">b - the second identifier</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if they match</div>
+</td></tr>
+<tr id="__16" onclick="return on(16)">
+<td class="return">void</td><td class="method">
+<a id="exceptionThrown_SQLException_String" href="#exceptionThrown_SQLException_String">exceptionThrown</a>(SQLException e, String sql)
+<div class="methodText">This method is called after an exception occurred, to inform the database
+ event listener (if one is set).</div>
+</td></tr>
+<tr onclick="return off(16)" class="detail" id="_16">
+<td class="return">void</td><td>
+<a id="exceptionThrown_SQLException_String" href="#exceptionThrown_SQLException_String">exceptionThrown</a>(SQLException e, String sql)
+<div class="methodText">This method is called after an exception occurred, to inform the database
+ event listener (if one is set).</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">e - the exception</div>
+<div class="item">sql - the SQL statement</div>
+</td></tr>
+<tr id="__17" onclick="return on(17)">
+<td class="return">UserAggregate</td><td class="method">
+<a id="findAggregate_String" href="#findAggregate_String">findAggregate</a>(String name)
+<div class="methodText">Get the user defined aggregate function if it exists, or null if not.</div>
+</td></tr>
+<tr onclick="return off(17)" class="detail" id="_17">
+<td class="return">UserAggregate</td><td>
+<a id="findAggregate_String" href="#findAggregate_String">findAggregate</a>(String name)
+<div class="methodText">Get the user defined aggregate function if it exists, or null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the user defined aggregate function</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the aggregate function or null</div>
+</td></tr>
+<tr id="__18" onclick="return on(18)">
+<td class="return">Comment</td><td class="method">
+<a id="findComment_DbObject" href="#findComment_DbObject">findComment</a>(DbObject object)
+<div class="methodText">Get the comment for the given database object if one exists, or null if
+ not.</div>
+</td></tr>
+<tr onclick="return off(18)" class="detail" id="_18">
+<td class="return">Comment</td><td>
+<a id="findComment_DbObject" href="#findComment_DbObject">findComment</a>(DbObject object)
+<div class="methodText">Get the comment for the given database object if one exists, or null if
+ not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">object - the database object</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the comment or null</div>
+</td></tr>
+<tr id="__19" onclick="return on(19)">
+<td class="return">Role</td><td class="method">
+<a id="findRole_String" href="#findRole_String">findRole</a>(String roleName)
+<div class="methodText">Get the role if it exists, or null if not.</div>
+</td></tr>
+<tr onclick="return off(19)" class="detail" id="_19">
+<td class="return">Role</td><td>
+<a id="findRole_String" href="#findRole_String">findRole</a>(String roleName)
+<div class="methodText">Get the role if it exists, or null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">roleName - the name of the role</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the role or null</div>
+</td></tr>
+<tr id="__20" onclick="return on(20)">
+<td class="return">Schema</td><td class="method">
+<a id="findSchema_String" href="#findSchema_String">findSchema</a>(String schemaName)
+<div class="methodText">Get the schema if it exists, or null if not.</div>
+</td></tr>
+<tr onclick="return off(20)" class="detail" id="_20">
+<td class="return">Schema</td><td>
+<a id="findSchema_String" href="#findSchema_String">findSchema</a>(String schemaName)
+<div class="methodText">Get the schema if it exists, or null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">schemaName - the name of the schema</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the schema or null</div>
+</td></tr>
+<tr id="__21" onclick="return on(21)">
+<td class="return">Setting</td><td class="method">
+<a id="findSetting_String" href="#findSetting_String">findSetting</a>(String name)
+<div class="methodText">Get the setting if it exists, or null if not.</div>
+</td></tr>
+<tr onclick="return off(21)" class="detail" id="_21">
+<td class="return">Setting</td><td>
+<a id="findSetting_String" href="#findSetting_String">findSetting</a>(String name)
+<div class="methodText">Get the setting if it exists, or null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the setting</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the setting or null</div>
+</td></tr>
+<tr id="__22" onclick="return on(22)">
+<td class="return">User</td><td class="method">
+<a id="findUser_String" href="#findUser_String">findUser</a>(String name)
+<div class="methodText">Get the user if it exists, or null if not.</div>
+</td></tr>
+<tr onclick="return off(22)" class="detail" id="_22">
+<td class="return">User</td><td>
+<a id="findUser_String" href="#findUser_String">findUser</a>(String name)
+<div class="methodText">Get the user if it exists, or null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the user</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the user or null</div>
+</td></tr>
+<tr id="__23" onclick="return on(23)">
+<td class="return">UserDataType</td><td class="method">
+<a id="findUserDataType_String" href="#findUserDataType_String">findUserDataType</a>(String name)
+<div class="methodText">Get the user defined data type if it exists, or null if not.</div>
+</td></tr>
+<tr onclick="return off(23)" class="detail" id="_23">
+<td class="return">UserDataType</td><td>
+<a id="findUserDataType_String" href="#findUserDataType_String">findUserDataType</a>(String name)
+<div class="methodText">Get the user defined data type if it exists, or null if not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the name of the user defined data type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the user defined data type or null</div>
+</td></tr>
+<tr id="__24" onclick="return on(24)">
+<td class="return">void</td><td class="method">
+<a id="flush" href="#flush">flush</a>()
+<div class="methodText">Flush all pending changes to the transaction log.</div>
+</td></tr>
+<tr onclick="return off(24)" class="detail" id="_24">
+<td class="return">void</td><td>
+<a id="flush" href="#flush">flush</a>()
+<div class="methodText">Flush all pending changes to the transaction log.</div>
+</td></tr>
+<tr id="__25" onclick="return on(25)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllAggregates" href="#getAllAggregates">getAllAggregates</a>()
+</td></tr>
+<tr onclick="return off(25)" class="detail" id="_25">
+<td class="return">ArrayList</td><td>
+<a id="getAllAggregates" href="#getAllAggregates">getAllAggregates</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__26" onclick="return on(26)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllComments" href="#getAllComments">getAllComments</a>()
+</td></tr>
+<tr onclick="return off(26)" class="detail" id="_26">
+<td class="return">ArrayList</td><td>
+<a id="getAllComments" href="#getAllComments">getAllComments</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__27" onclick="return on(27)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllRights" href="#getAllRights">getAllRights</a>()
+</td></tr>
+<tr onclick="return off(27)" class="detail" id="_27">
+<td class="return">ArrayList</td><td>
+<a id="getAllRights" href="#getAllRights">getAllRights</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__28" onclick="return on(28)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllRoles" href="#getAllRoles">getAllRoles</a>()
+</td></tr>
+<tr onclick="return off(28)" class="detail" id="_28">
+<td class="return">ArrayList</td><td>
+<a id="getAllRoles" href="#getAllRoles">getAllRoles</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__29" onclick="return on(29)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllSchemaObjects" href="#getAllSchemaObjects">getAllSchemaObjects</a>()
+<div class="methodText">Get all schema objects.</div>
+</td></tr>
+<tr onclick="return off(29)" class="detail" id="_29">
+<td class="return">ArrayList</td><td>
+<a id="getAllSchemaObjects" href="#getAllSchemaObjects">getAllSchemaObjects</a>()
+<div class="methodText">Get all schema objects.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">all objects of all types</div>
+</td></tr>
+<tr id="__30" onclick="return on(30)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllSchemaObjects_int" href="#getAllSchemaObjects_int">getAllSchemaObjects</a>(int type)
+<div class="methodText">Get all schema objects of the given type.</div>
+</td></tr>
+<tr onclick="return off(30)" class="detail" id="_30">
+<td class="return">ArrayList</td><td>
+<a id="getAllSchemaObjects_int" href="#getAllSchemaObjects_int">getAllSchemaObjects</a>(int type)
+<div class="methodText">Get all schema objects of the given type.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - the object type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">all objects of that type</div>
+</td></tr>
+<tr id="__31" onclick="return on(31)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllSchemas" href="#getAllSchemas">getAllSchemas</a>()
+</td></tr>
+<tr onclick="return off(31)" class="detail" id="_31">
+<td class="return">ArrayList</td><td>
+<a id="getAllSchemas" href="#getAllSchemas">getAllSchemas</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__32" onclick="return on(32)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllSettings" href="#getAllSettings">getAllSettings</a>()
+</td></tr>
+<tr onclick="return off(32)" class="detail" id="_32">
+<td class="return">ArrayList</td><td>
+<a id="getAllSettings" href="#getAllSettings">getAllSettings</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__33" onclick="return on(33)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllTablesAndViews_boolean" href="#getAllTablesAndViews_boolean">getAllTablesAndViews</a>(boolean includeMeta)
+<div class="methodText">Get all tables and views.</div>
+</td></tr>
+<tr onclick="return off(33)" class="detail" id="_33">
+<td class="return">ArrayList</td><td>
+<a id="getAllTablesAndViews_boolean" href="#getAllTablesAndViews_boolean">getAllTablesAndViews</a>(boolean includeMeta)
+<div class="methodText">Get all tables and views.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">includeMeta - whether to force including the meta data tables (if
+            true, metadata tables are always included; if false, metadata
+            tables are only included if they are already initialized)</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">all objects of that type</div>
+</td></tr>
+<tr id="__34" onclick="return on(34)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllUserDataTypes" href="#getAllUserDataTypes">getAllUserDataTypes</a>()
+</td></tr>
+<tr onclick="return off(34)" class="detail" id="_34">
+<td class="return">ArrayList</td><td>
+<a id="getAllUserDataTypes" href="#getAllUserDataTypes">getAllUserDataTypes</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__35" onclick="return on(35)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getAllUsers" href="#getAllUsers">getAllUsers</a>()
+</td></tr>
+<tr onclick="return off(35)" class="detail" id="_35">
+<td class="return">ArrayList</td><td>
+<a id="getAllUsers" href="#getAllUsers">getAllUsers</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__36" onclick="return on(36)">
+<td class="return">int</td><td class="method">
+<a id="getAllowLiterals" href="#getAllowLiterals">getAllowLiterals</a>()
+</td></tr>
+<tr onclick="return off(36)" class="detail" id="_36">
+<td class="return">int</td><td>
+<a id="getAllowLiterals" href="#getAllowLiterals">getAllowLiterals</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__37" onclick="return on(37)">
+<td class="return">String</td><td class="method">
+<a id="getCacheType" href="#getCacheType">getCacheType</a>()
+</td></tr>
+<tr onclick="return off(37)" class="detail" id="_37">
+<td class="return">String</td><td>
+<a id="getCacheType" href="#getCacheType">getCacheType</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__38" onclick="return on(38)">
+<td class="return">String</td><td class="method">
+<a id="getCluster" href="#getCluster">getCluster</a>()
+</td></tr>
+<tr onclick="return off(38)" class="detail" id="_38">
+<td class="return">String</td><td>
+<a id="getCluster" href="#getCluster">getCluster</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__39" onclick="return on(39)">
+<td class="return">CompareMode</td><td class="method">
+<a id="getCompareMode" href="#getCompareMode">getCompareMode</a>()
+</td></tr>
+<tr onclick="return off(39)" class="detail" id="_39">
+<td class="return">CompareMode</td><td>
+<a id="getCompareMode" href="#getCompareMode">getCompareMode</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__40" onclick="return on(40)">
+<td class="return">SourceCompiler</td><td class="method">
+<a id="getCompiler" href="#getCompiler">getCompiler</a>()
+</td></tr>
+<tr onclick="return off(40)" class="detail" id="_40">
+<td class="return">SourceCompiler</td><td>
+<a id="getCompiler" href="#getCompiler">getCompiler</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__41" onclick="return on(41)">
+<td class="return">String</td><td class="method">
+<a id="getDatabasePath" href="#getDatabasePath">getDatabasePath</a>()
+</td></tr>
+<tr onclick="return off(41)" class="detail" id="_41">
+<td class="return">String</td><td>
+<a id="getDatabasePath" href="#getDatabasePath">getDatabasePath</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__42" onclick="return on(42)">
+<td class="return">int</td><td class="method">
+<a id="getDefaultTableType" href="#getDefaultTableType">getDefaultTableType</a>()
+</td></tr>
+<tr onclick="return off(42)" class="detail" id="_42">
+<td class="return">int</td><td>
+<a id="getDefaultTableType" href="#getDefaultTableType">getDefaultTableType</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__43" onclick="return on(43)">
+<td class="return">Table</td><td class="method">
+<a id="getDependentTable_SchemaObject_Table" href="#getDependentTable_SchemaObject_Table">getDependentTable</a>(SchemaObject obj, Table except)
+<div class="methodText">Get the first table that depends on this object.</div>
+</td></tr>
+<tr onclick="return off(43)" class="detail" id="_43">
+<td class="return">Table</td><td>
+<a id="getDependentTable_SchemaObject_Table" href="#getDependentTable_SchemaObject_Table">getDependentTable</a>(SchemaObject obj, Table except)
+<div class="methodText">Get the first table that depends on this object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">obj - the object to find</div>
+<div class="item">except - the table to exclude (or null)</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the first dependent table, or null</div>
+</td></tr>
+<tr id="__44" onclick="return on(44)">
+<td class="return">Session</td><td class="method">
+<a id="getExclusiveSession" href="#getExclusiveSession">getExclusiveSession</a>()
+</td></tr>
+<tr onclick="return off(44)" class="detail" id="_44">
+<td class="return">Session</td><td>
+<a id="getExclusiveSession" href="#getExclusiveSession">getExclusiveSession</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__45" onclick="return on(45)">
+<td class="return">byte[]</td><td class="method">
+<a id="getFileEncryptionKey" href="#getFileEncryptionKey">getFileEncryptionKey</a>()
+</td></tr>
+<tr onclick="return off(45)" class="detail" id="_45">
+<td class="return">byte[]</td><td>
+<a id="getFileEncryptionKey" href="#getFileEncryptionKey">getFileEncryptionKey</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__46" onclick="return on(46)">
+<td class="return">Table</td><td class="method">
+<a id="getFirstUserTable" href="#getFirstUserTable">getFirstUserTable</a>()
+<div class="methodText">Get the first user defined table.</div>
+</td></tr>
+<tr onclick="return off(46)" class="detail" id="_46">
+<td class="return">Table</td><td>
+<a id="getFirstUserTable" href="#getFirstUserTable">getFirstUserTable</a>()
+<div class="methodText">Get the first user defined table.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the table or null if no table is defined</div>
+</td></tr>
+<tr id="__47" onclick="return on(47)">
+<td class="return">boolean</td><td class="method">
+<a id="getFlushOnEachCommit" href="#getFlushOnEachCommit">getFlushOnEachCommit</a>()
+<div class="methodText">Check if flush-on-each-commit is enabled.</div>
+</td></tr>
+<tr onclick="return off(47)" class="detail" id="_47">
+<td class="return">boolean</td><td>
+<a id="getFlushOnEachCommit" href="#getFlushOnEachCommit">getFlushOnEachCommit</a>()
+<div class="methodText">Check if flush-on-each-commit is enabled.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is</div>
+</td></tr>
+<tr id="__48" onclick="return on(48)">
+<td class="return">boolean</td><td class="method">
+<a id="getIgnoreCase" href="#getIgnoreCase">getIgnoreCase</a>()
+</td></tr>
+<tr onclick="return off(48)" class="detail" id="_48">
+<td class="return">boolean</td><td>
+<a id="getIgnoreCase" href="#getIgnoreCase">getIgnoreCase</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__49" onclick="return on(49)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getInDoubtTransactions" href="#getInDoubtTransactions">getInDoubtTransactions</a>()
+<div class="methodText">Get the list of in-doubt transactions.</div>
+</td></tr>
+<tr onclick="return off(49)" class="detail" id="_49">
+<td class="return">ArrayList</td><td>
+<a id="getInDoubtTransactions" href="#getInDoubtTransactions">getInDoubtTransactions</a>()
+<div class="methodText">Get the list of in-doubt transactions.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the list</div>
+</td></tr>
+<tr id="__50" onclick="return on(50)">
+<td class="return">JavaObjectSerializer</td><td class="method">
+<a id="getJavaObjectSerializer" href="#getJavaObjectSerializer">getJavaObjectSerializer</a>()
+</td></tr>
+<tr onclick="return off(50)" class="detail" id="_50">
+<td class="return">JavaObjectSerializer</td><td>
+<a id="getJavaObjectSerializer" href="#getJavaObjectSerializer">getJavaObjectSerializer</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__51" onclick="return on(51)">
+<td class="return">TableLinkConnection</td><td class="method">
+<a id="getLinkConnection_String_String_String_String" href="#getLinkConnection_String_String_String_String">getLinkConnection</a>(String driver, String url, String user, String password)
+<div class="methodText">Open a new connection or get an existing connection to another database.</div>
+</td></tr>
+<tr onclick="return off(51)" class="detail" id="_51">
+<td class="return">TableLinkConnection</td><td>
+<a id="getLinkConnection_String_String_String_String" href="#getLinkConnection_String_String_String_String">getLinkConnection</a>(String driver, String url, String user, String password)
+<div class="methodText">Open a new connection or get an existing connection to another database.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">driver - the database driver or null</div>
+<div class="item">url - the database URL</div>
+<div class="item">user - the user name</div>
+<div class="item">password - the password</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the connection</div>
+</td></tr>
+<tr id="__52" onclick="return on(52)">
+<td class="return">String</td><td class="method">
+<a id="getLobCompressionAlgorithm_int" href="#getLobCompressionAlgorithm_int">getLobCompressionAlgorithm</a>(int type)
+</td></tr>
+<tr onclick="return off(52)" class="detail" id="_52">
+<td class="return">String</td><td>
+<a id="getLobCompressionAlgorithm_int" href="#getLobCompressionAlgorithm_int">getLobCompressionAlgorithm</a>(int type)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__53" onclick="return on(53)">
+<td class="return">JdbcConnection</td><td class="method">
+<a id="getLobConnectionForInit" href="#getLobConnectionForInit">getLobConnectionForInit</a>()
+</td></tr>
+<tr onclick="return off(53)" class="detail" id="_53">
+<td class="return">JdbcConnection</td><td>
+<a id="getLobConnectionForInit" href="#getLobConnectionForInit">getLobConnectionForInit</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__54" onclick="return on(54)">
+<td class="return">JdbcConnection</td><td class="method">
+<a id="getLobConnectionForRegularUse" href="#getLobConnectionForRegularUse">getLobConnectionForRegularUse</a>()
+</td></tr>
+<tr onclick="return off(54)" class="detail" id="_54">
+<td class="return">JdbcConnection</td><td>
+<a id="getLobConnectionForRegularUse" href="#getLobConnectionForRegularUse">getLobConnectionForRegularUse</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__55" onclick="return on(55)">
+<td class="return">SmallLRUCache</td><td class="method">
+<a id="getLobFileListCache" href="#getLobFileListCache">getLobFileListCache</a>()
+</td></tr>
+<tr onclick="return off(55)" class="detail" id="_55">
+<td class="return">SmallLRUCache</td><td>
+<a id="getLobFileListCache" href="#getLobFileListCache">getLobFileListCache</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__56" onclick="return on(56)">
+<td class="return">Session</td><td class="method">
+<a id="getLobSession" href="#getLobSession">getLobSession</a>()
+</td></tr>
+<tr onclick="return off(56)" class="detail" id="_56">
+<td class="return">Session</td><td>
+<a id="getLobSession" href="#getLobSession">getLobSession</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__57" onclick="return on(57)">
+<td class="return">LobStorageInterface</td><td class="method">
+<a id="getLobStorage" href="#getLobStorage">getLobStorage</a>()
+</td></tr>
+<tr onclick="return off(57)" class="detail" id="_57">
+<td class="return">LobStorageInterface</td><td>
+<a id="getLobStorage" href="#getLobStorage">getLobStorage</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__58" onclick="return on(58)">
+<td class="return">Object</td><td class="method">
+<a id="getLobSyncObject" href="#getLobSyncObject">getLobSyncObject</a>()
+</td></tr>
+<tr onclick="return off(58)" class="detail" id="_58">
+<td class="return">Object</td><td>
+<a id="getLobSyncObject" href="#getLobSyncObject">getLobSyncObject</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__59" onclick="return on(59)">
+<td class="return">int</td><td class="method">
+<a id="getLockMode" href="#getLockMode">getLockMode</a>()
+</td></tr>
+<tr onclick="return off(59)" class="detail" id="_59">
+<td class="return">int</td><td>
+<a id="getLockMode" href="#getLockMode">getLockMode</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__60" onclick="return on(60)">
+<td class="return">int</td><td class="method">
+<a id="getLogMode" href="#getLogMode">getLogMode</a>()
+</td></tr>
+<tr onclick="return off(60)" class="detail" id="_60">
+<td class="return">int</td><td>
+<a id="getLogMode" href="#getLogMode">getLogMode</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__61" onclick="return on(61)">
+<td class="return">int</td><td class="method">
+<a id="getMaxLengthInplaceLob" href="#getMaxLengthInplaceLob">getMaxLengthInplaceLob</a>()
+</td></tr>
+<tr onclick="return off(61)" class="detail" id="_61">
+<td class="return">int</td><td>
+<a id="getMaxLengthInplaceLob" href="#getMaxLengthInplaceLob">getMaxLengthInplaceLob</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__62" onclick="return on(62)">
+<td class="return">int</td><td class="method">
+<a id="getMaxMemoryRows" href="#getMaxMemoryRows">getMaxMemoryRows</a>()
+</td></tr>
+<tr onclick="return off(62)" class="detail" id="_62">
+<td class="return">int</td><td>
+<a id="getMaxMemoryRows" href="#getMaxMemoryRows">getMaxMemoryRows</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__63" onclick="return on(63)">
+<td class="return">int</td><td class="method">
+<a id="getMaxMemoryUndo" href="#getMaxMemoryUndo">getMaxMemoryUndo</a>()
+</td></tr>
+<tr onclick="return off(63)" class="detail" id="_63">
+<td class="return">int</td><td>
+<a id="getMaxMemoryUndo" href="#getMaxMemoryUndo">getMaxMemoryUndo</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__64" onclick="return on(64)">
+<td class="return">int</td><td class="method">
+<a id="getMaxOperationMemory" href="#getMaxOperationMemory">getMaxOperationMemory</a>()
+</td></tr>
+<tr onclick="return off(64)" class="detail" id="_64">
+<td class="return">int</td><td>
+<a id="getMaxOperationMemory" href="#getMaxOperationMemory">getMaxOperationMemory</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__65" onclick="return on(65)">
+<td class="return">Mode</td><td class="method">
+<a id="getMode" href="#getMode">getMode</a>()
+</td></tr>
+<tr onclick="return off(65)" class="detail" id="_65">
+<td class="return">Mode</td><td>
+<a id="getMode" href="#getMode">getMode</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__66" onclick="return on(66)">
+<td class="return">long</td><td class="method">
+<a id="getModificationDataId" href="#getModificationDataId">getModificationDataId</a>()
+</td></tr>
+<tr onclick="return off(66)" class="detail" id="_66">
+<td class="return">long</td><td>
+<a id="getModificationDataId" href="#getModificationDataId">getModificationDataId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__67" onclick="return on(67)">
+<td class="return">long</td><td class="method">
+<a id="getModificationMetaId" href="#getModificationMetaId">getModificationMetaId</a>()
+</td></tr>
+<tr onclick="return off(67)" class="detail" id="_67">
+<td class="return">long</td><td>
+<a id="getModificationMetaId" href="#getModificationMetaId">getModificationMetaId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__68" onclick="return on(68)">
+<td class="return">MVTableEngine.Store</td><td class="method">
+<a id="getMvStore" href="#getMvStore">getMvStore</a>()
+</td></tr>
+<tr onclick="return off(68)" class="detail" id="_68">
+<td class="return">MVTableEngine.Store</td><td>
+<a id="getMvStore" href="#getMvStore">getMvStore</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__69" onclick="return on(69)">
+<td class="return">String</td><td class="method">
+<a id="getName" href="#getName">getName</a>()
+</td></tr>
+<tr onclick="return off(69)" class="detail" id="_69">
+<td class="return">String</td><td>
+<a id="getName" href="#getName">getName</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__70" onclick="return on(70)">
+<td class="return">long</td><td class="method">
+<a id="getNextModificationDataId" href="#getNextModificationDataId">getNextModificationDataId</a>()
+</td></tr>
+<tr onclick="return off(70)" class="detail" id="_70">
+<td class="return">long</td><td>
+<a id="getNextModificationDataId" href="#getNextModificationDataId">getNextModificationDataId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__71" onclick="return on(71)">
+<td class="return">long</td><td class="method">
+<a id="getNextModificationMetaId" href="#getNextModificationMetaId">getNextModificationMetaId</a>()
+</td></tr>
+<tr onclick="return off(71)" class="detail" id="_71">
+<td class="return">long</td><td>
+<a id="getNextModificationMetaId" href="#getNextModificationMetaId">getNextModificationMetaId</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__72" onclick="return on(72)">
+<td class="return">boolean</td><td class="method">
+<a id="getOptimizeReuseResults" href="#getOptimizeReuseResults">getOptimizeReuseResults</a>()
+</td></tr>
+<tr onclick="return off(72)" class="detail" id="_72">
+<td class="return">boolean</td><td>
+<a id="getOptimizeReuseResults" href="#getOptimizeReuseResults">getOptimizeReuseResults</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__73" onclick="return on(73)">
+<td class="return">int</td><td class="method">
+<a id="getPageSize" href="#getPageSize">getPageSize</a>()
+</td></tr>
+<tr onclick="return off(73)" class="detail" id="_73">
+<td class="return">int</td><td>
+<a id="getPageSize" href="#getPageSize">getPageSize</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__74" onclick="return on(74)">
+<td class="return">PageStore</td><td class="method">
+<a id="getPageStore" href="#getPageStore">getPageStore</a>()
+</td></tr>
+<tr onclick="return off(74)" class="detail" id="_74">
+<td class="return">PageStore</td><td>
+<a id="getPageStore" href="#getPageStore">getPageStore</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__75" onclick="return on(75)">
+<td class="return">int</td><td class="method">
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+</td></tr>
+<tr onclick="return off(75)" class="detail" id="_75">
+<td class="return">int</td><td>
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__76" onclick="return on(76)">
+<td class="return">Role</td><td class="method">
+<a id="getPublicRole" href="#getPublicRole">getPublicRole</a>()
+</td></tr>
+<tr onclick="return off(76)" class="detail" id="_76">
+<td class="return">Role</td><td>
+<a id="getPublicRole" href="#getPublicRole">getPublicRole</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__77" onclick="return on(77)">
+<td class="return">boolean</td><td class="method">
+<a id="getQueryStatistics" href="#getQueryStatistics">getQueryStatistics</a>()
+</td></tr>
+<tr onclick="return off(77)" class="detail" id="_77">
+<td class="return">boolean</td><td>
+<a id="getQueryStatistics" href="#getQueryStatistics">getQueryStatistics</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__78" onclick="return on(78)">
+<td class="return">QueryStatisticsData</td><td class="method">
+<a id="getQueryStatisticsData" href="#getQueryStatisticsData">getQueryStatisticsData</a>()
+</td></tr>
+<tr onclick="return off(78)" class="detail" id="_78">
+<td class="return">QueryStatisticsData</td><td>
+<a id="getQueryStatisticsData" href="#getQueryStatisticsData">getQueryStatisticsData</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__79" onclick="return on(79)">
+<td class="return">boolean</td><td class="method">
+<a id="getReferentialIntegrity" href="#getReferentialIntegrity">getReferentialIntegrity</a>()
+</td></tr>
+<tr onclick="return off(79)" class="detail" id="_79">
+<td class="return">boolean</td><td>
+<a id="getReferentialIntegrity" href="#getReferentialIntegrity">getReferentialIntegrity</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__80" onclick="return on(80)">
+<td class="return">int</td><td class="method">
+<a id="getRetentionTime" href="#getRetentionTime">getRetentionTime</a>()
+</td></tr>
+<tr onclick="return off(80)" class="detail" id="_80">
+<td class="return">int</td><td>
+<a id="getRetentionTime" href="#getRetentionTime">getRetentionTime</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__81" onclick="return on(81)">
+<td class="return">RowFactory</td><td class="method">
+<a id="getRowFactory" href="#getRowFactory">getRowFactory</a>()
+</td></tr>
+<tr onclick="return off(81)" class="detail" id="_81">
+<td class="return">RowFactory</td><td>
+<a id="getRowFactory" href="#getRowFactory">getRowFactory</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__82" onclick="return on(82)">
+<td class="return">Schema</td><td class="method">
+<a id="getSchema_String" href="#getSchema_String">getSchema</a>(String schemaName)
+<div class="methodText">Get the schema.</div>
+</td></tr>
+<tr onclick="return off(82)" class="detail" id="_82">
+<td class="return">Schema</td><td>
+<a id="getSchema_String" href="#getSchema_String">getSchema</a>(String schemaName)
+<div class="methodText">Get the schema. If the schema does not exist, an exception is thrown.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">schemaName - the name of the schema</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the schema</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - no schema with that name exists</div>
+</td></tr>
+<tr id="__83" onclick="return on(83)">
+<td class="return">int</td><td class="method">
+<a id="getSessionCount" href="#getSessionCount">getSessionCount</a>()
+</td></tr>
+<tr onclick="return off(83)" class="detail" id="_83">
+<td class="return">int</td><td>
+<a id="getSessionCount" href="#getSessionCount">getSessionCount</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__84" onclick="return on(84)">
+<td class="return">Session[]</td><td class="method">
+<a id="getSessions_boolean" href="#getSessions_boolean">getSessions</a>(boolean includingSystemSession)
+<div class="methodText">Get all sessions that are currently connected to the database.</div>
+</td></tr>
+<tr onclick="return off(84)" class="detail" id="_84">
+<td class="return">Session[]</td><td>
+<a id="getSessions_boolean" href="#getSessions_boolean">getSessions</a>(boolean includingSystemSession)
+<div class="methodText">Get all sessions that are currently connected to the database.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">includingSystemSession - if the system session should also be
+            included</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the list of sessions</div>
+</td></tr>
+<tr id="__85" onclick="return on(85)">
+<td class="return">DbSettings</td><td class="method">
+<a id="getSettings" href="#getSettings">getSettings</a>()
+</td></tr>
+<tr onclick="return off(85)" class="detail" id="_85">
+<td class="return">DbSettings</td><td>
+<a id="getSettings" href="#getSettings">getSettings</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__86" onclick="return on(86)">
+<td class="return">String</td><td class="method">
+<a id="getShortName" href="#getShortName">getShortName</a>()
+</td></tr>
+<tr onclick="return off(86)" class="detail" id="_86">
+<td class="return">String</td><td>
+<a id="getShortName" href="#getShortName">getShortName</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__87" onclick="return on(87)">
+<td class="return">Session</td><td class="method">
+<a id="getSystemSession" href="#getSystemSession">getSystemSession</a>()
+</td></tr>
+<tr onclick="return off(87)" class="detail" id="_87">
+<td class="return">Session</td><td>
+<a id="getSystemSession" href="#getSystemSession">getSystemSession</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__88" onclick="return on(88)">
+<td class="return">TableEngine</td><td class="method">
+<a id="getTableEngine_String" href="#getTableEngine_String">getTableEngine</a>(String tableEngine)
+<div class="methodText">Get the table engine class, loading it if needed.</div>
+</td></tr>
+<tr onclick="return off(88)" class="detail" id="_88">
+<td class="return">TableEngine</td><td>
+<a id="getTableEngine_String" href="#getTableEngine_String">getTableEngine</a>(String tableEngine)
+<div class="methodText">Get the table engine class, loading it if needed.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">tableEngine - the table engine name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the class</div>
+</td></tr>
+<tr id="__89" onclick="return on(89)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getTableOrViewByName_String" href="#getTableOrViewByName_String">getTableOrViewByName</a>(String name)
+<div class="methodText">Get the tables with the given name, if any.</div>
+</td></tr>
+<tr onclick="return off(89)" class="detail" id="_89">
+<td class="return">ArrayList</td><td>
+<a id="getTableOrViewByName_String" href="#getTableOrViewByName_String">getTableOrViewByName</a>(String name)
+<div class="methodText">Get the tables with the given name, if any.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the table name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the list</div>
+</td></tr>
+<tr id="__90" onclick="return on(90)">
+<td class="return">TempFileDeleter</td><td class="method">
+<a id="getTempFileDeleter" href="#getTempFileDeleter">getTempFileDeleter</a>()
+</td></tr>
+<tr onclick="return off(90)" class="detail" id="_90">
+<td class="return">TempFileDeleter</td><td>
+<a id="getTempFileDeleter" href="#getTempFileDeleter">getTempFileDeleter</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__91" onclick="return on(91)">
+<td class="return">String</td><td class="method">
+<a id="getTempTableName_String_Session" href="#getTempTableName_String_Session">getTempTableName</a>(String baseName, Session session)
+<div class="methodText">Get a unique temporary table name.</div>
+</td></tr>
+<tr onclick="return off(91)" class="detail" id="_91">
+<td class="return">String</td><td>
+<a id="getTempTableName_String_Session" href="#getTempTableName_String_Session">getTempTableName</a>(String baseName, Session session)
+<div class="methodText">Get a unique temporary table name.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">baseName - the prefix of the returned name</div>
+<div class="item">session - the session</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">a unique name</div>
+</td></tr>
+<tr id="__92" onclick="return on(92)">
+<td class="return">Trace</td><td class="method">
+<a id="getTrace_int" href="#getTrace_int">getTrace</a>(int moduleId)
+<div class="methodText">Get the trace object for the given module id.</div>
+</td></tr>
+<tr onclick="return off(92)" class="detail" id="_92">
+<td class="return">Trace</td><td>
+<a id="getTrace_int" href="#getTrace_int">getTrace</a>(int moduleId)
+<div class="methodText">Get the trace object for the given module id.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">moduleId - the module id</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the trace object</div>
+</td></tr>
+<tr id="__93" onclick="return on(93)">
+<td class="return">TraceSystem</td><td class="method">
+<a id="getTraceSystem" href="#getTraceSystem">getTraceSystem</a>()
+</td></tr>
+<tr onclick="return off(93)" class="detail" id="_93">
+<td class="return">TraceSystem</td><td>
+<a id="getTraceSystem" href="#getTraceSystem">getTraceSystem</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__94" onclick="return on(94)">
+<td class="return">User</td><td class="method">
+<a id="getUser_String" href="#getUser_String">getUser</a>(String name)
+<div class="methodText">Get user with the given name.</div>
+</td></tr>
+<tr onclick="return off(94)" class="detail" id="_94">
+<td class="return">User</td><td>
+<a id="getUser_String" href="#getUser_String">getUser</a>(String name)
+<div class="methodText">Get user with the given name. This method throws an exception if the user
+ does not exist.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - the user name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the user</div>
+<div class="itemTitle">Throws:</div>
+<div class="item">DbException - if the user does not exist</div>
+</td></tr>
+<tr id="__95" onclick="return on(95)">
+<td class="return">boolean</td><td class="method">
+<a id="isClosing" href="#isClosing">isClosing</a>()
+<div class="methodText">Check if the database is in the process of closing.</div>
+</td></tr>
+<tr onclick="return off(95)" class="detail" id="_95">
+<td class="return">boolean</td><td>
+<a id="isClosing" href="#isClosing">isClosing</a>()
+<div class="methodText">Check if the database is in the process of closing.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if the database is closing</div>
+</td></tr>
+<tr id="__96" onclick="return on(96)">
+<td class="return">boolean</td><td class="method">
+<a id="isFileLockSerialized" href="#isFileLockSerialized">isFileLockSerialized</a>()
+</td></tr>
+<tr onclick="return off(96)" class="detail" id="_96">
+<td class="return">boolean</td><td>
+<a id="isFileLockSerialized" href="#isFileLockSerialized">isFileLockSerialized</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__97" onclick="return on(97)">
+<td class="return">boolean</td><td class="method">
+<a id="isMultiThreaded" href="#isMultiThreaded">isMultiThreaded</a>()
+</td></tr>
+<tr onclick="return off(97)" class="detail" id="_97">
+<td class="return">boolean</td><td>
+<a id="isMultiThreaded" href="#isMultiThreaded">isMultiThreaded</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__98" onclick="return on(98)">
+<td class="return">boolean</td><td class="method">
+<a id="isMultiVersion" href="#isMultiVersion">isMultiVersion</a>()
+<div class="methodText">Check if multi version concurrency is enabled for this database.</div>
+</td></tr>
+<tr onclick="return off(98)" class="detail" id="_98">
+<td class="return">boolean</td><td>
+<a id="isMultiVersion" href="#isMultiVersion">isMultiVersion</a>()
+<div class="methodText">Check if multi version concurrency is enabled for this database.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is enabled</div>
+</td></tr>
+<tr id="__99" onclick="return on(99)">
+<td class="return">boolean</td><td class="method">
+<a id="isPersistent" href="#isPersistent">isPersistent</a>()
+<div class="methodText">Check if this database disk-based.</div>
+</td></tr>
+<tr onclick="return off(99)" class="detail" id="_99">
+<td class="return">boolean</td><td>
+<a id="isPersistent" href="#isPersistent">isPersistent</a>()
+<div class="methodText">Check if this database disk-based.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is disk-based, false it it is in-memory only.</div>
+</td></tr>
+<tr id="__100" onclick="return on(100)">
+<td class="return">boolean</td><td class="method">
+<a id="isReadOnly" href="#isReadOnly">isReadOnly</a>()
+</td></tr>
+<tr onclick="return off(100)" class="detail" id="_100">
+<td class="return">boolean</td><td>
+<a id="isReadOnly" href="#isReadOnly">isReadOnly</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__101" onclick="return on(101)">
+<td class="return">boolean</td><td class="method">
+<a id="isReconnectNeeded" href="#isReconnectNeeded">isReconnectNeeded</a>()
+<div class="methodText">Check if the contents of the database was changed and therefore it is
+ required to re-connect.</div>
+</td></tr>
+<tr onclick="return off(101)" class="detail" id="_101">
+<td class="return">boolean</td><td>
+<a id="isReconnectNeeded" href="#isReconnectNeeded">isReconnectNeeded</a>()
+<div class="methodText">Check if the contents of the database was changed and therefore it is
+ required to re-connect. This method waits until pending changes are
+ completed. If a pending change takes too long (more than 2 seconds), the
+ pending change is broken (removed from the properties file).</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if reconnecting is required</div>
+</td></tr>
+<tr id="__102" onclick="return on(102)">
+<td class="return">boolean</td><td class="method">
+<a id="isStarting" href="#isStarting">isStarting</a>()
+<div class="methodText">Check if the database is currently opening.</div>
+</td></tr>
+<tr onclick="return off(102)" class="detail" id="_102">
+<td class="return">boolean</td><td>
+<a id="isStarting" href="#isStarting">isStarting</a>()
+<div class="methodText">Check if the database is currently opening. This is true until all stored
+ SQL statements have been executed.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if the database is still starting</div>
+</td></tr>
+<tr id="__103" onclick="return on(103)">
+<td class="return">boolean</td><td class="method">
+<a id="isSysTableLocked" href="#isSysTableLocked">isSysTableLocked</a>()
+<div class="methodText">Checks if the system table (containing the catalog) is locked.</div>
+</td></tr>
+<tr onclick="return off(103)" class="detail" id="_103">
+<td class="return">boolean</td><td>
+<a id="isSysTableLocked" href="#isSysTableLocked">isSysTableLocked</a>()
+<div class="methodText">Checks if the system table (containing the catalog) is locked.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is currently locked</div>
+</td></tr>
+<tr id="__104" onclick="return on(104)">
+<td class="return">boolean</td><td class="method">
+<a id="isSysTableLockedBy_Session" href="#isSysTableLockedBy_Session">isSysTableLockedBy</a>(Session session)
+<div class="methodText">Checks if the system table (containing the catalog) is locked by the
+ given session.</div>
+</td></tr>
+<tr onclick="return off(104)" class="detail" id="_104">
+<td class="return">boolean</td><td>
+<a id="isSysTableLockedBy_Session" href="#isSysTableLockedBy_Session">isSysTableLockedBy</a>(Session session)
+<div class="methodText">Checks if the system table (containing the catalog) is locked by the
+ given session.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it is currently locked</div>
+</td></tr>
+<tr id="__105" onclick="return on(105)">
+<td class="return">boolean</td><td class="method">
+<a id="lockMeta_Session" href="#lockMeta_Session">lockMeta</a>(Session session)
+<div class="methodText">Lock the metadata table for updates.</div>
+</td></tr>
+<tr onclick="return off(105)" class="detail" id="_105">
+<td class="return">boolean</td><td>
+<a id="lockMeta_Session" href="#lockMeta_Session">lockMeta</a>(Session session)
+<div class="methodText">Lock the metadata table for updates.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">whether it was already locked before by this session</div>
+</td></tr>
+<tr id="__106" onclick="return on(106)">
+<td class="return">ConcurrentHashMap</td><td class="method">
+<a id="newConcurrentStringMap" href="#newConcurrentStringMap">newConcurrentStringMap</a>()
+<div class="methodText">Create a new hash map.</div>
+</td></tr>
+<tr onclick="return off(106)" class="detail" id="_106">
+<td class="return">ConcurrentHashMap</td><td>
+<a id="newConcurrentStringMap" href="#newConcurrentStringMap">newConcurrentStringMap</a>()
+<div class="methodText">Create a new hash map. Depending on the configuration, the key is case
+ sensitive or case insensitive.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the hash map</div>
+</td></tr>
+<tr id="__107" onclick="return on(107)">
+<td class="return">HashMap</td><td class="method">
+<a id="newStringMap" href="#newStringMap">newStringMap</a>()
+<div class="methodText">Create a new hash map.</div>
+</td></tr>
+<tr onclick="return off(107)" class="detail" id="_107">
+<td class="return">HashMap</td><td>
+<a id="newStringMap" href="#newStringMap">newStringMap</a>()
+<div class="methodText">Create a new hash map. Depending on the configuration, the key is case
+ sensitive or case insensitive.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the hash map</div>
+</td></tr>
+<tr id="__108" onclick="return on(108)">
+<td class="return">FileStore</td><td class="method">
+<a id="openFile_String_String_boolean" href="#openFile_String_String_boolean">openFile</a>(String name, String openMode, boolean mustExist)
+</td></tr>
+<tr onclick="return off(108)" class="detail" id="_108">
+<td class="return">FileStore</td><td>
+<a id="openFile_String_String_boolean" href="#openFile_String_String_boolean">openFile</a>(String name, String openMode, boolean mustExist)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__109" onclick="return on(109)">
+<td class="return">int</td><td class="method">
+<a id="readLob_long_byte-_long_byte-_int_int" href="#readLob_long_byte-_long_byte-_int_int">readLob</a>(long lobId, byte[] hmac, long offset, byte[] buff, int off, int length)
+</td></tr>
+<tr onclick="return off(109)" class="detail" id="_109">
+<td class="return">int</td><td>
+<a id="readLob_long_byte-_long_byte-_int_int" href="#readLob_long_byte-_long_byte-_int_int">readLob</a>(long lobId, byte[] hmac, long offset, byte[] buff, int off, int length)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__110" onclick="return on(110)">
+<td class="return">void</td><td class="method">
+<a id="removeDatabaseObject_Session_DbObject" href="#removeDatabaseObject_Session_DbObject">removeDatabaseObject</a>(Session session, DbObject obj)
+<div class="methodText">Remove the object from the database.</div>
+</td></tr>
+<tr onclick="return off(110)" class="detail" id="_110">
+<td class="return">void</td><td>
+<a id="removeDatabaseObject_Session_DbObject" href="#removeDatabaseObject_Session_DbObject">removeDatabaseObject</a>(Session session, DbObject obj)
+<div class="methodText">Remove the object from the database.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the object to remove</div>
+</td></tr>
+<tr id="__111" onclick="return on(111)">
+<td class="return">void</td><td class="method">
+<a id="removeMeta_Session_int" href="#removeMeta_Session_int">removeMeta</a>(Session session, int id)
+<div class="methodText">Remove the given object from the meta data.</div>
+</td></tr>
+<tr onclick="return off(111)" class="detail" id="_111">
+<td class="return">void</td><td>
+<a id="removeMeta_Session_int" href="#removeMeta_Session_int">removeMeta</a>(Session session, int id)
+<div class="methodText">Remove the given object from the meta data.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">id - the id of the object to remove</div>
+</td></tr>
+<tr id="__112" onclick="return on(112)">
+<td class="return">void</td><td class="method">
+<a id="removeSchemaObject_Session_SchemaObject" href="#removeSchemaObject_Session_SchemaObject">removeSchemaObject</a>(Session session, SchemaObject obj)
+<div class="methodText">Remove an object from the system table.</div>
+</td></tr>
+<tr onclick="return off(112)" class="detail" id="_112">
+<td class="return">void</td><td>
+<a id="removeSchemaObject_Session_SchemaObject" href="#removeSchemaObject_Session_SchemaObject">removeSchemaObject</a>(Session session, SchemaObject obj)
+<div class="methodText">Remove an object from the system table.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the object to be removed</div>
+</td></tr>
+<tr id="__113" onclick="return on(113)">
+<td class="return">void</td><td class="method">
+<a id="removeSession_Session" href="#removeSession_Session">removeSession</a>(Session session)
+<div class="methodText">Remove a session.</div>
+</td></tr>
+<tr onclick="return off(113)" class="detail" id="_113">
+<td class="return">void</td><td>
+<a id="removeSession_Session" href="#removeSession_Session">removeSession</a>(Session session)
+<div class="methodText">Remove a session. This method is called after the user has disconnected.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+</td></tr>
+<tr id="__114" onclick="return on(114)">
+<td class="return">void</td><td class="method">
+<a id="renameDatabaseObject_Session_DbObject_String" href="#renameDatabaseObject_Session_DbObject_String">renameDatabaseObject</a>(Session session, DbObject obj, String newName)
+<div class="methodText">Rename a database object.</div>
+</td></tr>
+<tr onclick="return off(114)" class="detail" id="_114">
+<td class="return">void</td><td>
+<a id="renameDatabaseObject_Session_DbObject_String" href="#renameDatabaseObject_Session_DbObject_String">renameDatabaseObject</a>(Session session, DbObject obj, String newName)
+<div class="methodText">Rename a database object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the object</div>
+<div class="item">newName - the new name</div>
+</td></tr>
+<tr id="__115" onclick="return on(115)">
+<td class="return">void</td><td class="method">
+<a id="renameSchemaObject_Session_SchemaObject_String" href="#renameSchemaObject_Session_SchemaObject_String">renameSchemaObject</a>(Session session, SchemaObject obj, String newName)
+<div class="methodText">Rename a schema object.</div>
+</td></tr>
+<tr onclick="return off(115)" class="detail" id="_115">
+<td class="return">void</td><td>
+<a id="renameSchemaObject_Session_SchemaObject_String" href="#renameSchemaObject_Session_SchemaObject_String">renameSchemaObject</a>(Session session, SchemaObject obj, String newName)
+<div class="methodText">Rename a schema object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the object</div>
+<div class="item">newName - the new name</div>
+</td></tr>
+<tr id="__116" onclick="return on(116)">
+<td class="return">void</td><td class="method">
+<a id="setAllowLiterals_int" href="#setAllowLiterals_int">setAllowLiterals</a>(int value)
+</td></tr>
+<tr onclick="return off(116)" class="detail" id="_116">
+<td class="return">void</td><td>
+<a id="setAllowLiterals_int" href="#setAllowLiterals_int">setAllowLiterals</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__117" onclick="return on(117)">
+<td class="return">void</td><td class="method">
+<a id="setBackgroundException_DbException" href="#setBackgroundException_DbException">setBackgroundException</a>(DbException e)
+</td></tr>
+<tr onclick="return off(117)" class="detail" id="_117">
+<td class="return">void</td><td>
+<a id="setBackgroundException_DbException" href="#setBackgroundException_DbException">setBackgroundException</a>(DbException e)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__118" onclick="return on(118)">
+<td class="return">void</td><td class="method">
+<a id="setCacheSize_int" href="#setCacheSize_int">setCacheSize</a>(int kb)
+</td></tr>
+<tr onclick="return off(118)" class="detail" id="_118">
+<td class="return">void</td><td>
+<a id="setCacheSize_int" href="#setCacheSize_int">setCacheSize</a>(int kb)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__119" onclick="return on(119)">
+<td class="return">void</td><td class="method">
+<a id="setCloseDelay_int" href="#setCloseDelay_int">setCloseDelay</a>(int value)
+</td></tr>
+<tr onclick="return off(119)" class="detail" id="_119">
+<td class="return">void</td><td>
+<a id="setCloseDelay_int" href="#setCloseDelay_int">setCloseDelay</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__120" onclick="return on(120)">
+<td class="return">void</td><td class="method">
+<a id="setCluster_String" href="#setCluster_String">setCluster</a>(String cluster)
+</td></tr>
+<tr onclick="return off(120)" class="detail" id="_120">
+<td class="return">void</td><td>
+<a id="setCluster_String" href="#setCluster_String">setCluster</a>(String cluster)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__121" onclick="return on(121)">
+<td class="return">void</td><td class="method">
+<a id="setCompactMode_int" href="#setCompactMode_int">setCompactMode</a>(int compactMode)
+</td></tr>
+<tr onclick="return off(121)" class="detail" id="_121">
+<td class="return">void</td><td>
+<a id="setCompactMode_int" href="#setCompactMode_int">setCompactMode</a>(int compactMode)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__122" onclick="return on(122)">
+<td class="return">void</td><td class="method">
+<a id="setCompareMode_CompareMode" href="#setCompareMode_CompareMode">setCompareMode</a>(CompareMode compareMode)
+</td></tr>
+<tr onclick="return off(122)" class="detail" id="_122">
+<td class="return">void</td><td>
+<a id="setCompareMode_CompareMode" href="#setCompareMode_CompareMode">setCompareMode</a>(CompareMode compareMode)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__123" onclick="return on(123)">
+<td class="return">void</td><td class="method">
+<a id="setDefaultTableType_int" href="#setDefaultTableType_int">setDefaultTableType</a>(int defaultTableType)
+</td></tr>
+<tr onclick="return off(123)" class="detail" id="_123">
+<td class="return">void</td><td>
+<a id="setDefaultTableType_int" href="#setDefaultTableType_int">setDefaultTableType</a>(int defaultTableType)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__124" onclick="return on(124)">
+<td class="return">void</td><td class="method">
+<a id="setDeleteFilesOnDisconnect_boolean" href="#setDeleteFilesOnDisconnect_boolean">setDeleteFilesOnDisconnect</a>(boolean b)
+</td></tr>
+<tr onclick="return off(124)" class="detail" id="_124">
+<td class="return">void</td><td>
+<a id="setDeleteFilesOnDisconnect_boolean" href="#setDeleteFilesOnDisconnect_boolean">setDeleteFilesOnDisconnect</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__125" onclick="return on(125)">
+<td class="return">void</td><td class="method">
+<a id="setEventListener_DatabaseEventListener" href="#setEventListener_DatabaseEventListener">setEventListener</a>(DatabaseEventListener eventListener)
+</td></tr>
+<tr onclick="return off(125)" class="detail" id="_125">
+<td class="return">void</td><td>
+<a id="setEventListener_DatabaseEventListener" href="#setEventListener_DatabaseEventListener">setEventListener</a>(DatabaseEventListener eventListener)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__126" onclick="return on(126)">
+<td class="return">void</td><td class="method">
+<a id="setEventListenerClass_String" href="#setEventListenerClass_String">setEventListenerClass</a>(String className)
+</td></tr>
+<tr onclick="return off(126)" class="detail" id="_126">
+<td class="return">void</td><td>
+<a id="setEventListenerClass_String" href="#setEventListenerClass_String">setEventListenerClass</a>(String className)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__127" onclick="return on(127)">
+<td class="return">void</td><td class="method">
+<a id="setExclusiveSession_Session_boolean" href="#setExclusiveSession_Session_boolean">setExclusiveSession</a>(Session session, boolean closeOthers)
+<div class="methodText">Set the session that can exclusively access the database.</div>
+</td></tr>
+<tr onclick="return off(127)" class="detail" id="_127">
+<td class="return">void</td><td>
+<a id="setExclusiveSession_Session_boolean" href="#setExclusiveSession_Session_boolean">setExclusiveSession</a>(Session session, boolean closeOthers)
+<div class="methodText">Set the session that can exclusively access the database.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">closeOthers - whether other sessions are closed</div>
+</td></tr>
+<tr id="__128" onclick="return on(128)">
+<td class="return">void</td><td class="method">
+<a id="setIgnoreCase_boolean" href="#setIgnoreCase_boolean">setIgnoreCase</a>(boolean b)
+</td></tr>
+<tr onclick="return off(128)" class="detail" id="_128">
+<td class="return">void</td><td>
+<a id="setIgnoreCase_boolean" href="#setIgnoreCase_boolean">setIgnoreCase</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__129" onclick="return on(129)">
+<td class="return">void</td><td class="method">
+<a id="setJavaObjectSerializerName_String" href="#setJavaObjectSerializerName_String">setJavaObjectSerializerName</a>(String serializerName)
+</td></tr>
+<tr onclick="return off(129)" class="detail" id="_129">
+<td class="return">void</td><td>
+<a id="setJavaObjectSerializerName_String" href="#setJavaObjectSerializerName_String">setJavaObjectSerializerName</a>(String serializerName)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__130" onclick="return on(130)">
+<td class="return">void</td><td class="method">
+<a id="setLobCompressionAlgorithm_String" href="#setLobCompressionAlgorithm_String">setLobCompressionAlgorithm</a>(String stringValue)
+</td></tr>
+<tr onclick="return off(130)" class="detail" id="_130">
+<td class="return">void</td><td>
+<a id="setLobCompressionAlgorithm_String" href="#setLobCompressionAlgorithm_String">setLobCompressionAlgorithm</a>(String stringValue)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__131" onclick="return on(131)">
+<td class="return">void</td><td class="method">
+<a id="setLockMode_int" href="#setLockMode_int">setLockMode</a>(int lockMode)
+</td></tr>
+<tr onclick="return off(131)" class="detail" id="_131">
+<td class="return">void</td><td>
+<a id="setLockMode_int" href="#setLockMode_int">setLockMode</a>(int lockMode)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__132" onclick="return on(132)">
+<td class="return">void</td><td class="method">
+<a id="setLogMode_int" href="#setLogMode_int">setLogMode</a>(int log)
+</td></tr>
+<tr onclick="return off(132)" class="detail" id="_132">
+<td class="return">void</td><td>
+<a id="setLogMode_int" href="#setLogMode_int">setLogMode</a>(int log)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__133" onclick="return on(133)">
+<td class="return">void</td><td class="method">
+<a id="setMasterUser_User" href="#setMasterUser_User">setMasterUser</a>(User user)
+</td></tr>
+<tr onclick="return off(133)" class="detail" id="_133">
+<td class="return">void</td><td>
+<a id="setMasterUser_User" href="#setMasterUser_User">setMasterUser</a>(User user)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__134" onclick="return on(134)">
+<td class="return">void</td><td class="method">
+<a id="setMaxLengthInplaceLob_int" href="#setMaxLengthInplaceLob_int">setMaxLengthInplaceLob</a>(int value)
+</td></tr>
+<tr onclick="return off(134)" class="detail" id="_134">
+<td class="return">void</td><td>
+<a id="setMaxLengthInplaceLob_int" href="#setMaxLengthInplaceLob_int">setMaxLengthInplaceLob</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__135" onclick="return on(135)">
+<td class="return">void</td><td class="method">
+<a id="setMaxLogSize_long" href="#setMaxLogSize_long">setMaxLogSize</a>(long value)
+</td></tr>
+<tr onclick="return off(135)" class="detail" id="_135">
+<td class="return">void</td><td>
+<a id="setMaxLogSize_long" href="#setMaxLogSize_long">setMaxLogSize</a>(long value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__136" onclick="return on(136)">
+<td class="return">void</td><td class="method">
+<a id="setMaxMemoryRows_int" href="#setMaxMemoryRows_int">setMaxMemoryRows</a>(int value)
+</td></tr>
+<tr onclick="return off(136)" class="detail" id="_136">
+<td class="return">void</td><td>
+<a id="setMaxMemoryRows_int" href="#setMaxMemoryRows_int">setMaxMemoryRows</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__137" onclick="return on(137)">
+<td class="return">void</td><td class="method">
+<a id="setMaxMemoryUndo_int" href="#setMaxMemoryUndo_int">setMaxMemoryUndo</a>(int value)
+</td></tr>
+<tr onclick="return off(137)" class="detail" id="_137">
+<td class="return">void</td><td>
+<a id="setMaxMemoryUndo_int" href="#setMaxMemoryUndo_int">setMaxMemoryUndo</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__138" onclick="return on(138)">
+<td class="return">void</td><td class="method">
+<a id="setMaxOperationMemory_int" href="#setMaxOperationMemory_int">setMaxOperationMemory</a>(int maxOperationMemory)
+</td></tr>
+<tr onclick="return off(138)" class="detail" id="_138">
+<td class="return">void</td><td>
+<a id="setMaxOperationMemory_int" href="#setMaxOperationMemory_int">setMaxOperationMemory</a>(int maxOperationMemory)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__139" onclick="return on(139)">
+<td class="return">void</td><td class="method">
+<a id="setMode_Mode" href="#setMode_Mode">setMode</a>(Mode mode)
+</td></tr>
+<tr onclick="return off(139)" class="detail" id="_139">
+<td class="return">void</td><td>
+<a id="setMode_Mode" href="#setMode_Mode">setMode</a>(Mode mode)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__140" onclick="return on(140)">
+<td class="return">void</td><td class="method">
+<a id="setMultiThreaded_boolean" href="#setMultiThreaded_boolean">setMultiThreaded</a>(boolean multiThreaded)
+</td></tr>
+<tr onclick="return off(140)" class="detail" id="_140">
+<td class="return">void</td><td>
+<a id="setMultiThreaded_boolean" href="#setMultiThreaded_boolean">setMultiThreaded</a>(boolean multiThreaded)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__141" onclick="return on(141)">
+<td class="return">void</td><td class="method">
+<a id="setMultiVersion_boolean" href="#setMultiVersion_boolean">setMultiVersion</a>(boolean multiVersion)
+</td></tr>
+<tr onclick="return off(141)" class="detail" id="_141">
+<td class="return">void</td><td>
+<a id="setMultiVersion_boolean" href="#setMultiVersion_boolean">setMultiVersion</a>(boolean multiVersion)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__142" onclick="return on(142)">
+<td class="return">void</td><td class="method">
+<a id="setMvStore_MVTableEngine.Store" href="#setMvStore_MVTableEngine.Store">setMvStore</a>(MVTableEngine.Store mvStore)
+</td></tr>
+<tr onclick="return off(142)" class="detail" id="_142">
+<td class="return">void</td><td>
+<a id="setMvStore_MVTableEngine.Store" href="#setMvStore_MVTableEngine.Store">setMvStore</a>(MVTableEngine.Store mvStore)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__143" onclick="return on(143)">
+<td class="return">void</td><td class="method">
+<a id="setOptimizeReuseResults_boolean" href="#setOptimizeReuseResults_boolean">setOptimizeReuseResults</a>(boolean b)
+</td></tr>
+<tr onclick="return off(143)" class="detail" id="_143">
+<td class="return">void</td><td>
+<a id="setOptimizeReuseResults_boolean" href="#setOptimizeReuseResults_boolean">setOptimizeReuseResults</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__144" onclick="return on(144)">
+<td class="return">void</td><td class="method">
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int count)
+</td></tr>
+<tr onclick="return off(144)" class="detail" id="_144">
+<td class="return">void</td><td>
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int count)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__145" onclick="return on(145)">
+<td class="return">void</td><td class="method">
+<a id="setProgress_int_String_int_int" href="#setProgress_int_String_int_int">setProgress</a>(int state, String name, int x, int max)
+<div class="methodText">Set the progress of a long running operation.</div>
+</td></tr>
+<tr onclick="return off(145)" class="detail" id="_145">
+<td class="return">void</td><td>
+<a id="setProgress_int_String_int_int" href="#setProgress_int_String_int_int">setProgress</a>(int state, String name, int x, int max)
+<div class="methodText">Set the progress of a long running operation.
+ This method calls the {@link DatabaseEventListener} if one is registered.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">state - the {@link DatabaseEventListener} state</div>
+<div class="item">name - the object name</div>
+<div class="item">x - the current position</div>
+<div class="item">max - the highest value</div>
+</td></tr>
+<tr id="__146" onclick="return on(146)">
+<td class="return">void</td><td class="method">
+<a id="setQueryStatistics_boolean" href="#setQueryStatistics_boolean">setQueryStatistics</a>(boolean b)
+</td></tr>
+<tr onclick="return off(146)" class="detail" id="_146">
+<td class="return">void</td><td>
+<a id="setQueryStatistics_boolean" href="#setQueryStatistics_boolean">setQueryStatistics</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__147" onclick="return on(147)">
+<td class="return">void</td><td class="method">
+<a id="setQueryStatisticsMaxEntries_int" href="#setQueryStatisticsMaxEntries_int">setQueryStatisticsMaxEntries</a>(int n)
+</td></tr>
+<tr onclick="return off(147)" class="detail" id="_147">
+<td class="return">void</td><td>
+<a id="setQueryStatisticsMaxEntries_int" href="#setQueryStatisticsMaxEntries_int">setQueryStatisticsMaxEntries</a>(int n)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__148" onclick="return on(148)">
+<td class="return">void</td><td class="method">
+<a id="setReadOnly_boolean" href="#setReadOnly_boolean">setReadOnly</a>(boolean readOnly)
+<div class="methodText">Switch the database to read-only mode.</div>
+</td></tr>
+<tr onclick="return off(148)" class="detail" id="_148">
+<td class="return">void</td><td>
+<a id="setReadOnly_boolean" href="#setReadOnly_boolean">setReadOnly</a>(boolean readOnly)
+<div class="methodText">Switch the database to read-only mode.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">readOnly - the new value</div>
+</td></tr>
+<tr id="__149" onclick="return on(149)">
+<td class="return">void</td><td class="method">
+<a id="setReferentialIntegrity_boolean" href="#setReferentialIntegrity_boolean">setReferentialIntegrity</a>(boolean b)
+</td></tr>
+<tr onclick="return off(149)" class="detail" id="_149">
+<td class="return">void</td><td>
+<a id="setReferentialIntegrity_boolean" href="#setReferentialIntegrity_boolean">setReferentialIntegrity</a>(boolean b)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__150" onclick="return on(150)">
+<td class="return">void</td><td class="method">
+<a id="setRetentionTime_int" href="#setRetentionTime_int">setRetentionTime</a>(int value)
+</td></tr>
+<tr onclick="return off(150)" class="detail" id="_150">
+<td class="return">void</td><td>
+<a id="setRetentionTime_int" href="#setRetentionTime_int">setRetentionTime</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__151" onclick="return on(151)">
+<td class="return">void</td><td class="method">
+<a id="setRowFactory_RowFactory" href="#setRowFactory_RowFactory">setRowFactory</a>(RowFactory rowFactory)
+</td></tr>
+<tr onclick="return off(151)" class="detail" id="_151">
+<td class="return">void</td><td>
+<a id="setRowFactory_RowFactory" href="#setRowFactory_RowFactory">setRowFactory</a>(RowFactory rowFactory)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__152" onclick="return on(152)">
+<td class="return">void</td><td class="method">
+<a id="setWriteDelay_int" href="#setWriteDelay_int">setWriteDelay</a>(int value)
+</td></tr>
+<tr onclick="return off(152)" class="detail" id="_152">
+<td class="return">void</td><td>
+<a id="setWriteDelay_int" href="#setWriteDelay_int">setWriteDelay</a>(int value)
+<div class="methodText"></div>
+</td></tr>
+<tr id="__153" onclick="return on(153)">
+<td class="return">void</td><td class="method">
+<a id="shutdownImmediately" href="#shutdownImmediately">shutdownImmediately</a>()
+<div class="methodText">Immediately close the database.</div>
+</td></tr>
+<tr onclick="return off(153)" class="detail" id="_153">
+<td class="return">void</td><td>
+<a id="shutdownImmediately" href="#shutdownImmediately">shutdownImmediately</a>()
+<div class="methodText">Immediately close the database.</div>
+</td></tr>
+<tr id="__154" onclick="return on(154)">
+<td class="return">void</td><td class="method">
+<a id="sync" href="#sync">sync</a>()
+<div class="methodText">Synchronize the files with the file system.</div>
+</td></tr>
+<tr onclick="return off(154)" class="detail" id="_154">
+<td class="return">void</td><td>
+<a id="sync" href="#sync">sync</a>()
+<div class="methodText">Synchronize the files with the file system. This method is called when
+ executing the SQL statement CHECKPOINT SYNC.</div>
+</td></tr>
+<tr id="__155" onclick="return on(155)">
+<td class="return">String</td><td class="method">
+<a id="toString" href="#toString">toString</a>()
+</td></tr>
+<tr onclick="return off(155)" class="detail" id="_155">
+<td class="return">String</td><td>
+<a id="toString" href="#toString">toString</a>()
+<div class="methodText"></div>
+</td></tr>
+<tr id="__156" onclick="return on(156)">
+<td class="return">void</td><td class="method">
+<a id="unlockMeta_Session" href="#unlockMeta_Session">unlockMeta</a>(Session session)
+<div class="methodText">Unlock the metadata table.</div>
+</td></tr>
+<tr onclick="return off(156)" class="detail" id="_156">
+<td class="return">void</td><td>
+<a id="unlockMeta_Session" href="#unlockMeta_Session">unlockMeta</a>(Session session)
+<div class="methodText">Unlock the metadata table.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+</td></tr>
+<tr id="__157" onclick="return on(157)">
+<td class="return">void</td><td class="method">
+<a id="updateMeta_Session_DbObject" href="#updateMeta_Session_DbObject">updateMeta</a>(Session session, DbObject obj)
+<div class="methodText">Update an object in the system table.</div>
+</td></tr>
+<tr onclick="return off(157)" class="detail" id="_157">
+<td class="return">void</td><td>
+<a id="updateMeta_Session_DbObject" href="#updateMeta_Session_DbObject">updateMeta</a>(Session session, DbObject obj)
+<div class="methodText">Update an object in the system table.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+<div class="item">obj - the database object</div>
+</td></tr>
+<tr id="__158" onclick="return on(158)">
+<td class="return">void</td><td class="method">
+<a id="verifyMetaLocked_Session" href="#verifyMetaLocked_Session">verifyMetaLocked</a>(Session session)
+<div class="methodText">Verify the meta table is locked.</div>
+</td></tr>
+<tr onclick="return off(158)" class="detail" id="_158">
+<td class="return">void</td><td>
+<a id="verifyMetaLocked_Session" href="#verifyMetaLocked_Session">verifyMetaLocked</a>(Session session)
+<div class="methodText">Verify the meta table is locked.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+</td></tr>
+</table>
+</div></td></tr></table></body></html>

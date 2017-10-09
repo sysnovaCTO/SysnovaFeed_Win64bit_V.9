@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+RightOwner
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>RightOwner</h1>
+A right owner (sometimes called principal).<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">Right</td><td class="method">
+<a id="getRightForObject_DbObject" href="#getRightForObject_DbObject">getRightForObject</a>(DbObject object)
+<div class="methodText">Get the 'grant schema' right of this object.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">Right</td><td>
+<a id="getRightForObject_DbObject" href="#getRightForObject_DbObject">getRightForObject</a>(DbObject object)
+<div class="methodText">Get the 'grant schema' right of this object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">object - the granted object (table or schema)</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the right or null if the right has not been granted</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">Right</td><td class="method">
+<a id="getRightForRole_Role" href="#getRightForRole_Role">getRightForRole</a>(Role role)
+<div class="methodText">Get the 'grant role' right of this object.</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">Right</td><td>
+<a id="getRightForRole_Role" href="#getRightForRole_Role">getRightForRole</a>(Role role)
+<div class="methodText">Get the 'grant role' right of this object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">role - the granted role</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the right or null if the right has not been granted</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">void</td><td class="method">
+<a id="grantRight_DbObject_Right" href="#grantRight_DbObject_Right">grantRight</a>(DbObject object, Right right)
+<div class="methodText">Grant a right for the given table.</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">void</td><td>
+<a id="grantRight_DbObject_Right" href="#grantRight_DbObject_Right">grantRight</a>(DbObject object, Right right)
+<div class="methodText">Grant a right for the given table. Only one right object per table is
+ supported.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">object - the object (table or schema)</div>
+<div class="item">right - the right</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">void</td><td class="method">
+<a id="grantRole_Role_Right" href="#grantRole_Role_Right">grantRole</a>(Role role, Right right)
+<div class="methodText">Grant a role to this object.</div>
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">void</td><td>
+<a id="grantRole_Role_Right" href="#grantRole_Role_Right">grantRole</a>(Role role, Right right)
+<div class="methodText">Grant a role to this object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">role - the role</div>
+<div class="item">right - the right to grant</div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">boolean</td><td class="method">
+<a id="isRoleGranted_Role" href="#isRoleGranted_Role">isRoleGranted</a>(Role grantedRole)
+<div class="methodText">Check if a role has been granted for this right owner.</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">boolean</td><td>
+<a id="isRoleGranted_Role" href="#isRoleGranted_Role">isRoleGranted</a>(Role grantedRole)
+<div class="methodText">Check if a role has been granted for this right owner.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">grantedRole - the role</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if the role has been granted</div>
+</td></tr>
+</table>
+</div></td></tr></table></body></html>

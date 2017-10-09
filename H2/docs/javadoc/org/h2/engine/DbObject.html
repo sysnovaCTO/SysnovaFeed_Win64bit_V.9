@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+DbObject
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>DbObject</h1>
+A database object such as a table, an index, or a user.<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">void</td><td class="method">
+<a id="checkRename" href="#checkRename">checkRename</a>()
+<div class="methodText">Check if renaming is allowed.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">void</td><td>
+<a id="checkRename" href="#checkRename">checkRename</a>()
+<div class="methodText">Check if renaming is allowed. Does nothing when allowed.</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getChildren" href="#getChildren">getChildren</a>()
+<div class="methodText">Get the list of dependent children (for tables, this includes indexes and
+ so on).</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">ArrayList</td><td>
+<a id="getChildren" href="#getChildren">getChildren</a>()
+<div class="methodText">Get the list of dependent children (for tables, this includes indexes and
+ so on).</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the list of children</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">String</td><td class="method">
+<a id="getComment" href="#getComment">getComment</a>()
+<div class="methodText">Get the current comment of this object.</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">String</td><td>
+<a id="getComment" href="#getComment">getComment</a>()
+<div class="methodText">Get the current comment of this object.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the comment, or null if not set</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">String</td><td class="method">
+<a id="getCreateSQL" href="#getCreateSQL">getCreateSQL</a>()
+<div class="methodText">Construct the original CREATE ...</div>
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">String</td><td>
+<a id="getCreateSQL" href="#getCreateSQL">getCreateSQL</a>()
+<div class="methodText">Construct the original CREATE ... SQL statement for this object.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the SQL statement</div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">String</td><td class="method">
+<a id="getCreateSQLForCopy_Table_String" href="#getCreateSQLForCopy_Table_String">getCreateSQLForCopy</a>(Table table, String quotedName)
+<div class="methodText">Build a SQL statement to re-create the object, or to create a copy of the
+ object with a different name or referencing a different table</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">String</td><td>
+<a id="getCreateSQLForCopy_Table_String" href="#getCreateSQLForCopy_Table_String">getCreateSQLForCopy</a>(Table table, String quotedName)
+<div class="methodText">Build a SQL statement to re-create the object, or to create a copy of the
+ object with a different name or referencing a different table</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">table - the new table</div>
+<div class="item">quotedName - the quoted name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the SQL statement</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">Database</td><td class="method">
+<a id="getDatabase" href="#getDatabase">getDatabase</a>()
+<div class="methodText">Get the database.</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">Database</td><td>
+<a id="getDatabase" href="#getDatabase">getDatabase</a>()
+<div class="methodText">Get the database.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the database</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">String</td><td class="method">
+<a id="getDropSQL" href="#getDropSQL">getDropSQL</a>()
+<div class="methodText">Construct a DROP ...</div>
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">String</td><td>
+<a id="getDropSQL" href="#getDropSQL">getDropSQL</a>()
+<div class="methodText">Construct a DROP ... SQL statement for this object.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the SQL statement</div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">int</td><td class="method">
+<a id="getId" href="#getId">getId</a>()
+<div class="methodText">Get the unique object id.</div>
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">int</td><td>
+<a id="getId" href="#getId">getId</a>()
+<div class="methodText">Get the unique object id.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the object id</div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">String</td><td class="method">
+<a id="getName" href="#getName">getName</a>()
+<div class="methodText">Get the name.</div>
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">String</td><td>
+<a id="getName" href="#getName">getName</a>()
+<div class="methodText">Get the name.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the name</div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">String</td><td class="method">
+<a id="getSQL" href="#getSQL">getSQL</a>()
+<div class="methodText">Get the SQL name of this object (may be quoted).</div>
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">String</td><td>
+<a id="getSQL" href="#getSQL">getSQL</a>()
+<div class="methodText">Get the SQL name of this object (may be quoted).</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the SQL name</div>
+</td></tr>
+<tr id="__10" onclick="return on(10)">
+<td class="return">int</td><td class="method">
+<a id="getType" href="#getType">getType</a>()
+<div class="methodText">Get the object type.</div>
+</td></tr>
+<tr onclick="return off(10)" class="detail" id="_10">
+<td class="return">int</td><td>
+<a id="getType" href="#getType">getType</a>()
+<div class="methodText">Get the object type.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the object type</div>
+</td></tr>
+<tr id="__11" onclick="return on(11)">
+<td class="return">boolean</td><td class="method">
+<a id="isTemporary" href="#isTemporary">isTemporary</a>()
+<div class="methodText">Check if this object is temporary (for example, a temporary table).</div>
+</td></tr>
+<tr onclick="return off(11)" class="detail" id="_11">
+<td class="return">boolean</td><td>
+<a id="isTemporary" href="#isTemporary">isTemporary</a>()
+<div class="methodText">Check if this object is temporary (for example, a temporary table).</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if is temporary</div>
+</td></tr>
+<tr id="__12" onclick="return on(12)">
+<td class="return">void</td><td class="method">
+<a id="removeChildrenAndResources_Session" href="#removeChildrenAndResources_Session">removeChildrenAndResources</a>(Session session)
+<div class="methodText">Delete all dependent children objects and resources of this object.</div>
+</td></tr>
+<tr onclick="return off(12)" class="detail" id="_12">
+<td class="return">void</td><td>
+<a id="removeChildrenAndResources_Session" href="#removeChildrenAndResources_Session">removeChildrenAndResources</a>(Session session)
+<div class="methodText">Delete all dependent children objects and resources of this object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">session - the session</div>
+</td></tr>
+<tr id="__13" onclick="return on(13)">
+<td class="return">void</td><td class="method">
+<a id="rename_String" href="#rename_String">rename</a>(String newName)
+<div class="methodText">Rename the object.</div>
+</td></tr>
+<tr onclick="return off(13)" class="detail" id="_13">
+<td class="return">void</td><td>
+<a id="rename_String" href="#rename_String">rename</a>(String newName)
+<div class="methodText">Rename the object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">newName - the new name</div>
+</td></tr>
+<tr id="__14" onclick="return on(14)">
+<td class="return">void</td><td class="method">
+<a id="setComment_String" href="#setComment_String">setComment</a>(String comment)
+<div class="methodText">Change the comment of this object.</div>
+</td></tr>
+<tr onclick="return off(14)" class="detail" id="_14">
+<td class="return">void</td><td>
+<a id="setComment_String" href="#setComment_String">setComment</a>(String comment)
+<div class="methodText">Change the comment of this object.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">comment - the new comment, or null for no comment</div>
+</td></tr>
+<tr id="__15" onclick="return on(15)">
+<td class="return">void</td><td class="method">
+<a id="setTemporary_boolean" href="#setTemporary_boolean">setTemporary</a>(boolean temporary)
+<div class="methodText">Tell this object that it is temporary or not.</div>
+</td></tr>
+<tr onclick="return off(15)" class="detail" id="_15">
+<td class="return">void</td><td>
+<a id="setTemporary_boolean" href="#setTemporary_boolean">setTemporary</a>(boolean temporary)
+<div class="methodText">Tell this object that it is temporary or not.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">temporary - the new value</div>
+</td></tr>
+</table>
+<br /><table><tr><th colspan="2">Fields</th></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c14">AGGREGATE</a> = 14
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c13">COMMENT</a> = 13
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c11">CONSTANT</a> = 11
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c5">CONSTRAINT</a> = 5
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c9">FUNCTION_ALIAS</a> = 9
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c1">INDEX</a> = 1
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c8">RIGHT</a> = 8
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c7">ROLE</a> = 7
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c10">SCHEMA</a> = 10
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c3">SEQUENCE</a> = 3
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c6">SETTING</a> = 6
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c0">TABLE_OR_VIEW</a> = 0
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c4">TRIGGER</a> = 4
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c2">USER</a> = 2
+</td></tr>
+<tr><td class="return">static int</td><td class="method">
+<a href="#c12">USER_DATATYPE</a> = 12
+</td></tr>
+</table>
+<h4 id="c0"><span class="methodName">TABLE_OR_VIEW
+ = 0
+</span></h4>
+<div class="item">The object is of the type table or view.</div>
+<hr />
+<h4 id="c1"><span class="methodName">INDEX
+ = 1
+</span></h4>
+<div class="item">This object is an index.</div>
+<hr />
+<h4 id="c10"><span class="methodName">SCHEMA
+ = 10
+</span></h4>
+<div class="item">This object is a schema.</div>
+<hr />
+<h4 id="c11"><span class="methodName">CONSTANT
+ = 11
+</span></h4>
+<div class="item">This object is a constant.</div>
+<hr />
+<h4 id="c12"><span class="methodName">USER_DATATYPE
+ = 12
+</span></h4>
+<div class="item">This object is a user data type (domain).</div>
+<hr />
+<h4 id="c13"><span class="methodName">COMMENT
+ = 13
+</span></h4>
+<div class="item">This object is a comment.</div>
+<hr />
+<h4 id="c14"><span class="methodName">AGGREGATE
+ = 14
+</span></h4>
+<div class="item">This object is a user-defined aggregate function.</div>
+<hr />
+<h4 id="c2"><span class="methodName">USER
+ = 2
+</span></h4>
+<div class="item">This object is a user.</div>
+<hr />
+<h4 id="c3"><span class="methodName">SEQUENCE
+ = 3
+</span></h4>
+<div class="item">This object is a sequence.</div>
+<hr />
+<h4 id="c4"><span class="methodName">TRIGGER
+ = 4
+</span></h4>
+<div class="item">This object is a trigger.</div>
+<hr />
+<h4 id="c5"><span class="methodName">CONSTRAINT
+ = 5
+</span></h4>
+<div class="item">This object is a constraint (check constraint, unique constraint, or
+ referential constraint).</div>
+<hr />
+<h4 id="c6"><span class="methodName">SETTING
+ = 6
+</span></h4>
+<div class="item">This object is a setting.</div>
+<hr />
+<h4 id="c7"><span class="methodName">ROLE
+ = 7
+</span></h4>
+<div class="item">This object is a role.</div>
+<hr />
+<h4 id="c8"><span class="methodName">RIGHT
+ = 8
+</span></h4>
+<div class="item">This object is a right.</div>
+<hr />
+<h4 id="c9"><span class="methodName">FUNCTION_ALIAS
+ = 9
+</span></h4>
+<div class="item">This object is an alias for a Java function.</div>
+<hr />
+</div></td></tr></table></body></html>

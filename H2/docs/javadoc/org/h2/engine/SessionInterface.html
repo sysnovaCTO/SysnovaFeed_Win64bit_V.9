@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+SessionInterface
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>SessionInterface</h1>
+A local or remote session. A session represents a database connection.<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">void</td><td class="method">
+<a id="addTemporaryLob_Value" href="#addTemporaryLob_Value">addTemporaryLob</a>(Value v)
+<div class="methodText">Add a temporary LOB, which is closed when the session commits.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">void</td><td>
+<a id="addTemporaryLob_Value" href="#addTemporaryLob_Value">addTemporaryLob</a>(Value v)
+<div class="methodText">Add a temporary LOB, which is closed when the session commits.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">v - the value</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">void</td><td class="method">
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+<div class="methodText">Called after writing has ended.</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">void</td><td>
+<a id="afterWriting" href="#afterWriting">afterWriting</a>()
+<div class="methodText">Called after writing has ended. It needs to be called after
+ isReconnectNeeded(true) returned false.</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">void</td><td class="method">
+<a id="cancel" href="#cancel">cancel</a>()
+<div class="methodText">Cancel the current or next command (called when closing a connection).</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">void</td><td>
+<a id="cancel" href="#cancel">cancel</a>()
+<div class="methodText">Cancel the current or next command (called when closing a connection).</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">void</td><td class="method">
+<a id="close" href="#close">close</a>()
+<div class="methodText">Roll back pending transactions and close the session.</div>
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">void</td><td>
+<a id="close" href="#close">close</a>()
+<div class="methodText">Roll back pending transactions and close the session.</div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">boolean</td><td class="method">
+<a id="getAutoCommit" href="#getAutoCommit">getAutoCommit</a>()
+<div class="methodText">Check if this session is in auto-commit mode.</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">boolean</td><td>
+<a id="getAutoCommit" href="#getAutoCommit">getAutoCommit</a>()
+<div class="methodText">Check if this session is in auto-commit mode.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if the session is in auto-commit mode</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">ArrayList</td><td class="method">
+<a id="getClusterServers" href="#getClusterServers">getClusterServers</a>()
+<div class="methodText">Get the list of the cluster servers for this session.</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">ArrayList</td><td>
+<a id="getClusterServers" href="#getClusterServers">getClusterServers</a>()
+<div class="methodText">Get the list of the cluster servers for this session.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">A list of "ip:port" strings for the cluster servers in this
+         session.</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">String</td><td class="method">
+<a id="getCurrentSchemaName" href="#getCurrentSchemaName">getCurrentSchemaName</a>()
+<div class="methodText">Get current schema.</div>
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">String</td><td>
+<a id="getCurrentSchemaName" href="#getCurrentSchemaName">getCurrentSchemaName</a>()
+<div class="methodText">Get current schema.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the current schema name</div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">DataHandler</td><td class="method">
+<a id="getDataHandler" href="#getDataHandler">getDataHandler</a>()
+<div class="methodText">Get the data handler object.</div>
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">DataHandler</td><td>
+<a id="getDataHandler" href="#getDataHandler">getDataHandler</a>()
+<div class="methodText">Get the data handler object.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the data handler</div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">int</td><td class="method">
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+<div class="methodText">Get the number of disk operations before power failure is simulated.</div>
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">int</td><td>
+<a id="getPowerOffCount" href="#getPowerOffCount">getPowerOffCount</a>()
+<div class="methodText">Get the number of disk operations before power failure is simulated.
+ This is used for testing. If not set, 0 is returned</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the number of operations, or 0</div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">Trace</td><td class="method">
+<a id="getTrace" href="#getTrace">getTrace</a>()
+<div class="methodText">Get the trace object</div>
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">Trace</td><td>
+<a id="getTrace" href="#getTrace">getTrace</a>()
+<div class="methodText">Get the trace object</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the trace object</div>
+</td></tr>
+<tr id="__10" onclick="return on(10)">
+<td class="return">boolean</td><td class="method">
+<a id="hasPendingTransaction" href="#hasPendingTransaction">hasPendingTransaction</a>()
+<div class="methodText">Check whether this session has a pending transaction.</div>
+</td></tr>
+<tr onclick="return off(10)" class="detail" id="_10">
+<td class="return">boolean</td><td>
+<a id="hasPendingTransaction" href="#hasPendingTransaction">hasPendingTransaction</a>()
+<div class="methodText">Check whether this session has a pending transaction.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if it has</div>
+</td></tr>
+<tr id="__11" onclick="return on(11)">
+<td class="return">boolean</td><td class="method">
+<a id="isClosed" href="#isClosed">isClosed</a>()
+<div class="methodText">Check if close was called.</div>
+</td></tr>
+<tr onclick="return off(11)" class="detail" id="_11">
+<td class="return">boolean</td><td>
+<a id="isClosed" href="#isClosed">isClosed</a>()
+<div class="methodText">Check if close was called.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">if the session has been closed</div>
+</td></tr>
+<tr id="__12" onclick="return on(12)">
+<td class="return">boolean</td><td class="method">
+<a id="isReconnectNeeded_boolean" href="#isReconnectNeeded_boolean">isReconnectNeeded</a>(boolean write)
+<div class="methodText">Check if the database changed and therefore reconnecting is required.</div>
+</td></tr>
+<tr onclick="return off(12)" class="detail" id="_12">
+<td class="return">boolean</td><td>
+<a id="isReconnectNeeded_boolean" href="#isReconnectNeeded_boolean">isReconnectNeeded</a>(boolean write)
+<div class="methodText">Check if the database changed and therefore reconnecting is required.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">write - if the next operation may be writing</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if reconnecting is required</div>
+</td></tr>
+<tr id="__13" onclick="return on(13)">
+<td class="return">boolean</td><td class="method">
+<a id="isRemote" href="#isRemote">isRemote</a>()
+<div class="methodText">Check if this session is remote or embedded.</div>
+</td></tr>
+<tr onclick="return off(13)" class="detail" id="_13">
+<td class="return">boolean</td><td>
+<a id="isRemote" href="#isRemote">isRemote</a>()
+<div class="methodText">Check if this session is remote or embedded.</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">true if this session is remote</div>
+</td></tr>
+<tr id="__14" onclick="return on(14)">
+<td class="return">CommandInterface</td><td class="method">
+<a id="prepareCommand_String_int" href="#prepareCommand_String_int">prepareCommand</a>(String sql, int fetchSize)
+<div class="methodText">Parse a command and prepare it for execution.</div>
+</td></tr>
+<tr onclick="return off(14)" class="detail" id="_14">
+<td class="return">CommandInterface</td><td>
+<a id="prepareCommand_String_int" href="#prepareCommand_String_int">prepareCommand</a>(String sql, int fetchSize)
+<div class="methodText">Parse a command and prepare it for execution.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">sql - the SQL statement</div>
+<div class="item">fetchSize - the number of rows to fetch in one step</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the prepared command</div>
+</td></tr>
+<tr id="__15" onclick="return on(15)">
+<td class="return">SessionInterface</td><td class="method">
+<a id="reconnect_boolean" href="#reconnect_boolean">reconnect</a>(boolean write)
+<div class="methodText">Close the connection and open a new connection.</div>
+</td></tr>
+<tr onclick="return off(15)" class="detail" id="_15">
+<td class="return">SessionInterface</td><td>
+<a id="reconnect_boolean" href="#reconnect_boolean">reconnect</a>(boolean write)
+<div class="methodText">Close the connection and open a new connection.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">write - if the next operation may be writing</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">the new connection</div>
+</td></tr>
+<tr id="__16" onclick="return on(16)">
+<td class="return">void</td><td class="method">
+<a id="setAutoCommit_boolean" href="#setAutoCommit_boolean">setAutoCommit</a>(boolean autoCommit)
+<div class="methodText">Set the auto-commit mode.</div>
+</td></tr>
+<tr onclick="return off(16)" class="detail" id="_16">
+<td class="return">void</td><td>
+<a id="setAutoCommit_boolean" href="#setAutoCommit_boolean">setAutoCommit</a>(boolean autoCommit)
+<div class="methodText">Set the auto-commit mode. This call doesn't commit the current
+ transaction.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">autoCommit - the new value</div>
+</td></tr>
+<tr id="__17" onclick="return on(17)">
+<td class="return">void</td><td class="method">
+<a id="setCurrentSchemaName_String" href="#setCurrentSchemaName_String">setCurrentSchemaName</a>(String schema)
+<div class="methodText">Set current schema.</div>
+</td></tr>
+<tr onclick="return off(17)" class="detail" id="_17">
+<td class="return">void</td><td>
+<a id="setCurrentSchemaName_String" href="#setCurrentSchemaName_String">setCurrentSchemaName</a>(String schema)
+<div class="methodText">Set current schema.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">schema - the schema name</div>
+</td></tr>
+<tr id="__18" onclick="return on(18)">
+<td class="return">void</td><td class="method">
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int i)
+<div class="methodText">Set the number of disk operations before power failure is simulated.</div>
+</td></tr>
+<tr onclick="return off(18)" class="detail" id="_18">
+<td class="return">void</td><td>
+<a id="setPowerOffCount_int" href="#setPowerOffCount_int">setPowerOffCount</a>(int i)
+<div class="methodText">Set the number of disk operations before power failure is simulated.
+ To disable the countdown, use 0.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">i - the number of operations</div>
+</td></tr>
+</table>
+</div></td></tr></table></body></html>

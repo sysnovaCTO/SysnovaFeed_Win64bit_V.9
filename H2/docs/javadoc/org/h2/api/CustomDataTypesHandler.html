@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>
+CustomDataTypesHandler
+</title><link rel="stylesheet" type="text/css" href="../../../stylesheet.css" />
+<script type="text/javascript" src="../../../animate.js"></script>
+</head><body onload="openLink();">
+<table class="content"><tr class="content"><td class="content"><div class="contentDiv">
+<h1>CustomDataTypesHandler</h1>
+Custom data type handler
+ Provides means to plug-in custom data types support
+
+ Please keep in mind that this feature may not possibly
+ provide the same ABI stability level as other features
+ as it  exposes many of the H2 internals.  You may be
+ required to update your code occasionally due to internal
+ changes in H2 if you are going to use this feature<br /><br />
+<table class="block"><tr onclick="return allDetails()"><th colspan="2">Methods</th></tr>
+<tr id="__0" onclick="return on(0)">
+<td class="return">Value</td><td class="method">
+<a id="convert_Value_int" href="#convert_Value_int">convert</a>(Value source, int targetType)
+<div class="methodText">Convert the provided source value into value of given target data type
+ Shall implement conversions to and from custom data types.</div>
+</td></tr>
+<tr onclick="return off(0)" class="detail" id="_0">
+<td class="return">Value</td><td>
+<a id="convert_Value_int" href="#convert_Value_int">convert</a>(Value source, int targetType)
+<div class="methodText">Convert the provided source value into value of given target data type
+ Shall implement conversions to and from custom data types.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">source - source value</div>
+<div class="item">targetType - identifier of target data type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">converted value</div>
+</td></tr>
+<tr id="__1" onclick="return on(1)">
+<td class="return">int</td><td class="method">
+<a id="getAddProofType_int" href="#getAddProofType_int">getAddProofType</a>(int type)
+<div class="methodText">Get compatible type identifier that would not overflow
+ after many add operations.</div>
+</td></tr>
+<tr onclick="return off(1)" class="detail" id="_1">
+<td class="return">int</td><td>
+<a id="getAddProofType_int" href="#getAddProofType_int">getAddProofType</a>(int type)
+<div class="methodText">Get compatible type identifier that would not overflow
+ after many add operations.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - identifier of a type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">resulting type identifier</div>
+</td></tr>
+<tr id="__2" onclick="return on(2)">
+<td class="return">DataType</td><td class="method">
+<a id="getDataTypeById_int" href="#getDataTypeById_int">getDataTypeById</a>(int type)
+<div class="methodText">Get custom data type given its integer id</div>
+</td></tr>
+<tr onclick="return off(2)" class="detail" id="_2">
+<td class="return">DataType</td><td>
+<a id="getDataTypeById_int" href="#getDataTypeById_int">getDataTypeById</a>(int type)
+<div class="methodText">Get custom data type given its integer id</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - identifier of a data type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">custom data type</div>
+</td></tr>
+<tr id="__3" onclick="return on(3)">
+<td class="return">DataType</td><td class="method">
+<a id="getDataTypeByName_String" href="#getDataTypeByName_String">getDataTypeByName</a>(String name)
+<div class="methodText">Get custom data type given its name</div>
+</td></tr>
+<tr onclick="return off(3)" class="detail" id="_3">
+<td class="return">DataType</td><td>
+<a id="getDataTypeByName_String" href="#getDataTypeByName_String">getDataTypeByName</a>(String name)
+<div class="methodText">Get custom data type given its name</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">name - data type name</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">custom data type</div>
+</td></tr>
+<tr id="__4" onclick="return on(4)">
+<td class="return">String</td><td class="method">
+<a id="getDataTypeClassName_int" href="#getDataTypeClassName_int">getDataTypeClassName</a>(int type)
+<div class="methodText">Get custom data type class name given its integer id</div>
+</td></tr>
+<tr onclick="return off(4)" class="detail" id="_4">
+<td class="return">String</td><td>
+<a id="getDataTypeClassName_int" href="#getDataTypeClassName_int">getDataTypeClassName</a>(int type)
+<div class="methodText">Get custom data type class name given its integer id</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - identifier of a data type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">class name</div>
+</td></tr>
+<tr id="__5" onclick="return on(5)">
+<td class="return">int</td><td class="method">
+<a id="getDataTypeOrder_int" href="#getDataTypeOrder_int">getDataTypeOrder</a>(int type)
+<div class="methodText">Get order for custom data type given its integer id</div>
+</td></tr>
+<tr onclick="return off(5)" class="detail" id="_5">
+<td class="return">int</td><td>
+<a id="getDataTypeOrder_int" href="#getDataTypeOrder_int">getDataTypeOrder</a>(int type)
+<div class="methodText">Get order for custom data type given its integer id</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - identifier of a data type</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">order associated with custom data type</div>
+</td></tr>
+<tr id="__6" onclick="return on(6)">
+<td class="return">Object</td><td class="method">
+<a id="getObject_Value_Class" href="#getObject_Value_Class">getObject</a>(Value value, Class cls)
+<div class="methodText">Converts </div>
+</td></tr>
+<tr onclick="return off(6)" class="detail" id="_6">
+<td class="return">Object</td><td>
+<a id="getObject_Value_Class" href="#getObject_Value_Class">getObject</a>(Value value, Class cls)
+<div class="methodText">Converts {@link org.h2.value.Value} object
+ to the specified class.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">value - the value to convert</div>
+<div class="item">cls - the target class</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">result</div>
+</td></tr>
+<tr id="__7" onclick="return on(7)">
+<td class="return">int</td><td class="method">
+<a id="getTypeIdFromClass_Class" href="#getTypeIdFromClass_Class">getTypeIdFromClass</a>(Class cls)
+<div class="methodText">Get custom data type identifier given corresponding Java class</div>
+</td></tr>
+<tr onclick="return off(7)" class="detail" id="_7">
+<td class="return">int</td><td>
+<a id="getTypeIdFromClass_Class" href="#getTypeIdFromClass_Class">getTypeIdFromClass</a>(Class cls)
+<div class="methodText">Get custom data type identifier given corresponding Java class</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">cls - Java class object</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">type identifier</div>
+</td></tr>
+<tr id="__8" onclick="return on(8)">
+<td class="return">Value</td><td class="method">
+<a id="getValue_int_Object_DataHandler" href="#getValue_int_Object_DataHandler">getValue</a>(int type, Object data, DataHandler dataHandler)
+<div class="methodText">Get </div>
+</td></tr>
+<tr onclick="return off(8)" class="detail" id="_8">
+<td class="return">Value</td><td>
+<a id="getValue_int_Object_DataHandler" href="#getValue_int_Object_DataHandler">getValue</a>(int type, Object data, DataHandler dataHandler)
+<div class="methodText">Get {@link org.h2.value.Value} object
+ corresponding to given data type identifier and data.</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - custom data type identifier</div>
+<div class="item">data - underlying data type value</div>
+<div class="item">dataHandler - data handler object</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">Value object</div>
+</td></tr>
+<tr id="__9" onclick="return on(9)">
+<td class="return">boolean</td><td class="method">
+<a id="supportsAdd_int" href="#supportsAdd_int">supportsAdd</a>(int type)
+<div class="methodText">Checks if type supports add operation</div>
+</td></tr>
+<tr onclick="return off(9)" class="detail" id="_9">
+<td class="return">boolean</td><td>
+<a id="supportsAdd_int" href="#supportsAdd_int">supportsAdd</a>(int type)
+<div class="methodText">Checks if type supports add operation</div>
+<div class="itemTitle">Parameters:</div>
+<div class="item">type - custom data type identifier</div>
+<div class="itemTitle">Returns:</div>
+<div class="item">True, if custom data type supports add operation</div>
+</td></tr>
+</table>
+</div></td></tr></table></body></html>

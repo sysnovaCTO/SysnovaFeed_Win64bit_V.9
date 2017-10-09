@@ -3,11 +3,11 @@ SysnovaFeed is a revolutionary free/open-source least-cost feed formulation soft
 Installation
 ------------
 In order for SysnovaFeed to run,
-1) Unzip the rar file into your "Downloads" Directory Like "C:\Users\UserName\Downloads".Open SysnovaFeed_Win64bit-master Folder
-2) Right click on setup.bat file and select "Run as administrator"
-3) Then allow it by clicking Yes button .A comand prompt will open and install all the requirements for this App .
-4) A shortcut will be created in your Desktop as SysnovaFeed. 
-After Completing installation double click the file SysnovaFeed in your Desktop and start using . 
+1) Unzip the SysnovaFeed_Win64bit-master.rar file into your "Downloads" Directory Like "C:\Users\UserName\Downloads".Open SysnovaFeed_Win64bit-master Folder
+2) Right click on setup.bat file and click "Run as administrator"
+3) Then allow it by clicking Yes button .A comand prompt will open and install all the requirements for this software .
+4) A shortcut will be created in your Desktop name as "SysnovaFeed". 
+After Completing installation double click the file "SysnovaFeed" in your Desktop and start using . 
 
 
 Note:

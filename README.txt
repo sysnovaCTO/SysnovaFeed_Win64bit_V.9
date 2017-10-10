@@ -9,6 +9,13 @@ In order for SysnovaFeed to run,
 4) A shortcut will be created in your Desktop name as "SysnovaFeed". 
 After Completing installation double click the file "SysnovaFeed" in your Desktop and start using . 
 
+login
+------------
+userID: System
+Passwprd: p
+
+userID: User
+Passwprd: p
 
 Note:
 ============================================================================================================================

@@ -12,10 +12,10 @@ After Completing installation double click the file "SysnovaFeed" in your Deskto
 login
 ------------
 userID: System
-Passwprd: p
+Password: p
 
 userID: User
-Passwprd: p
+Password: p
 
 Note:
 ============================================================================================================================

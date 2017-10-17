@@ -46,3 +46,16 @@ Technical Features :
 
 Commercial Web-Based Version: A web-based multi-user collaborative version of SysnovaFeed will be released as a commercial product for purchase by large companies with multiple feed mills and nutritionists. 
 
+References
+-----------
+1. Meat & Bone Meal, Distillers Dried Grains Soluble (DDGS), Soybean meal, wheat flour, Wheat Bran & Rice polish values from-
+    Nutrient Requirements of poultry: Ninth Revised Edition, 1994
+    Subcommittee on Poultry Nutrition, NRC
+    ISBN: 0-309-59632-7, 8.5x11, (1994)
+    This PDF is available from the National Academies Press at:
+    http://www.nap.edu/catalog/2114.htm
+
+2. Corn, Whole wheat, canola meal, rapeseed meal, corn gluten meal (CGM) value from-
+    Commercial Poultry Nutrition Book, 3rd Edition, S. Leeson & J. D. Summers.
+
+3. For all micro ingredients used manufacturer recommended values. 

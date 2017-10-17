@@ -3,7 +3,7 @@ SysnovaFeed is a revolutionary free/open-source least-cost feed formulation soft
 Installation
 ------------
 In order for SysnovaFeed to run,
-1) Unzip the SysnovaFeed_Win64bit-master.rar file any location at "C:" Drive.
+1) Unzip the SysnovaFeed_Win64bit-master.rar file any location at "C:" Drive. After Unzip Jre Bundle 178 Mb, GLPK 72 Mb, H2 database 20 Mb, Application 24 Mb. Total Size Should be 293 Mb.
 2) Right click on setup.bat file and click "Run as administrator"
 3) Then allow it by clicking Yes button .A comand prompt will open and install all the requirements for this software .
 4) A shortcut will be created in your Desktop name as "SysnovaFeed". 

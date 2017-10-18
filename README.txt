@@ -52,10 +52,16 @@ References
     Nutrient Requirements of poultry: Ninth Revised Edition, 1994
     Subcommittee on Poultry Nutrition, NRC
     ISBN: 0-309-59632-7, 8.5x11, (1994)
-    This PDF is available from the National Academies Press at:
-    http://www.nap.edu/catalog/2114.htm
-
+    https://www.nap.edu/catalog/2114/nutrient-requirements-of-poultry-ninth-revised-edition-1994
+    https://www.nap.edu/read/2114/chapter/1
+    
 2. Corn, Whole wheat, canola meal, rapeseed meal, corn gluten meal (CGM) value from-
     Commercial Poultry Nutrition Book, 3rd Edition, S. Leeson & J. D. Summers.
-
+    
 3. For all micro ingredients used manufacturer recommended values. 
+
+4. Free/open-source Gnu Linear Programming Kit 
+    https://www.gnu.org/software/glpk/
+    
+5. h2 database 
+    www.h2database.com

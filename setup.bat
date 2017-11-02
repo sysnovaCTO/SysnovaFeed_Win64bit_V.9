@@ -44,7 +44,7 @@ IF %ERRORLEVEL% NEQ 0 (
 
 setx CLASSPATH "C:\Program Files\GLPK\w64\glpk-java.jar"
 
-setx path "%path%C:\Program Files\GLPK\w64" /M
+setx path "%path%;C:\Program Files\GLPK\w64" /M
 IF %ERRORLEVEL% NEQ 0 (
   set "error=error : Failed to set Path in Environment variable for GLPK."
   goto done

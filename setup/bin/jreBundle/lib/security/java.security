@@ -224,18 +224,7 @@ package.access=sun.,\
                jdk.nashorn.internal.,\
                jdk.nashorn.tools.,\
                com.sun.activation.registries.,\
-               com.sun.java.accessibility.,\
-               com.sun.browser.,\
-               com.sun.glass.,\
-               com.sun.javafx.,\
-               com.sun.media.,\
-               com.sun.openpisces.,\
-               com.sun.prism.,\
-               com.sun.scenario.,\
-               com.sun.t2k.,\
-               com.sun.pisces.,\
-               com.sun.webkit.,\
-               jdk.management.resource.internal.
+               com.sun.java.accessibility.
 
 #
 # List of comma-separated packages that start with or equal this string
@@ -285,18 +274,7 @@ package.definition=sun.,\
                    jdk.nashorn.internal.,\
                    jdk.nashorn.tools.,\
                    com.sun.activation.registries.,\
-                   com.sun.java.accessibility.,\
-                   com.sun.browser.,\
-                   com.sun.glass.,\
-                   com.sun.javafx.,\
-                   com.sun.media.,\
-                   com.sun.openpisces.,\
-                   com.sun.prism.,\
-                   com.sun.scenario.,\
-                   com.sun.t2k.,\
-                   com.sun.pisces.,\
-                   com.sun.webkit.,\
-                   jdk.management.resource.internal.
+                   com.sun.java.accessibility.
 
 #
 # Determines whether this properties file can be appended to

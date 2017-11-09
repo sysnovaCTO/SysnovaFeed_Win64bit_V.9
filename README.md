@@ -24,11 +24,6 @@ In order for SysnovaFeed to run,
 * Formulations: SysnovaFeed contains default formulations for well-known breeds of commercial layers based on published nutritional standards of 
   breeding companies. Users can edit these formulations and add unlimited new formulations.
 * Prices: SysnovaFeed comes with a default set of prices which the user can update to reflect current market rates.
-<<<<<<< HEAD
-=======
-* Ingredients: SysnovaFeed contains a default nutritional database for major ingredients like maize/corn, wheat, wheat bran, rice, rice bran,
-  soybean meal and soybean oil based on nutritional specifications. Users can edit these nutritional specifications and add unlimited ingredients.
->>>>>>> 9bf25170422981a34bf90c18d187c58e476af7ec
 
 ### Technical Features :
 ----------------------

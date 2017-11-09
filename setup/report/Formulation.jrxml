@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulation" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="293"/>
-	<property name="ireport.y" value="121"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Formulation" pageWidth="595" pageHeight="1200" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ID" class="java.lang.Integer">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["/root/Desktop/Ofc task/feedReport/"]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[select date,
@@ -25,15 +25,16 @@ FROM COMPOUND com
 where com.compound_id = $P{ID} limit 1)as d) as Animalgrp,
 com.description as descp,
 p.code as pricelist,com.cost as cost,
-ad.name as updatedby,ing.longname as ingredient,
+ad.name as updatedby,
+ing.code||' '||ing.longname as ingredient,
 coming.price::numeric as price,com.updated as date,
 coming.value::numeric as perc,
 (coming.value*10)::numeric as weight
 FROM COMPOUND com
 join COMPOUNDINGREDIENT coming on(coming.COMPOUND_id = com.COMPOUND_id)
-join PRICEWEEK p on(p.priceweek_id = com.priceweek_id)
+left join PRICEWEEK p on(p.priceweek_id = com.priceweek_id)
 join ingredient ing on(ing.ingredient_id = coming.ingredient_id)
-join CompoundGroup comgrp on(comgrp.compoundgroup_id = com.compoundgroup_id)
+left join CompoundGroup comgrp on(comgrp.compoundgroup_id = com.compoundgroup_id)
 left join AD_USER ad on(ad.ad_user_id = com.updatedby)
 where com.compound_id = $P{ID} and coming.value != 0
 ) as d
@@ -53,9 +54,7 @@ order by perc desc]]>
 	<field name="WEIGHT" class="java.math.BigDecimal"/>
 	<field name="TOTAL_PRICE" class="java.math.BigDecimal"/>
 	<variable name="Price" class="java.math.BigDecimal">
-		<variableExpression><![CDATA[$V{weight}.compareTo( new BigDecimal(0.0) ) > 0 ?
-(($V{total_price}).divide($V{weight},BigDecimal.ROUND_HALF_UP,2))
-:new BigDecimal(0.0)]]></variableExpression>
+		<variableExpression><![CDATA[]]></variableExpression>
 	</variable>
 	<variable name="Perc" class="java.math.BigDecimal" calculation="Sum">
 		<variableExpression><![CDATA[$F{PERC}]]></variableExpression>
@@ -188,9 +187,9 @@ order by perc desc]]>
 		</band>
 	</title>
 	<columnHeader>
-		<band height="20" splitType="Stretch">
+		<band height="23" splitType="Stretch">
 			<staticText>
-				<reportElement x="61" y="0" width="192" height="20"/>
+				<reportElement x="39" y="0" width="214" height="20"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -212,7 +211,7 @@ order by perc desc]]>
 					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.0"/>
 				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
 				<text><![CDATA[Price(per kg)]]></text>
@@ -260,7 +259,7 @@ order by perc desc]]>
 				<text><![CDATA[Price]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="61" height="20"/>
+				<reportElement x="0" y="0" width="39" height="20"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -276,9 +275,9 @@ order by perc desc]]>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="10" splitType="Stretch">
+		<band height="16" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="61" y="0" width="192" height="10"/>
+				<reportElement stretchType="RelativeToTallestObject" x="39" y="0" width="214" height="16"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -292,7 +291,7 @@ order by perc desc]]>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{INGREDIENT}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.000" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="253" y="0" width="95" height="10"/>
+				<reportElement stretchType="RelativeToTallestObject" x="253" y="0" width="95" height="16"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -306,7 +305,7 @@ order by perc desc]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{PRICE}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.000" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="348" y="0" width="71" height="10"/>
+				<reportElement stretchType="RelativeToTallestObject" x="348" y="0" width="71" height="16"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -320,7 +319,7 @@ order by perc desc]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{PERC}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.000" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="419" y="0" width="61" height="10"/>
+				<reportElement stretchType="RelativeToTallestObject" x="419" y="0" width="61" height="16"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -334,7 +333,7 @@ order by perc desc]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{WEIGHT}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.000" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="480" y="0" width="75" height="10"/>
+				<reportElement stretchType="RelativeToTallestObject" x="480" y="0" width="75" height="16"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -348,7 +347,7 @@ order by perc desc]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TOTAL_PRICE}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.000" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="56" height="10"/>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="39" height="16"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0"/>
@@ -424,7 +423,7 @@ order by perc desc]]>
 		</band>
 	</pageFooter>
 	<summary>
-		<band height="97" splitType="Stretch">
+		<band height="17" splitType="Stretch">
 			<line>
 				<reportElement x="0" y="0" width="555" height="1"/>
 			</line>
@@ -484,24 +483,6 @@ order by perc desc]]>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_price}]]></textFieldExpression>
 			</textField>
-			<subreport>
-				<reportElement x="0" y="47" width="308" height="49"/>
-				<subreportParameter name="SUBREPORT_DIR">
-					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="ID">
-					<subreportParameterExpression><![CDATA[$P{ID}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}]]></subreportExpression>
-			</subreport>
-			<staticText>
-				<reportElement x="0" y="27" width="132" height="20"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[Analysis]]></text>
-			</staticText>
 		</band>
 	</summary>
 </jasperReport>

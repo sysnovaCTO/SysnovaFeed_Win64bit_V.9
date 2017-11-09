@@ -9,14 +9,17 @@
 	<queryString>
 		<![CDATA[SELECT nuan.analysis as analysis,nuan.overlay as overlay,nuan.specification as spec,ing.longname as ingredient,nu.code,nu.shortname as nutrient,nu.longname as decsc,ingtype.name as ingtype,inggrp.name as ingGroupname,ing.scintficname as ing_name,ing.code as ing_code,
 nu.updated::date as date,ing.longname as ing_desc,ad.name as user
+
 FROM NUTRIENTANALYSIS nuan
 join ingredient ing on (ing.ingredient_id = nuan.ingredient_id)
 join nutrient nu on (nu.nutrient_id = nuan.nutrient_id)
-join ingredienttype ingtype on (ing.ingredienttype_id = ingtype.ingredienttype_id)
-join ingredientgroup inggrp on (inggrp.ingredientgroup_id = ing.ingredientgroup_id)
+left join ingredienttype ingtype on (ing.ingredienttype_id = ingtype.ingredienttype_id)
+left join ingredientgroup inggrp on (inggrp.ingredientgroup_id = ing.ingredientgroup_id)
 left join AD_USER ad on(ad.ad_user_id = ing.updatedby)
 where ing.ingredient_id = $P{ID}
-order by nu.code]]>
+order by nu.code
+
+]]>
 	</queryString>
 	<field name="ANALYSIS" class="java.lang.Double"/>
 	<field name="OVERLAY" class="java.lang.Double"/>
